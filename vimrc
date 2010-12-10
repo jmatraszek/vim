@@ -229,10 +229,6 @@ let g:NERDTreeChDirMode = 2
 let g:NERDTreeShowBookmarks = 1 "wyswietl zakladki
 "NERD TREE END
 
-
-
-
-
 function ToggleFlag(option,flag)
    exec ('let lopt = &' . a:option)
    if lopt =~ (".*" . a:flag . ".*")
