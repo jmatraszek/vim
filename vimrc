@@ -119,7 +119,7 @@ set statusline+=[POS=%p%%]
 set statusline+=%#User7#
 set statusline+=[LEN=%L]
 set statusline+=%#User8#
-set statusline+=[VCS=%{fugitive#statusline()}]
+set statusline+=[GIT=%{fugitive#statusline()}]
 set statusline+=%#User9#
 set statusline+=[ASCII=\%03.3b]
 set statusline+=%#User10#
