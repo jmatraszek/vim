@@ -8,7 +8,6 @@ call pathogen#helptags()
 filetype plugin indent on
 "PATHOGEN END
 
-
 set showmode
 set backspace=indent,eol,start
 set virtualedit=onemore
