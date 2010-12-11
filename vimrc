@@ -33,17 +33,15 @@ set tenc=utf8
 set mouse=a
 ""set hls
 set formatoptions=tcqmM
-set wrap!
-set lbr!
+"set wrap!
+"set lbr!
 set textwidth=120
 set helplang=pl,en
 set autoindent
 set smartindent
-set tabstop=4
+set tabstop=4 "4 spacje zamiast taba
 set cindent
 set smarttab
-set lz
-set number
 set ignorecase
 set smartcase
 set expandtab
@@ -65,6 +63,13 @@ if has("gui_running")
    set guifont=Monospace\ 8
 endif
 "GUI END
+
+"TOHTML BEGIN
+let html_number_lines=0
+let use_xhtml=1
+let html_use_css=1
+let html_dynamic_folds=1
+"TOHTML END
 
 "STATUSLINE BEGIN
 function! FileSize()
@@ -127,6 +132,11 @@ set statusline+=[HEX=\%02.2B]
 set statusline+=%#User0#
 set laststatus=2
 "STATUSLINE END
+
+
+"ALTERNATE BEGIN
+let g:alternateSearchPath = 'sfr:../source,sfr:../src,sfr:../include,sfr:../inc,abs:/usr/include/opencv,abs:/usr/include/curl'
+"ALTERNATE END
 
 "NERD COMMENTER BEGIN
 let NERDSpaceDelims=1
