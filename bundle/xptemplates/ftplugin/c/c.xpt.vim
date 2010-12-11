@@ -47,17 +47,22 @@ XSET elts=c_printf_elts( R( 'pattern' ), ',' )
 XPT printf	" printf\(...)
 printf(`$SPop^`:_printfElts:^`$SPop^)
 
+XPT p alias=printf
 
 XPT sprintf	" sprintf\(...)
 sprintf(`$SPop^`str^,`$SPop^`:_printfElts:^`$SPop^)
 
+XPT sp alias=sprintf
 
 XPT snprintf	" snprintf\(...)
 snprintf(`$SPop^`str^,`$SPop^`size^,`$SPop^`:_printfElts:^`$SPop^)
 
+XPT snp alias=snprintf
 
 XPT fprintf	" fprintf\(...)
 fprintf(`$SPop^`stream^,`$SPop^`:_printfElts:^`$SPop^)
+
+XPT fp alias=fprintf
 
 XPT memcpy " memcpy (..., ..., sizeof (...) ... )
 memcpy( `dest^, `source^, sizeof(`type^int^) * `count^ )
