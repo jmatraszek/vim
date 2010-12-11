@@ -1694,8 +1694,7 @@ function! fugitive#statusline(...)
   if &statusline =~# '%[MRHWY]' && &statusline !~# '%[mrhwy]'
     return ',GIT'.status
   else
-    "return '[Git'.status.']'
-    return status
+    return '[Git'.status.']'
   endif
 endfunction
 
