@@ -128,10 +128,9 @@ set statusline+=%#User0#
 set laststatus=2
 "STATUSLINE END
 
-"VCSCOMMAND BEGIN
-let b:VCSCommandVCSType='git'
-let g:VCSCommandEnableBufferSetup = 1
-"VCSCOMMAND END
+"NERD COMMENTER BEGIN
+let NERDSpaceDelims=1
+"NERD COMMENTER END
 
 "TIMESTAMP BEGIN
 "25 pierwszych i ostatnich linii pliku przeszukiwane pod katem wystapienia taga TIMESTAMP
@@ -139,24 +138,43 @@ let g:timestamp_modelines=25
 "TIMESTAMP END
 
 "COMMAND-T BEGIN
-let g:CommandTMaxHeight=15 
 "okno command-t - najwyzej 15 pozycji
+let g:CommandTMaxHeight=15 
 "COMMAND-T END
 
+"DOXYGEN TOOLKIT BEGIN
+" menu Doxy jako submenu Plugin
+let g:Doxy_RootMenu = "&Plugin.Do&xy."
+" naprawiamy sciezki do szablonow, popsute przez pathogen'a :)
+let g:Doxy_LocalTemplateFile  = $HOME.'/.vim/bundle/doxygen_support/doxygen-support/templates/doxygen.templates'
+let g:Doxy_LocalTemplateDir   = $HOME.'/.vim/doxygen_support/doxygen-support/templates/'
+"DOXYGEN TOOLKIT END
+
+
 "SHOWMARKS BEGIN
-let showmarks_include = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXY" "znaczniki, ktorych bedziemy uzywac, bez Z
-"zeby nam nie kolidowalo z mapowaniem <F2>
-let g:showmarks_enable = 1
-highlight ShowMarksHLl gui=bold guibg=LightBlue guifg=Blue "kolory dla znacznikow a-z
-highlight ShowMarksHLu gui=bold guibg=LightRed guifg=DarkRed "dla znacznikow A-Z
-highlight ShowMarksHLo gui=bold guibg=LightYellow guifg=DarkYellow "dla innych znacznikow
-highlight ShowMarksHLm gui=bold guibg=LightGreen guifg=DarkGreen "dla wielu znacznikow w tej samej linii
+""domyslnie wylaczone, mozemy wlaczyc przez <mapleader>mt
+let showmarks_enable=0
+"znaczniki, ktorych bedziemy uzywac, bez Z zeby nam nie kolidowalo z mapowaniem <F2>
+let showmarks_include = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXY" 
+
+"kolory dla znacznikow a-z
+highlight ShowMarksHLl gui=bold guibg=LightBlue guifg=Blue 
+"dla znacznikow A-Z
+highlight ShowMarksHLu gui=bold guibg=LightRed guifg=DarkRed 
+"dla innych znacznikow
+highlight ShowMarksHLo gui=bold guibg=LightYellow guifg=DarkYellow
+ "dla wielu znacznikow w tej samej linii
+highlight ShowMarksHLm gui=bold guibg=LightGreen guifg=DarkGreen
 "SHOWMARKS END
+
+
+
 "SUPERTAB BEGIN
 let g:SuperTabLongestEnhanced = 1
 let g:SuperTabMappingForward = '<tab>'
 let g:SuperTabMappingBackward = '<s-tab>'
 
+"kolory dla pop up menu
 highlight Pmenu term=NONE cterm=NONE ctermfg=7 ctermbg=5 gui=NONE guifg=White guibg=Magenta
 highlight PmenuSel term=NONE cterm=NONE ctermfg=0 ctermbg=7 gui=NONE guifg=Black guibg=White
 highlight PmenuSbar term=NONE cterm=NONE ctermfg=7 ctermbg=0 gui=NONE guifg=White guibg=Black
@@ -164,6 +182,7 @@ highlight PmenuThumb term=NONE cterm=NONE ctermfg=0 ctermbg=7 gui=NONE guifg=Bla
 "SUPERTAB END
 
 "XPTEMPLATES BEGIN
+" bez wstawiania znakow zamykajacych
 inoremap <buffer>( (
 inoremap <buffer>[ [
 inoremap <buffer>{ {
@@ -179,9 +198,14 @@ let g:xptemplate_minimal_prefix = 'full' "xpt wlaczy sie tylko po wpisaniu pelne
 
 "KEY MAPPING BEGIN
 map Q gq
+" szybkie wylaczenie podswietlania wynikow wyszukiwania
 map gn :nohlsearch<CR> 
-
+" zapis pliku w stylu gorszych edytorow tekstowych :)
 noremap! <C-S> <Esc>:w<CR><INSERT>
+" wyjscie w stylu gorzych edytorow tekstowych :)
+noremap! <C-Q> <Esc>:quit<CR>
+noremap <C-Q> <Esc>:quit<CR>
+" latwa nawigacja zakladkami
 noremap! <A-Up> <Esc>:tabnew<CR><Esc>:e<Space>
 noremap <A-Up> <Esc>:tabnew<CR><Esc>:e<Space>
 noremap <C-T> <Esc>:tabnew<CR>
@@ -191,9 +215,7 @@ noremap! <A-Left> <Esc>:tabp<CR><INSERT>
 noremap <A-Left> <Esc>:tabp<CR><INSERT>
 noremap! <A-Right> <Esc>:tabn<CR><INSERT>
 noremap <A-Right> <Esc>:tabn<CR><INSERT>
-noremap! <C-Q> <Esc>:quit<CR>
-noremap <C-Q> <Esc>:quit<CR>
-
+" zapis gdy edytujemy plik bez uprawnien do zapisu
 cmap w!! w !sudo tee % >/dev/null
 
 noremap <F1> :help<Space>
@@ -208,26 +230,13 @@ noremap! <F3> <Esc>:TlistToggle<CR>l<Insert>
 noremap <F4> <Esc>:NERDTreeToggle<CR>l<Insert>
 noremap! <F4> <Esc>:NERDTreeToggle<CR>l<Insert>
 
-"map <F5> :exe ":sign place 123 line=" . line(".") ." name=information file=" . expand("%:p")<CR>
-"map <A-F5> :exe ":sign unplace"<CR>
 
 noremap <F6> <Esc>:YRShow<CR>l<Insert>
 noremap! <F6> <Esc>:YRShow<CR>l<Insert>
 
+" nowe linie powyzej/ponizej w trybie normal
 nnoremap + O<esc>
 nnoremap - o<esc>
-"KEY MAPPINGS END
-
-"NERD TREE BEGIN
-let g:NERDTreeMapActivateNode='<CR>' "otwieramy plik/katalog enterem
-let g:NERDTreeWinSize = 35 "szerokość okna nerd tree
-let g:NERDTreeWinPos = "left" "pozycja okna nerd tree
-let g:NERDTreeAutoCenter = 0 "wycentrowanie
-let g:NERDTreeHighlightCursorline = 0 "podswietlanie linii z kursorem
-"set noautochdir
-let g:NERDTreeChDirMode = 2
-let g:NERDTreeShowBookmarks = 1 "wyswietl zakladki
-"NERD TREE END
 
 function ToggleFlag(option,flag)
    exec ('let lopt = &' . a:option)
@@ -241,11 +250,26 @@ endfunction
 noremap <silent> <A-1> :call ToggleFlag("guioptions","m")<BAR>set guioptions?<CR>
 imap <A-1> <C-O><A-1>
 
+
+"KEY MAPPINGS END
+
+"NERD TREE BEGIN
+let g:NERDTreeMapActivateNode='<CR>' "otwieramy plik/katalog enterem
+let g:NERDTreeWinSize = 35 "szerokość okna nerd tree
+let g:NERDTreeWinPos = "left" "pozycja okna nerd tree
+let g:NERDTreeAutoCenter = 0 "wycentrowanie
+let g:NERDTreeHighlightCursorline = 0 "podswietlanie linii z kursorem
+"set noautochdir
+let g:NERDTreeChDirMode = 2
+let g:NERDTreeShowBookmarks = 1 "wyswietl zakladki
+"NERD TREE END
+
+
 "AUTOCMD BEGIN
 if has("autocmd")
    autocmd QuickfixCmdPost make,grep,grepadd,vimgrep :botright cwindow "wlacz okienko quickfix po kazdym make
-   autocmd BufWinLeave *.* mkview! "zapisz widok
-   autocmd BufWinEnter *.* silent loadview "wczytaj widok
+   autocmd BufWinLeave *.* mkview! "zapisz widok przy wylaczeniu
+   autocmd BufWinEnter *.* silent loadview "wczytaj widok przy wlaczeniu
    "filetype plugin indent on
    augroup vimrcEx
       au!
