@@ -12,11 +12,13 @@ XPTinclude
 XPT #inc		" include <>
 #include <`^.h>
 
+XPT ii alias=#include
 
 XPT #include_user	" include ""
 XSET me=fileRoot()
 #include "`me^.h"
 
+XPT in alias=#include_user
 
 XPT #ind alias=#include_user
 
