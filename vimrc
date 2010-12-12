@@ -1,5 +1,3 @@
-"Created       : czw 09 gru 2010 11:51:49  CET
-"Last modified : pią 10 gru 2010 12:19:56  CET
 "PATHOGEN BEGIN
 set nocompatible
 filetype off
@@ -31,21 +29,19 @@ set fencs=utf8
 set enc=utf8
 set tenc=utf8
 set mouse=a
-""set hls
 set formatoptions=tcqmM
-"set wrap!
-"set lbr!
 set textwidth=120
 set helplang=pl,en
 set autoindent
-set smartindent
-set tabstop=4 "4 spacje zamiast taba
-set cindent
-set smarttab
+" set smartindent
+" set cindent
 set ignorecase
-set smartcase
+set smartcase "case sensitive tylko jesli wyszukiwana fraza zawiera wielka litere
+set smarttab
 set expandtab
-set shiftwidth=3
+" set tabstop=4 "4 spacje zamiast taba
+set shiftwidth=4 "4 spacje przyautoformatowaniu kodu"
+set softtabstop=4 "tylko spacje w formatowaniu kodu
 source $VIMRUNTIME/ftplugin/man.vim "wlaczamy plugin man
 
 "GUI BEGIN
@@ -53,14 +49,14 @@ if &t_Co > 2 || has("gui_running")
    syntax on
    set hlsearch
    set cursorline
+   set guifont=Monospace\ 8
    colorscheme desert
 endif
 if has("gui_running")
    "set background=dark
    set lines=58
    set columns=152
-   set guioptions=aegirLt
-   set guifont=Monospace\ 8
+   set guioptions=aegirLt "wylaczony toolbar i menu
 endif
 "GUI END
 
@@ -108,7 +104,7 @@ set statusline+=%m
 set statusline+=%#ro#
 set statusline+=%r
 set statusline+=%#User0#
-set statusline+=%h%w]
+set statusline+=%w]
 set statusline+=%#User1#
 set statusline+=[FORMAT=%{&ff}]
 set statusline+=%#User2#
@@ -135,10 +131,12 @@ set laststatus=2
 
 
 "ALTERNATE BEGIN
+" dodane sciazki do plikow naglowkowych kilku bibliotek
 let g:alternateSearchPath = 'sfr:../source,sfr:../src,sfr:../include,sfr:../inc,abs:/usr/include/opencv,abs:/usr/include/curl'
 "ALTERNATE END
 
 "NERD COMMENTER BEGIN
+" wlaczenie spacji pomiedzy znakiem komentarza, a komentowanym tekstem
 let NERDSpaceDelims=1
 "NERD COMMENTER END
 
@@ -248,6 +246,7 @@ noremap! <F6> <Esc>:YRShow<CR>l<Insert>
 nnoremap + O<esc>
 nnoremap - o<esc>
 
+" wlaczenie/wylaczenie menu
 function ToggleFlag(option,flag)
    exec ('let lopt = &' . a:option)
    if lopt =~ (".*" . a:flag . ".*")
@@ -256,11 +255,8 @@ function ToggleFlag(option,flag)
       exec ('set ' . a:option . '+=' . a:flag)
    endif
 endfunction
-
 noremap <silent> <A-1> :call ToggleFlag("guioptions","m")<BAR>set guioptions?<CR>
 imap <A-1> <C-O><A-1>
-
-
 "KEY MAPPINGS END
 
 "NERD TREE BEGIN
