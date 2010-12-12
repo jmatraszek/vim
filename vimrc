@@ -199,10 +199,10 @@ inoremap <buffer>{ {
 inoremap <buffer>" "
 inoremap <buffer>' '
 let g:xptemplate_vars = "SParg=&BRloop=\n&SPcmd=&BRif=\n&BRstc=\n&SPop=" "dostosowanie snippetow do stylu kodowania
-let g:SuperTabMappingForward = '<Plug>supertabKey' "avoid key conflict with supertab
-let g:xptemplate_fallback = '<Plug>supertabKey' "jesli nic nie pasowalo w xpt sprawdzamy supertab'a
-let g:xptemplate_key = '<Tab>' "xpt uzywa <tab> zamiast <C-\>
-let g:xptemplate_pum_tab_nav = 1 "uzycie <tab>/<S-tab> do nawigacji w popup-msg
+" let g:SuperTabMappingForward = '<Plug>supertabKey' "avoid key conflict with supertab
+" let g:xptemplate_fallback = '<Plug>supertabKey' "jesli nic nie pasowalo w xpt sprawdzamy supertab'a
+" let g:xptemplate_key = '<Tab>' "xpt uzywa <tab> zamiast <C-\>
+" let g:xptemplate_pum_tab_nav = 1 "uzycie <tab>/<S-tab> do nawigacji w popup-msg
 let g:xptemplate_minimal_prefix = 'full' "xpt wlaczy sie tylko po wpisaniu pelnej nazwy snippeta
 "XMTEMPLATE END
 
