@@ -1,3 +1,5 @@
+"Created       : czw 09 gru 2010 11:51:49  CET
+"Last modified : pią 10 gru 2010 12:19:56  CET
 "PATHOGEN BEGIN
 set nocompatible
 filetype off
@@ -29,6 +31,7 @@ set fencs=utf8
 set enc=utf8
 set tenc=utf8
 set mouse=a
+""set hls
 set formatoptions=tcqmM
 "set wrap!
 "set lbr!
@@ -105,7 +108,7 @@ set statusline+=%m
 set statusline+=%#ro#
 set statusline+=%r
 set statusline+=%#User0#
-set statusline+=%w]
+set statusline+=%h%w]
 set statusline+=%#User1#
 set statusline+=[FORMAT=%{&ff}]
 set statusline+=%#User2#
@@ -188,10 +191,20 @@ highlight PmenuSbar term=NONE cterm=NONE ctermfg=7 ctermbg=0 gui=NONE guifg=Whit
 highlight PmenuThumb term=NONE cterm=NONE ctermfg=0 ctermbg=7 gui=NONE guifg=Black guibg=White
 "SUPERTAB END
 
-"SNIPPETS_EMU BEGIN
-let g:snip_start_tag='<'
-let g:snip_end_tag='>'
-"SNIPPETS_EMU END
+"XPTEMPLATES BEGIN
+" bez wstawiania znakow zamykajacych
+inoremap <buffer>( (
+inoremap <buffer>[ [
+inoremap <buffer>{ {
+inoremap <buffer>" "
+inoremap <buffer>' '
+let g:xptemplate_vars = "SParg=&BRloop=\n&SPcmd=&BRif=\n&BRstc=\n&SPop=" "dostosowanie snippetow do stylu kodowania
+let g:SuperTabMappingForward = '<Plug>supertabKey' "avoid key conflict with supertab
+let g:xptemplate_fallback = '<Plug>supertabKey' "jesli nic nie pasowalo w xpt sprawdzamy supertab'a
+let g:xptemplate_key = '<Tab>' "xpt uzywa <tab> zamiast <C-\>
+let g:xptemplate_pum_tab_nav = 1 "uzycie <tab>/<S-tab> do nawigacji w popup-msg
+let g:xptemplate_minimal_prefix = 'full' "xpt wlaczy sie tylko po wpisaniu pelnej nazwy snippeta
+"XMTEMPLATE END
 
 "KEY MAPPING BEGIN
 map Q gq
@@ -246,6 +259,8 @@ endfunction
 
 noremap <silent> <A-1> :call ToggleFlag("guioptions","m")<BAR>set guioptions?<CR>
 imap <A-1> <C-O><A-1>
+
+
 "KEY MAPPINGS END
 
 "NERD TREE BEGIN
