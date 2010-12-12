@@ -5,7 +5,7 @@ call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 filetype plugin indent on
 "PATHOGEN END
-
+    
 set showmode
 set backspace=indent,eol,start
 set virtualedit=onemore
@@ -279,6 +279,7 @@ if has("autocmd")
    "filetype plugin indent on
    augroup vimrcEx
       au!
+      autocmd FileType make setlocal noexpandtab "wylacz zamiane tabow na spacje gdy edytujemy makefile
       autocmd FileType text setlocal textwidth=120
       autocmd FileType c setlocal formatoptions=croq "wrap only comments, not code
       autocmd BufReadPost * "skacz do ostatniej pozycji kursora w pliku
