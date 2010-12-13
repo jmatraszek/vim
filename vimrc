@@ -135,6 +135,16 @@ set laststatus=2
 let g:alternateSearchPath = 'sfr:../source,sfr:../src,sfr:../include,sfr:../inc,abs:/usr/include/opencv,abs:/usr/include/curl'
 "ALTERNATE END
 
+"BASH SUPPORT BEGIN
+ let g:BASH_Support_Root_Dir  = $HOME.'/.vim/bundle/bash_support/bash-support'
+
+" let g:BASH_LocalTemplateFile = $HOME.'/.vim/bundle/bash-support/templates/Templates'
+" let g:BASH_CodeSnippets = $HOME.'/.vim/bundle/bash-support/codesnippets' 
+" let g:BASH_Dictionary_File = $HOME."/.vim/bundle/bash-support/wordlists/bash.list"
+let g:BASH_Root = '&Plugin.B&ash.'
+
+"BASH SUPPORT END
+
 "NERD COMMENTER BEGIN
 " wlaczenie spacji pomiedzy znakiem komentarza, a komentowanym tekstem
 let NERDSpaceDelims=1
@@ -155,7 +165,7 @@ let g:CommandTMaxHeight=15
 let g:Doxy_RootMenu = "&Plugin.Do&xy."
 " naprawiamy sciezki do szablonow, popsute przez pathogen'a :)
 let g:Doxy_LocalTemplateFile  = $HOME.'/.vim/bundle/doxygen_support/doxygen-support/templates/doxygen.templates'
-let g:Doxy_LocalTemplateDir   = $HOME.'/.vim/doxygen_support/doxygen-support/templates/'
+let g:Doxy_LocalTemplateDir   = $HOME.'/.vim/bundle/doxygen_support/doxygen-support/templates/'
 "DOXYGEN TOOLKIT END
 
 
