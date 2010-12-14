@@ -92,9 +92,9 @@ else
 		let s:plugin_dir  	= $HOME.'/.vim/'
 	end
 	"
-	let s:BASH_LocalTemplateFile		= $HOME.'/.vim/bash-support/templates/Templates'
+	let s:BASH_LocalTemplateFile		= $HOME.'/.vim/bundle/bash_support/bash-support/templates/Templates'
 	let s:BASH_LocalTemplateDir			= fnamemodify( s:BASH_LocalTemplateFile, ":p:h" ).'/'
-	let s:BASH_CodeSnippets  				= $HOME.'/.vim/bash-support/codesnippets/'
+	let s:BASH_CodeSnippets  				= $HOME.'/.vim/bundle/bash_support/bash-support/codesnippets/'
 	let s:BASH_BASH				= $SHELL
 	let s:BASH_Man        = 'man'
 	let s:BASH_OutputGvim	= 'vim'
@@ -114,7 +114,7 @@ endif
 "  Modul global variables    {{{1
 "
 let s:BASH_MenuHeader							 = 'yes'
-let s:BASH_Root										 = 'B&ash.'
+let s:BASH_Root										 = '&Plugin.B&ash.'
 let s:BASH_Debugger                = 'term'
 let s:BASH_LineEndCommColDefault   = 49
 let s:BASH_LoadMenus               = 'yes'

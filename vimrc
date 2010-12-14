@@ -5,16 +5,16 @@ call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 filetype plugin indent on
 "PATHOGEN END
-    
+
 set showmode
 set backspace=indent,eol,start
 set virtualedit=onemore
 set autochdir
 if has("vms")
-   set nobackup " do not keep a backup file, use versions instead
+    set nobackup " do not keep a backup file, use versions instead
 else
-   set backup " keep a backup file
-   set backupdir=~/.tmp-vim
+    set backup " keep a backup file
+    set backupdir=~/.tmp-vim
 endif
 set history=500 " keep 50 lines of command line history
 set ruler " show the cursor position all the time
@@ -46,17 +46,17 @@ source $VIMRUNTIME/ftplugin/man.vim "wlaczamy plugin man
 
 "GUI BEGIN
 if &t_Co > 2 || has("gui_running")
-   syntax on
-   set hlsearch
-   set cursorline
-   set guifont=Monospace\ 8
-   colorscheme desert
+    syntax on
+    set hlsearch
+    set cursorline
+    set guifont=Monospace\ 8
+    colorscheme desert
 endif
 if has("gui_running")
-   "set background=dark
-   set lines=58
-   set columns=152
-   set guioptions=aegirLt "wylaczony toolbar i menu
+    "set background=dark
+    set lines=58
+    set columns=152
+    set guioptions=aegirLt "wylaczony toolbar i menu
 endif
 "GUI END
 
@@ -69,18 +69,18 @@ let html_dynamic_folds=1
 
 "STATUSLINE BEGIN
 function! FileSize()
-   let bytes = getfsize(expand("%:p"))
-   if bytes <= 0
-      return ""
-   endif
-   if bytes < 1024 "w bajtach
-      return bytes
-   endif
-   if bytes < 1048576 "w kilobajtach
-      return (bytes / 1024) . "K"
-   else "w megabajtach
-      return (bytes / 1048576) . "M"
-   endif
+    let bytes = getfsize(expand("%:p"))
+    if bytes <= 0
+        return ""
+    endif
+    if bytes < 1024 "w bajtach
+        return bytes
+    endif
+    if bytes < 1048576 "w kilobajtach
+        return (bytes / 1024) . "K"
+    else "w megabajtach
+        return (bytes / 1048576) . "M"
+    endif
 endfunction
 
 hi User0 guibg=#FFE87C guifg=black
@@ -136,13 +136,11 @@ let g:alternateSearchPath = 'sfr:../source,sfr:../src,sfr:../include,sfr:../inc,
 "ALTERNATE END
 
 "BASH SUPPORT BEGIN
- let g:BASH_Support_Root_Dir  = $HOME.'/.vim/bundle/bash_support/bash-support'
-
-" let g:BASH_LocalTemplateFile = $HOME.'/.vim/bundle/bash-support/templates/Templates'
-" let g:BASH_CodeSnippets = $HOME.'/.vim/bundle/bash-support/codesnippets' 
-" let g:BASH_Dictionary_File = $HOME."/.vim/bundle/bash-support/wordlists/bash.list"
+let g:BASH_Support_Root_Dir = $HOME.'/.vim/bundle/bash_support/bash-support'
+let g:BASH_LocalTemplateFile = $HOME.'/.vim/bundle/bash_support/bash-support/templates/Templates'
+let g:BASH_CodeSnippets = $HOME.'/.vim/bundle/bash_support/bash-support/codesnippets' 
+let g:BASH_Dictionary_File = $HOME."/.vim/bundle/bash_support/bash-support/wordlists/bash.list"
 let g:BASH_Root = '&Plugin.B&ash.'
-
 "BASH SUPPORT END
 
 "NERD COMMENTER BEGIN
@@ -181,7 +179,7 @@ highlight ShowMarksHLl gui=bold guibg=LightBlue guifg=Blue
 highlight ShowMarksHLu gui=bold guibg=LightRed guifg=DarkRed 
 "dla innych znacznikow
 highlight ShowMarksHLo gui=bold guibg=LightYellow guifg=DarkYellow
- "dla wielu znacznikow w tej samej linii
+"dla wielu znacznikow w tej samej linii
 highlight ShowMarksHLm gui=bold guibg=LightGreen guifg=DarkGreen
 "SHOWMARKS END
 
@@ -258,12 +256,12 @@ nnoremap - o<esc>
 
 " wlaczenie/wylaczenie menu
 function ToggleFlag(option,flag)
-   exec ('let lopt = &' . a:option)
-   if lopt =~ (".*" . a:flag . ".*")
-      exec ('set ' . a:option . '-=' . a:flag)
-   else
-      exec ('set ' . a:option . '+=' . a:flag)
-   endif
+    exec ('let lopt = &' . a:option)
+    if lopt =~ (".*" . a:flag . ".*")
+        exec ('set ' . a:option . '-=' . a:flag)
+    else
+        exec ('set ' . a:option . '+=' . a:flag)
+    endif
 endfunction
 noremap <silent> <A-1> :call ToggleFlag("guioptions","m")<BAR>set guioptions?<CR>
 imap <A-1> <C-O><A-1>
@@ -283,21 +281,22 @@ let g:NERDTreeShowBookmarks = 1 "wyswietl zakladki
 
 "AUTOCMD BEGIN
 if has("autocmd")
-   autocmd QuickfixCmdPost make,grep,grepadd,vimgrep :botright cwindow "wlacz okienko quickfix po kazdym make
-   autocmd BufWinLeave *.* mkview! "zapisz widok przy wylaczeniu
-   autocmd BufWinEnter *.* silent loadview "wczytaj widok przy wlaczeniu
-   "filetype plugin indent on
-   augroup vimrcEx
-      au!
-      autocmd FileType make setlocal noexpandtab "wylacz zamiane tabow na spacje gdy edytujemy makefile
-      autocmd FileType text setlocal textwidth=120
-      autocmd FileType c setlocal formatoptions=croq "wrap only comments, not code
-      autocmd BufReadPost * "skacz do ostatniej pozycji kursora w pliku
-               \ if line("'\"") > 0 && line("'\"") <= line("$") |
-               \ exe "normal g`\"" |
-               \ endif
-   augroup END
+    autocmd BufEnter * :lchdir %:p:h
+    autocmd QuickfixCmdPost make,grep,grepadd,vimgrep :botright cwindow "wlacz okienko quickfix po kazdym make
+    autocmd BufWinLeave *.* mkview! "zapisz widok przy wylaczeniu
+    autocmd BufWinEnter *.* silent loadview "wczytaj widok przy wlaczeniu
+    "filetype plugin indent on
+    augroup vimrcEx
+        au!
+        autocmd FileType make setlocal noexpandtab "wylacz zamiane tabow na spacje gdy edytujemy makefile
+        autocmd FileType text setlocal textwidth=120
+        autocmd FileType c setlocal formatoptions=croq "wrap only comments, not code
+        autocmd BufReadPost * "skacz do ostatniej pozycji kursora w pliku
+                    \ if line("'\"") > 0 && line("'\"") <= line("$") |
+                    \ exe "normal g`\"" |
+                    \ endif
+    augroup END
 else
-   set autoindent " always set autoindenting on
+    set autoindent " always set autoindenting on
 endif 
 "AUTOCMD END
