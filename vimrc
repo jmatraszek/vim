@@ -148,6 +148,12 @@ let g:BASH_Root = '&Plugin.B&ash.'
 let NERDSpaceDelims=1
 "NERD COMMENTER END
 
+"VIM-RUBY BEGIN
+let g:rubycomplete_buffer_loading = 1
+let g:rubycomplete_classes_in_global = 1
+let g:rubycomplete_rails = 1
+"VIM-RUBY END
+
 "TIMESTAMP BEGIN
 "25 pierwszych i ostatnich linii pliku przeszukiwane pod katem wystapienia taga TIMESTAMP
 let g:timestamp_modelines=25
@@ -189,7 +195,6 @@ highlight ShowMarksHLm gui=bold guibg=LightGreen guifg=DarkGreen
 let g:SuperTabLongestEnhanced = 1
 let g:SuperTabMappingForward = '<tab>'
 let g:SuperTabMappingBackward = '<s-tab>'
-
 "kolory dla pop up menu
 highlight Pmenu term=NONE cterm=NONE ctermfg=7 ctermbg=5 gui=NONE guifg=White guibg=Magenta
 highlight PmenuSel term=NONE cterm=NONE ctermfg=0 ctermbg=7 gui=NONE guifg=Black guibg=White
@@ -291,6 +296,9 @@ if has("autocmd")
         autocmd FileType make setlocal noexpandtab "wylacz zamiane tabow na spacje gdy edytujemy makefile
         autocmd FileType text setlocal textwidth=120
         autocmd FileType c setlocal formatoptions=croq "wrap only comments, not code
+        autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
+        autocmd FileType ruby,eruby set expandtab shiftwidth=2 softtabstop=2
+        autocmd FileType ruby,eruby let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
         autocmd BufReadPost * "skacz do ostatniej pozycji kursora w pliku
                     \ if line("'\"") > 0 && line("'\"") <= line("$") |
                     \ exe "normal g`\"" |
