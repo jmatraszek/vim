@@ -135,11 +135,16 @@ set laststatus=2
 let g:alternateSearchPath = 'sfr:../source,sfr:../src,sfr:../include,sfr:../inc,abs:/usr/include/opencv,abs:/usr/include/curl'
 "ALTERNATE END
 
+
+let g:C_LocalTemplateFile = $HOME.'/.vim/bundle/c/c-support/templates/Templates'
+let g:C_GlobalTemplateFile = $HOME.'/.vim/bundle/c/c-support/templates/Templates'
+
+
 "BASH SUPPORT BEGIN
-let g:BASH_Support_Root_Dir = $HOME.'/.vim/bundle/bash_support/bash-support'
-let g:BASH_LocalTemplateFile = $HOME.'/.vim/bundle/bash_support/bash-support/templates/Templates'
-let g:BASH_CodeSnippets = $HOME.'/.vim/bundle/bash_support/bash-support/codesnippets' 
-let g:BASH_Dictionary_File = $HOME."/.vim/bundle/bash_support/bash-support/wordlists/bash.list"
+let g:BASH_Support_Root_Dir = $HOME.'/.vim/bundle/bash-support/bash-support'
+let g:BASH_LocalTemplateFile = $HOME.'/.vim/bundle/bash-support/bash-support/templates/Templates'
+let g:BASH_CodeSnippets = $HOME.'/.vim/bundle/bash-support/bash-support/codesnippets' 
+let g:BASH_Dictionary_File = $HOME."/.vim/bundle/bash-support/bash-support/wordlists/bash.list"
 let g:BASH_Root = '&Plugin.B&ash.'
 "BASH SUPPORT END
 

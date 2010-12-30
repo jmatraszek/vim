@@ -85,3 +85,6 @@
 [submodule "bundle/tgpg"]
 	path = bundle/tgpg
 	url = https://github.com/tomtom/tgpg_vim.git
+[submodule "bundle/pastie"]
+	path = bundle/pastie
+	url = https://github.com/tpope/vim-pastie.git
