@@ -1,1 +1,0 @@
-hints_man2.vba: call delete('/home/qba/.vim/bundle/hints_man2/ftplugin/c/hints_man2.vim')
