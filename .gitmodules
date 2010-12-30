@@ -4,3 +4,9 @@
 [submodule "bundle/rails"]
 	path = bundle/rails
 	url = git://github.com/tpope/vim-rails.git
+[submodule "/home/qba/.vim/bundle/tgpg"]
+	path = /home/qba/.vim/bundle/tgpg
+	url = https://github.com/tomtom/tgpg_vim.git
+[submodule "bundle/vim-git"]
+	path = bundle/vim-git
+	url = https://github.com/tpope/vim-git.git
