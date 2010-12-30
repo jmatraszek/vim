@@ -67,9 +67,6 @@
 [submodule "bundle/taglist"]
 	path = bundle/taglist
 	url = https://github.com/vim-scripts/taglist.vim.git
-[submodule "bundle/timestamp"]
-	path = bundle/timestamp
-	url = https://github.com/vim-scripts/timestamp.git
 [submodule "bundle/vimoutliner"]
 	path = bundle/vimoutliner
 	url = https://github.com/vim-scripts/TVO--The-Vim-Outliner.git
@@ -85,3 +82,6 @@
 [submodule "bundle/color_pack"]
 	path = bundle/color_pack
 	url = https://github.com/vim-scripts/Color-Sampler-Pack.git
+[submodule "bundle/tgpg"]
+	path = bundle/tgpg
+	url = https://github.com/tomtom/tgpg_vim.git
