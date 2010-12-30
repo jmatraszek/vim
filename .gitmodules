@@ -13,3 +13,72 @@
 [submodule "bundle/crefvim"]
 	path = bundle/crefvim
 	url = https://github.com/vim-scripts/CRefVim.git
+[submodule "bundle/c"]
+	path = bundle/c
+	url = https://github.com/vim-scripts/c.vim.git
+[submodule "bundle/a"]
+	path = bundle/a
+	url = https://github.com/vim-scripts/a.vim.git
+[submodule "bundle/align"]
+	path = bundle/align
+	url = https://github.com/vim-scripts/Align.git
+[submodule "bundle/bash-support"]
+	path = bundle/bash-support
+	url = https://github.com/vim-scripts/bash-support.vim.git
+[submodule "bundle/command-t"]
+	path = bundle/command-t
+	url = https://github.com/vim-scripts/Command-T.git
+[submodule "bundle/doxygen-support"]
+	path = bundle/doxygen-support
+	url = https://github.com/vim-scripts/doxygen-support.vim.git
+[submodule "bundle/hints_man2"]
+	path = bundle/hints_man2
+	url = https://github.com/vim-scripts/Hints-for-C-Library-Functions.git
+[submodule "bundle/hints_man3"]
+	path = bundle/hints_man3
+	url = https://github.com/vim-scripts/Hints-for-C-Library-Functions-B.git
+[submodule "bundle/matchit"]
+	path = bundle/matchit
+	url = https://github.com/vim-scripts/matchit.zip.git
+[submodule "bundle/nerd_commenter"]
+	path = bundle/nerd_commenter
+	url = https://github.com/vim-scripts/The-NERD-Commenter.git
+[submodule "bundle/nerd_tree"]
+	path = bundle/nerd_tree
+	url = https://github.com/vim-scripts/The-NERD-tree.git
+[submodule "bundle/project"]
+	path = bundle/project
+	url = https://github.com/vim-scripts/project.tar.gz.git
+[submodule "bundle/repeat"]
+	path = bundle/repeat
+	url = https://github.com/vim-scripts/repeat.vim.git
+[submodule "bundle/search_complete"]
+	path = bundle/search_complete
+	url = https://github.com/vim-scripts/SearchCompl.vim.git
+[submodule "bundle/show_marks"]
+	path = bundle/show_marks
+	url = https://github.com/vim-scripts/ShowMarks.git
+[submodule "bundle/supertab"]
+	path = bundle/supertab
+	url = https://github.com/vim-scripts/SuperTab.git
+[submodule "bundle/surround"]
+	path = bundle/surround
+	url = https://github.com/vim-scripts/surround.vim.git
+[submodule "bundle/taglist"]
+	path = bundle/taglist
+	url = https://github.com/vim-scripts/taglist.vim.git
+[submodule "bundle/timestamp"]
+	path = bundle/timestamp
+	url = https://github.com/vim-scripts/timestamp.git
+[submodule "bundle/vimoutliner"]
+	path = bundle/vimoutliner
+	url = https://github.com/vim-scripts/TVO--The-Vim-Outliner.git
+[submodule "bundle/xptemplates"]
+	path = bundle/xptemplates
+	url = https://github.com/vim-scripts/xptemplate.git
+[submodule "bundle/yank_ring"]
+	path = bundle/yank_ring
+	url = https://github.com/vim-scripts/YankRing.vim.git
+[submodule "bundle/speeddating"]
+	path = bundle/speeddating
+	url = https://github.com/tpope/vim-speeddating.git
