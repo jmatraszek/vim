@@ -33,7 +33,7 @@ set formatoptions=tcqmM
 set textwidth=120
 set helplang=pl,en
 set autoindent
-" set smartindent
+set smartindent
 " set cindent
 set ignorecase
 set smartcase "case sensitive tylko jesli wyszukiwana fraza zawiera wielka litere
@@ -135,10 +135,10 @@ set laststatus=2
 let g:alternateSearchPath = 'sfr:../source,sfr:../src,sfr:../include,sfr:../inc,abs:/usr/include/opencv,abs:/usr/include/curl'
 "ALTERNATE END
 
-
+"C-SUPPORT BEGIN
 let g:C_LocalTemplateFile = $HOME.'/.vim/bundle/c/c-support/templates/Templates'
 let g:C_GlobalTemplateFile = $HOME.'/.vim/bundle/c/c-support/templates/Templates'
-
+"C-SUPPORT END
 
 "BASH SUPPORT BEGIN
 let g:BASH_Support_Root_Dir = $HOME.'/.vim/bundle/bash-support/bash-support'
@@ -159,10 +159,6 @@ let g:rubycomplete_classes_in_global = 1
 let g:rubycomplete_rails = 1
 "VIM-RUBY END
 
-"TIMESTAMP BEGIN
-"25 pierwszych i ostatnich linii pliku przeszukiwane pod katem wystapienia taga TIMESTAMP
-let g:timestamp_modelines=25
-"TIMESTAMP END
 
 "COMMAND-T BEGIN
 "okno command-t - najwyzej 15 pozycji
@@ -173,8 +169,8 @@ let g:CommandTMaxHeight=15
 " menu Doxy jako submenu Plugin
 let g:Doxy_RootMenu = "&Plugin.Do&xy."
 " naprawiamy sciezki do szablonow, popsute przez pathogen'a :)
-let g:Doxy_LocalTemplateFile  = $HOME.'/.vim/bundle/doxygen_support/doxygen-support/templates/doxygen.templates'
-let g:Doxy_LocalTemplateDir   = $HOME.'/.vim/bundle/doxygen_support/doxygen-support/templates/'
+let g:Doxy_LocalTemplateFile  = $HOME.'/.vim/bundle/doxygen-support/doxygen-support/templates/doxygen.templates'
+let g:Doxy_LocalTemplateDir   = $HOME.'/.vim/bundle/doxygen-support/doxygen-support/templates/'
 "DOXYGEN TOOLKIT END
 
 
@@ -193,7 +189,6 @@ highlight ShowMarksHLo gui=bold guibg=LightYellow guifg=DarkYellow
 "dla wielu znacznikow w tej samej linii
 highlight ShowMarksHLm gui=bold guibg=LightGreen guifg=DarkGreen
 "SHOWMARKS END
-
 
 
 "SUPERTAB BEGIN
@@ -223,6 +218,12 @@ let g:xptemplate_minimal_prefix = 'full' "xpt wlaczy sie tylko po wpisaniu pelne
 "XMTEMPLATE END
 
 "KEY MAPPING BEGIN
+" Fast saving
+nmap <leader>w :w!<cr>
+map <leader>cp :botright cope<cr>
+map <leader>n :cn<cr>
+map <leader>p :cp<cr>
+
 map Q gq
 " szybkie wylaczenie podswietlania wynikow wyszukiwania
 map gn :nohlsearch<CR> 
@@ -263,6 +264,8 @@ noremap! <F6> <Esc>:YRShow<CR>l<Insert>
 " nowe linie powyzej/ponizej w trybie normal
 nnoremap + O<esc>
 nnoremap - o<esc>
+" Remove the Windows ^M - when the encodings gets messed up
+noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
 " wlaczenie/wylaczenie menu
 function ToggleFlag(option,flag)
@@ -288,6 +291,9 @@ let g:NERDTreeChDirMode = 2
 let g:NERDTreeShowBookmarks = 1 "wyswietl zakladki
 "NERD TREE END
 
+"MRU BEGIN
+let MRU_File = $HOME.'.mru-files'
+"MRU END
 
 "AUTOCMD BEGIN
 if has("autocmd")
@@ -304,6 +310,7 @@ if has("autocmd")
         autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
         autocmd FileType ruby,eruby set expandtab shiftwidth=2 softtabstop=2
         autocmd FileType ruby,eruby let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
+        autocmd! bufwritepost vimrc source ~/.vim/vimrc " When vimrc is edited, reload it
         autocmd BufReadPost * "skacz do ostatniej pozycji kursora w pliku
                     \ if line("'\"") > 0 && line("'\"") <= line("$") |
                     \ exe "normal g`\"" |

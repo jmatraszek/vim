@@ -88,3 +88,4 @@
 [submodule "bundle/pastie"]
 	path = bundle/pastie
 	url = https://github.com/tpope/vim-pastie.git
+
