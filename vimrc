@@ -126,6 +126,7 @@ set statusline+=[ASCII=\%03.3b]
 set statusline+=%#User10#
 set statusline+=[HEX=\%02.2B]
 set statusline+=%#User0#
+set statusline+=%{VimBuddy()}
 set laststatus=2
 "STATUSLINE END
 
@@ -310,7 +311,7 @@ if has("autocmd")
         autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
         autocmd FileType ruby,eruby set expandtab shiftwidth=2 softtabstop=2
         autocmd FileType ruby,eruby let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
-        autocmd! bufwritepost vimrc source ~/.vim/vimrc " When vimrc is edited, reload it
+        "autocmd! bufwritepost vimrc source ~/.vim/vimrc " When vimrc is edited, reload it
         autocmd BufReadPost * "skacz do ostatniej pozycji kursora w pliku
                     \ if line("'\"") > 0 && line("'\"") <= line("$") |
                     \ exe "normal g`\"" |

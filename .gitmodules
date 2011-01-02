@@ -89,3 +89,6 @@
 	path = bundle/pastie
 	url = https://github.com/tpope/vim-pastie.git
 
+[submodule "bundle/vimbuddy"]
+	path = bundle/vimbuddy
+	url = https://github.com/vim-scripts/vimbuddy.vim.git
