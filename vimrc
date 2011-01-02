@@ -160,7 +160,6 @@ let g:rubycomplete_classes_in_global = 1
 let g:rubycomplete_rails = 1
 "VIM-RUBY END
 
-
 "COMMAND-T BEGIN
 "okno command-t - najwyzej 15 pozycji
 let g:CommandTMaxHeight=15 
