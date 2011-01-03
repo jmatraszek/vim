@@ -42,20 +42,22 @@ set expandtab
 " set tabstop=4 "4 spacje zamiast taba
 set shiftwidth=4 "4 spacje przyautoformatowaniu kodu"
 set softtabstop=4 "tylko spacje w formatowaniu kodu
+set nocursorline
 source $VIMRUNTIME/ftplugin/man.vim "wlaczamy plugin man
 
 "GUI BEGIN
 if &t_Co > 2 || has("gui_running")
     syntax on
     set hlsearch
-    set cursorline
     set guifont=Monospace\ 8
-    colorscheme desert
-endif
+    colorscheme dante
+    endif
 if has("gui_running")
     "set background=dark
+    colorscheme desert
     set lines=58
     set columns=152
+    set cursorline
     set guioptions=aegirLt "wylaczony toolbar i menu
 endif
 "GUI END
@@ -129,7 +131,6 @@ set statusline+=%#User0#
 set statusline+=%{VimBuddy()}
 set laststatus=2
 "STATUSLINE END
-
 
 "ALTERNATE BEGIN
 " dodane sciazki do plikow naglowkowych kilku bibliotek
@@ -219,7 +220,11 @@ let g:xptemplate_minimal_prefix = 'full' "xpt wlaczy sie tylko po wpisaniu pelne
 
 "KEY MAPPING BEGIN
 " Fast saving
-nmap <leader>w :w!<cr>
+nmap <leader>w :Gwrite<cr>
+nmap <leader>c :Gcommit<cr>
+nmap <leader>s :Gstatus<cr>
+nmap <leader>d :Gdiff<cr>
+nmap <leader>ds :Gdiff --staged<cr>
 map <leader>cp :botright cope<cr>
 map <leader>n :cn<cr>
 map <leader>p :cp<cr>
@@ -291,13 +296,9 @@ let g:NERDTreeChDirMode = 2
 let g:NERDTreeShowBookmarks = 1 "wyswietl zakladki
 "NERD TREE END
 
-"MRU BEGIN
-let MRU_File = $HOME.'.mru-files'
-"MRU END
-
 "AUTOCMD BEGIN
 if has("autocmd")
-    autocmd BufEnter * :lchdir %:p:h
+    autocmd BufEnter * if expand('%:p') !~ '://' | cd %:p:h | endif
     autocmd QuickfixCmdPost make,grep,grepadd,vimgrep :botright cwindow "wlacz okienko quickfix po kazdym make
     autocmd BufWinLeave *.* mkview! "zapisz widok przy wylaczeniu
     autocmd BufWinEnter *.* silent loadview "wczytaj widok przy wlaczeniu
