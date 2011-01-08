@@ -50,7 +50,7 @@ if &t_Co > 2 || has("gui_running")
     syntax on
     set hlsearch
     set guifont=Monospace\ 8
-    colorscheme dante
+    colorscheme wombat256
     endif
 if has("gui_running")
     "set background=dark
@@ -85,19 +85,19 @@ function! FileSize()
     endif
 endfunction
 
-hi User0 guibg=#FFE87C guifg=black
-hi User1 guibg=#FAAFBA guifg=black
-hi User2 guibg=#F778A1 guifg=black
-hi User3 guibg=#F75D59 guifg=black
-hi User4 guibg=#C85A17 guifg=black
-hi User5 guibg=#B1FB17 guifg=black
-hi User6 guibg=#00FF00 guifg=black
-hi User7 guibg=#00CC00 guifg=black
-hi User8 guibg=#8B31C7 guifg=black
-hi User9 guibg=#153E7E guifg=black
-hi User10 guibg=#0000CC guifg=black
-hi mod guibg=#FFE87C guifg=red ctermfg=red
-hi ro guibg=red guifg=black ctermbg=red ctermfg=black
+hi User0 guibg=#FFE87C ctermbg=222 guifg=#000000 ctermfg=0
+hi User1 guibg=#FAAFBA ctermbg=217 guifg=#000000 ctermfg=0
+hi User2 guibg=#F778A1 ctermbg=211 guifg=#000000 ctermfg=0
+hi User3 guibg=#F75D59 ctermbg=203 guifg=#000000 ctermfg=0
+hi User4 guibg=#C85A17 ctermbg=166 guifg=#000000 ctermfg=0
+hi User5 guibg=#B1FB17 ctermbg=154 guifg=#000000 ctermfg=0
+hi User6 guibg=#00FF00 ctermbg=10 guifg=#000000 ctermfg=0
+hi User7 guibg=#00CC00 ctermbg=2 guifg=#000000 ctermfg=0
+hi User8 guibg=#8B31C7 ctermbg=98 guifg=#000000 ctermfg=0
+hi User9 guibg=#153E7E ctermbg=24 guifg=#000000 ctermfg=0
+hi User10 guibg=#0000CC ctermbg=20 guifg=#000000 ctermfg=0
+hi mod guibg=#FFE87C ctermbg=222 guifg=#FF0000 ctermfg=9 
+hi ro guibg=red guifg=#000000 ctermfg=0 
 set statusline=
 set statusline=%#User0#
 set statusline+=[%F 
@@ -141,14 +141,6 @@ let g:alternateSearchPath = 'sfr:../source,sfr:../src,sfr:../include,sfr:../inc,
 let g:C_LocalTemplateFile = $HOME.'/.vim/bundle/c/c-support/templates/Templates'
 let g:C_GlobalTemplateFile = $HOME.'/.vim/bundle/c/c-support/templates/Templates'
 "C-SUPPORT END
-
-"BASH SUPPORT BEGIN
-let g:BASH_Support_Root_Dir = $HOME.'/.vim/bundle/bash-support/bash-support'
-let g:BASH_LocalTemplateFile = $HOME.'/.vim/bundle/bash-support/bash-support/templates/Templates'
-let g:BASH_CodeSnippets = $HOME.'/.vim/bundle/bash-support/bash-support/codesnippets' 
-let g:BASH_Dictionary_File = $HOME."/.vim/bundle/bash-support/bash-support/wordlists/bash.list"
-let g:BASH_Root = '&Plugin.B&ash.'
-"BASH SUPPORT END
 
 "NERD COMMENTER BEGIN
 " wlaczenie spacji pomiedzy znakiem komentarza, a komentowanym tekstem
@@ -194,8 +186,8 @@ highlight ShowMarksHLm gui=bold guibg=LightGreen guifg=DarkGreen
 
 "SUPERTAB BEGIN
 let g:SuperTabLongestEnhanced = 1
-let g:SuperTabMappingForward = '<tab>'
-let g:SuperTabMappingBackward = '<s-tab>'
+let g:SuperTabMappingForward = '<Tab>'
+let g:SuperTabMappingBackward = '<S-Tab>'
 "kolory dla pop up menu
 highlight Pmenu term=NONE cterm=NONE ctermfg=7 ctermbg=5 gui=NONE guifg=White guibg=Magenta
 highlight PmenuSel term=NONE cterm=NONE ctermfg=0 ctermbg=7 gui=NONE guifg=Black guibg=White
@@ -321,3 +313,4 @@ else
     set autoindent " always set autoindenting on
 endif 
 "AUTOCMD END
+
