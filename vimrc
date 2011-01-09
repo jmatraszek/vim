@@ -132,6 +132,10 @@ set statusline+=%{VimBuddy()}
 set laststatus=2
 "STATUSLINE END
 
+"CHANGE CURSOS SHAPE IN DIFFRENT MODES
+let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+
 "ALTERNATE BEGIN
 " dodane sciazki do plikow naglowkowych kilku bibliotek
 let g:alternateSearchPath = 'sfr:../source,sfr:../src,sfr:../include,sfr:../inc,abs:/usr/include/opencv,abs:/usr/include/curl'
