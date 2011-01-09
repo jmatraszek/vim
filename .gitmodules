@@ -40,9 +40,6 @@
 [submodule "bundle/nerd_commenter"]
 	path = bundle/nerd_commenter
 	url = https://github.com/vim-scripts/The-NERD-Commenter.git
-[submodule "bundle/nerd_tree"]
-	path = bundle/nerd_tree
-	url = https://github.com/vim-scripts/The-NERD-tree.git
 [submodule "bundle/project"]
 	path = bundle/project
 	url = https://github.com/vim-scripts/project.tar.gz.git
@@ -94,3 +91,6 @@
 [submodule "bundle/unimpaired"]
 	path = bundle/unimpaired
 	url = https://github.com/tpope/vim-unimpaired.git
+[submodule "bundle/nerd_tree"]
+	path = bundle/nerd_tree
+	url = https://github.com/scrooloose/nerdtree.git

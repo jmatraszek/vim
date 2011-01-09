@@ -218,11 +218,11 @@ let g:xptemplate_minimal_prefix = 'full' "xpt wlaczy sie tylko po wpisaniu pelne
 
 "KEY MAPPING BEGIN
 " Fast saving
-nmap <leader>w :Gwrite<cr>
-nmap <leader>c :Gcommit<cr>
-nmap <leader>s :Gstatus<cr>
-nmap <leader>d :Gdiff<cr>
-nmap <leader>ds :Gdiff --staged<cr>
+nmap <leader>gw :Gwrite<cr>
+nmap <leader>gc :Gcommit<cr>
+nmap <leader>gs :Gstatus<cr>
+nmap <leader>gd :Gdiff<cr>
+nmap <leader>gds :Gdiff --staged<cr>
 map <leader>cp :botright cope<cr>
 map <leader>n :cn<cr>
 map <leader>p :cp<cr>
@@ -292,11 +292,12 @@ let g:NERDTreeHighlightCursorline = 0 "podswietlanie linii z kursorem
 "set noautochdir
 let g:NERDTreeChDirMode = 2
 let g:NERDTreeShowBookmarks = 1 "wyswietl zakladki
+let g:NERDTreeStatusline = -1
 "NERD TREE END
 
 "AUTOCMD BEGIN
 if has("autocmd")
-    autocmd BufEnter * if expand('%:p') !~ '://' | cd %:p:h | endif
+    "autocmd BufEnter * if expand('%:p') !~ '://' | cd %:p:h | endif
     autocmd QuickfixCmdPost make,grep,grepadd,vimgrep :botright cwindow "wlacz okienko quickfix po kazdym make
     autocmd BufWinLeave *.* mkview! "zapisz widok przy wylaczeniu
     autocmd BufWinEnter *.* silent loadview "wczytaj widok przy wlaczeniu
@@ -307,7 +308,7 @@ if has("autocmd")
         autocmd FileType text setlocal textwidth=120
         autocmd FileType c setlocal formatoptions=croq "wrap only comments, not code
         autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
-        autocmd FileType ruby,eruby set expandtab shiftwidth=2 softtabstop=2
+        autocmd FileType ruby,eruby set tabstop=2 expandtab shiftwidth=2 softtabstop=2
         autocmd FileType ruby,eruby let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
         "autocmd! bufwritepost vimrc source ~/.vim/vimrc " When vimrc is edited, reload it
         autocmd BufReadPost * "skacz do ostatniej pozycji kursora w pliku
