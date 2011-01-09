@@ -85,20 +85,20 @@ function! FileSize()
     endif
 endfunction
 
-hi User0 guibg=#D2FE39 ctermbg=191 guifg=#000000 ctermfg=0
+hi User0 guibg=#D2FE39 ctermbg=191 guifg=#000000 ctermfg=16
 hi mod guibg=#D2FE39 ctermbg=191 guifg=#FF0000 ctermfg=169 
-hi ro guibg=#FF0000 ctermbg=169 guifg=#000000 ctermfg=0
-hi User1 guibg=#6FFE39 ctermbg=83 guifg=#000000 ctermfg=0
-hi User2 guibg=#39FE66 ctermbg=85 guifg=#000000 ctermfg=0
-hi User3 guibg=#39FEC9 ctermbg=87 guifg=#000000 ctermfg=0
-hi User4 guibg=#39D2FE ctermbg=81 guifg=#000000 ctermfg=0
-hi User5 guibg=#396FFE ctermbg=69 guifg=#000000 ctermfg=0
-hi User6 guibg=#6639FE ctermbg=99 guifg=#000000 ctermfg=0
-hi User7 guibg=#C939FE ctermbg=171 guifg=#000000 ctermfg=0
-hi User8 guibg=#FE39D2 ctermbg=206 guifg=#000000 ctermfg=0
-hi User9 guibg=#FE396F ctermbg=203 guifg=#000000 ctermfg=0
-hi User10 guibg=#FF6639 ctermbg=208 guifg=#000000 ctermfg=0
-hi User11 guibg=#FEC939 ctermbg=215 guifg=#000000 ctermfg=0
+hi ro guibg=#FF0000 ctermbg=169 guifg=#000000 ctermfg=16
+hi User1 guibg=#6FFE39 ctermbg=83 guifg=#000000 ctermfg=16
+hi User2 guibg=#39FE66 ctermbg=85 guifg=#000000 ctermfg=16
+hi User3 guibg=#39FEC9 ctermbg=87 guifg=#000000 ctermfg=16
+hi User4 guibg=#39D2FE ctermbg=81 guifg=#000000 ctermfg=16
+hi User5 guibg=#396FFE ctermbg=69 guifg=#000000 ctermfg=16
+hi User6 guibg=#6639FE ctermbg=99 guifg=#000000 ctermfg=16
+hi User7 guibg=#C939FE ctermbg=171 guifg=#000000 ctermfg=16
+hi User8 guibg=#FE39D2 ctermbg=206 guifg=#000000 ctermfg=16
+hi User9 guibg=#FE396F ctermbg=203 guifg=#000000 ctermfg=16
+hi User10 guibg=#FF6639 ctermbg=208 guifg=#000000 ctermfg=16
+hi User11 guibg=#FEC939 ctermbg=215 guifg=#000000 ctermfg=16
 
 set statusline=
 set statusline=%#User0#
