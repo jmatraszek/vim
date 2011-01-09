@@ -85,19 +85,21 @@ function! FileSize()
     endif
 endfunction
 
-hi User0 guibg=#FFE87C ctermbg=222 guifg=#000000 ctermfg=0
-hi User1 guibg=#FAAFBA ctermbg=217 guifg=#000000 ctermfg=0
-hi User2 guibg=#F778A1 ctermbg=211 guifg=#000000 ctermfg=0
-hi User3 guibg=#F75D59 ctermbg=203 guifg=#000000 ctermfg=0
-hi User4 guibg=#C85A17 ctermbg=166 guifg=#000000 ctermfg=0
-hi User5 guibg=#B1FB17 ctermbg=154 guifg=#000000 ctermfg=0
-hi User6 guibg=#00FF00 ctermbg=10 guifg=#000000 ctermfg=0
-hi User7 guibg=#00CC00 ctermbg=2 guifg=#000000 ctermfg=0
-hi User8 guibg=#8B31C7 ctermbg=98 guifg=#000000 ctermfg=0
-hi User9 guibg=#153E7E ctermbg=24 guifg=#000000 ctermfg=0
-hi User10 guibg=#0000CC ctermbg=20 guifg=#000000 ctermfg=0
-hi mod guibg=#FFE87C ctermbg=222 guifg=#FF0000 ctermfg=9 
-hi ro guibg=red guifg=#000000 ctermfg=0 
+hi User0 guibg=#D2FE39 ctermbg=191 guifg=#000000 ctermfg=0
+hi mod guibg=#D2FE39 ctermbg=191 guifg=#FF0000 ctermfg=169 
+hi ro guibg=#FF0000 ctermbg=169 guifg=#000000 ctermfg=0
+hi User1 guibg=#6FFE39 ctermbg=83 guifg=#000000 ctermfg=0
+hi User2 guibg=#39FE66 ctermbg=85 guifg=#000000 ctermfg=0
+hi User3 guibg=#39FEC9 ctermbg=87 guifg=#000000 ctermfg=0
+hi User4 guibg=#39D2FE ctermbg=81 guifg=#000000 ctermfg=0
+hi User5 guibg=#396FFE ctermbg=69 guifg=#000000 ctermfg=0
+hi User6 guibg=#6639FE ctermbg=99 guifg=#000000 ctermfg=0
+hi User7 guibg=#C939FE ctermbg=171 guifg=#000000 ctermfg=0
+hi User8 guibg=#FE39D2 ctermbg=206 guifg=#000000 ctermfg=0
+hi User9 guibg=#FE396F ctermbg=203 guifg=#000000 ctermfg=0
+hi User10 guibg=#FF6639 ctermbg=208 guifg=#000000 ctermfg=0
+hi User11 guibg=#FEC939 ctermbg=215 guifg=#000000 ctermfg=0
+
 set statusline=
 set statusline=%#User0#
 set statusline+=[%F 
@@ -127,7 +129,7 @@ set statusline+=%#User9#
 set statusline+=[ASCII=\%03.3b]
 set statusline+=%#User10#
 set statusline+=[HEX=\%02.2B]
-set statusline+=%#User0#
+set statusline+=%#User11#
 set statusline+=%{VimBuddy()}
 set laststatus=2
 "STATUSLINE END
