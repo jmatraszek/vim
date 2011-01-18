@@ -1,3 +1,4 @@
 *.swp
 view/*
 .directory
+.netrwhits
