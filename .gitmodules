@@ -94,3 +94,6 @@
 [submodule "bundle/nerd_tree"]
 	path = bundle/nerd_tree
 	url = https://github.com/scrooloose/nerdtree.git
+[submodule "bundle/vim-task"]
+	path = bundle/vim-task
+	url = git://github.com/samsonw/vim-task.git
