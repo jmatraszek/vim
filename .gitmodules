@@ -19,42 +19,27 @@
 [submodule "bundle/align"]
 	path = bundle/align
 	url = https://github.com/vim-scripts/Align.git
-[submodule "bundle/command-t"]
-	path = bundle/command-t
-	url = https://github.com/vim-scripts/Command-T.git
 [submodule "bundle/doxygen-support"]
 	path = bundle/doxygen-support
 	url = https://github.com/vim-scripts/doxygen-support.vim.git
 [submodule "bundle/matchit"]
 	path = bundle/matchit
 	url = https://github.com/vim-scripts/matchit.zip.git
-[submodule "bundle/nerd_commenter"]
-	path = bundle/nerd_commenter
-	url = https://github.com/vim-scripts/The-NERD-Commenter.git
 [submodule "bundle/project"]
 	path = bundle/project
 	url = https://github.com/vim-scripts/project.tar.gz.git
-[submodule "bundle/repeat"]
-	path = bundle/repeat
-	url = https://github.com/vim-scripts/repeat.vim.git
 [submodule "bundle/search_complete"]
 	path = bundle/search_complete
 	url = https://github.com/vim-scripts/SearchCompl.vim.git
 [submodule "bundle/show_marks"]
 	path = bundle/show_marks
 	url = https://github.com/vim-scripts/ShowMarks.git
-[submodule "bundle/surround"]
-	path = bundle/surround
-	url = https://github.com/vim-scripts/surround.vim.git
 [submodule "bundle/taglist"]
 	path = bundle/taglist
 	url = https://github.com/vim-scripts/taglist.vim.git
 [submodule "bundle/vimoutliner"]
 	path = bundle/vimoutliner
 	url = https://github.com/vim-scripts/TVO--The-Vim-Outliner.git
-[submodule "bundle/xptemplates"]
-	path = bundle/xptemplates
-	url = https://github.com/vim-scripts/xptemplate.git
 [submodule "bundle/yank_ring"]
 	path = bundle/yank_ring
 	url = https://github.com/vim-scripts/YankRing.vim.git
@@ -82,3 +67,6 @@
 [submodule "bundle/supertab"]
 	path = bundle/supertab
 	url = https://github.com/ervandew/supertab.git
+[submodule "bundle/ruby-matchit"]
+	path = bundle/ruby-matchit
+	url = https://github.com/vim-scripts/ruby-matchit.git
