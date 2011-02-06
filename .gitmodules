@@ -10,9 +10,6 @@
 [submodule "bundle/fugitive"]
 	path = bundle/fugitive
 	url = git://github.com/tpope/vim-fugitive.git
-[submodule "bundle/crefvim"]
-	path = bundle/crefvim
-	url = https://github.com/vim-scripts/CRefVim.git
 [submodule "bundle/c"]
 	path = bundle/c
 	url = https://github.com/vim-scripts/c.vim.git
@@ -28,12 +25,6 @@
 [submodule "bundle/doxygen-support"]
 	path = bundle/doxygen-support
 	url = https://github.com/vim-scripts/doxygen-support.vim.git
-[submodule "bundle/hints_man2"]
-	path = bundle/hints_man2
-	url = https://github.com/vim-scripts/Hints-for-C-Library-Functions.git
-[submodule "bundle/hints_man3"]
-	path = bundle/hints_man3
-	url = https://github.com/vim-scripts/Hints-for-C-Library-Functions-B.git
 [submodule "bundle/matchit"]
 	path = bundle/matchit
 	url = https://github.com/vim-scripts/matchit.zip.git
@@ -52,9 +43,6 @@
 [submodule "bundle/show_marks"]
 	path = bundle/show_marks
 	url = https://github.com/vim-scripts/ShowMarks.git
-[submodule "bundle/supertab"]
-	path = bundle/supertab
-	url = https://github.com/vim-scripts/SuperTab.git
 [submodule "bundle/surround"]
 	path = bundle/surround
 	url = https://github.com/vim-scripts/surround.vim.git
@@ -82,12 +70,6 @@
 [submodule "bundle/pastie"]
 	path = bundle/pastie
 	url = https://github.com/tpope/vim-pastie.git
-[submodule "bundle/vimbuddy"]
-	path = bundle/vimbuddy
-	url = https://github.com/vim-scripts/vimbuddy.vim.git
-[submodule "bundle/scrollcolors"]
-	path = bundle/scrollcolors
-	url = https://github.com/vim-scripts/ScrollColors.git
 [submodule "bundle/unimpaired"]
 	path = bundle/unimpaired
 	url = https://github.com/tpope/vim-unimpaired.git
