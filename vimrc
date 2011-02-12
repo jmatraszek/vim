@@ -43,6 +43,7 @@ set expandtab
 set shiftwidth=4 "4 spacje przyautoformatowaniu kodu"
 set softtabstop=4 "tylko spacje w formatowaniu kodu
 set nocursorline
+set paste
 source $VIMRUNTIME/ftplugin/man.vim "wlaczamy plugin man
 " no list special keys
 set nolist
@@ -159,6 +160,21 @@ let g:C_LocalTemplateFile = $HOME.'/.vim/bundle/c/c-support/templates/Templates'
 let g:C_GlobalTemplateFile = $HOME.'/.vim/bundle/c/c-support/templates/Templates'
 "C-SUPPORT END
 
+"MINIBUFEXPLORER BEGIN
+let g:miniBufExplMapWindowNavVim = 1
+let g:miniBufExplMapWindowNavArrows = 1
+let g:miniBufExplMapCTabSwitchBufs = 1
+let g:miniBufExplModSelTarget = 1
+let g:miniBufExplUseSingleClick = 1
+
+hi MBEVisibleActive guifg=#8181F7 guibg=#5858FA
+hi MBEVisibleChangedActive guifg=#F32020 guibg=#C0C0C0
+hi MBEVisibleChanged guifg=#F34227 guibg=#808080
+hi MBEVisibleNormal guifg=#A6DB29 guibg=#808080
+hi MBEChanged guifg=#F34227 guibg=#808080
+hi MBENormal guifg=#A6DB29 guibg=#808080
+"MINIBUFEXPLORER END
+
 "NERD COMMENTER BEGIN
 " wlaczenie spacji pomiedzy znakiem komentarza, a komentowanym tekstem
 let NERDSpaceDelims=1
@@ -173,6 +189,8 @@ let g:rubycomplete_rails = 1
 "COMMAND-T BEGIN
 "okno command-t - najwyzej 15 pozycji
 let g:CommandTMaxHeight=15 
+noremap <F5> <Esc>:CommandT<CR>
+noremap! <F5> <Esc>:CommandT<CR>
 "COMMAND-T END
 
 "DOXYGEN TOOLKIT BEGIN
@@ -189,7 +207,6 @@ let g:Doxy_LocalTemplateDir   = $HOME.'/.vim/bundle/doxygen-support/doxygen-supp
 let showmarks_enable=0
 "znaczniki, ktorych bedziemy uzywac, bez Z zeby nam nie kolidowalo z mapowaniem <F2>
 let showmarks_include = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXY" 
-
 "kolory dla znacznikow a-z
 highlight ShowMarksHLl gui=bold guibg=LightBlue guifg=Blue 
 "dla znacznikow A-Z
@@ -202,6 +219,8 @@ highlight ShowMarksHLm gui=bold guibg=LightGreen guifg=DarkGreen
 
 "YANKRING BEGIN
 let g:yankring_history_file = '.yankring_history.txt'
+noremap <F6> <Esc>:YRShow<CR>
+noremap! <F6> <Esc>:YRShow<CR>
 "YANKRING END
 
 "SUPERTAB BEGIN
@@ -225,6 +244,57 @@ let g:xptemplate_pum_tab_nav = 1 "uzycie <tab>/<S-tab> do nawigacji w popup-msg
 let g:xptemplate_minimal_prefix = 'full' "xpt wlaczy sie tylko po wpisaniu pelnej nazwy snippeta
 "XMTEMPLATE END
 
+"TAGLIST BEGIN
+noremap <F3> <Esc>:TlistToggle<CR>
+noremap! <F3> <Esc>:TlistToggle<CR>
+if has("autocmd")
+    autocmd BufWinEnter *Tag_List* setlocal statusline=%#User11#%F
+end
+"TAGLIST END
+
+"FUGITIVE BEGIN
+nmap <leader>gw :Gwrite<cr>
+nmap <leader>gc :Gcommit<cr>
+nmap <leader>gs :Gstatus<cr>
+nmap <leader>gd :Gdiff<cr>
+nmap <leader>gds :Gdiff --staged<cr>
+"FUGITIVE END
+
+"NERD TREE BEGIN
+noremap <F4> <Esc>:NERDTreeToggle<CR>
+noremap! <F4> <Esc>:NERDTreeToggle<CR>
+let g:NERDTreeMapActivateNode='<CR>' "otwieramy plik/katalog enterem
+let g:NERDTreeWinSize = 35 "szerokość okna nerd tree
+let g:NERDTreeWinPos = "left" "pozycja okna nerd tree
+let g:NERDTreeAutoCenter = 0 "wycentrowanie
+let g:NERDTreeHighlightCursorline = 0 "podswietlanie linii z kursorem
+let g:NERDTreeChDirMode = 0
+let g:NERDTreeShowBookmarks = 1 "wyswietl zakladki
+let g:NERDTreeStatusline = -1
+if has("autocmd")
+    autocmd BufWinEnter NERD_* setlocal statusline=%#User11#%F
+end
+"NERD TREE END
+
+"VIM RUBY BEGIN
+if has("autocmd")
+    autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
+    autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
+    autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
+    autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+end
+"VIM RUBY END
+
+
+"VIM TASK BEGIN
+inoremap <silent> <buffer> <C-S-CR> <ESC>:call Toggle_task_status()<CR>i
+noremap <silent> <buffer> <C-S-CR> :call Toggle_task_status()<CR>
+if has("autocmd")
+    autocmd BufNewFile,BufRead *todo.txt,*.task,*.tasks  setfiletype task
+end
+"VIM TASK END
+
+
 "KEY MAPPING BEGIN
 " moving in a right way :)
 nnoremap <up> <nop>
@@ -238,12 +308,6 @@ nnoremap <right> <nop>
 nnoremap j gj
 nnoremap k gk
 
-" Fast saving
-nmap <leader>gw :Gwrite<cr>
-nmap <leader>gc :Gcommit<cr>
-nmap <leader>gs :Gstatus<cr>
-nmap <leader>gd :Gdiff<cr>
-nmap <leader>gds :Gdiff --staged<cr>
 map <leader>cp :botright cope<cr>
 map <leader>n :cnext<cr>
 map <leader>p :cprev<cr>
@@ -257,7 +321,7 @@ vmap <C-Up> [egv
 vmap <C-Down> ]egv
 " Visually select the text that was last edited/pasted
 nmap gV `[v`]
-
+" windows movement
 map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
@@ -296,19 +360,6 @@ noremap! <F1> :help<Space>
 noremap <F2> <Esc>mZggVG=`Z:delmarks Z<CR>lzz<Insert>
 noremap! <F2> <Esc>mZggVG=`Z:delmarks Z<CR>lzz<Insert>
 
-noremap <F3> <Esc>:TlistToggle<CR>
-noremap! <F3> <Esc>:TlistToggle<CR>
-
-noremap <F4> <Esc>:NERDTreeToggle<CR>
-noremap! <F4> <Esc>:NERDTreeToggle<CR>
-
-noremap <F5> <Esc>:CommandT<CR>
-noremap! <F5> <Esc>:CommandT<CR>
-
-
-noremap <F6> <Esc>:YRShow<CR>
-noremap! <F6> <Esc>:YRShow<CR>
-
 " nowe linie powyzej/ponizej w trybie normal
 nnoremap + O<esc>
 nnoremap - o<esc>
@@ -330,29 +381,11 @@ imap <A-1> <C-O><A-1>
 
 
 
-let g:NERDTreeMapActivateNode='<CR>' "otwieramy plik/katalog enterem
-let g:NERDTreeWinSize = 35 "szerokość okna nerd tree
-let g:NERDTreeWinPos = "left" "pozycja okna nerd tree
-let g:NERDTreeAutoCenter = 0 "wycentrowanie
-let g:NERDTreeHighlightCursorline = 0 "podswietlanie linii z kursorem
-let g:NERDTreeChDirMode = 0
-let g:NERDTreeShowBookmarks = 1 "wyswietl zakladki
-let g:NERDTreeStatusline = -1
-"NERD TREE END
-
-"VIM TASK BEGIN
-inoremap <silent> <buffer> <C-S-CR> <ESC>:call Toggle_task_status()<CR>i
-noremap <silent> <buffer> <C-S-CR> :call Toggle_task_status()<CR>
-"VIM TASK END
-
-
 "AUTOCMD BEGIN
 if has("autocmd")
     autocmd QuickfixCmdPost make,grep,grepadd,vimgrep :botright cwindow "wlacz okienko quickfix po kazdym make
     autocmd BufWinLeave *.* mkview! "zapisz widok przy wylaczeniu
     autocmd BufWinEnter *.* silent loadview "wczytaj widok przy wlaczeniu
-    autocmd BufWinEnter NERD_* setlocal statusline=%#User11#%F
-    autocmd BufWinEnter *Tag_List* setlocal statusline=%#User11#%F
 
     filetype plugin indent on
     augroup vimrcEx
@@ -360,12 +393,7 @@ if has("autocmd")
 	autocmd FileType make setlocal noexpandtab "wylacz zamiane tabow na spacje gdy edytujemy makefile
 	autocmd FileType text setlocal textwidth=120
 	autocmd FileType c setlocal formatoptions=croq "wrap only comments, not code
-	autocmd FileType ruby,eruby setlocal omnifunc=rubycomplete#Complete
-	autocmd FileType ruby,eruby setlocal tabstop=2 expandtab shiftwidth=2 softtabstop=2
-	autocmd FileType ruby,eruby setlocal makeprg=ruby\ -c\ %  
 	"autocmd FileType ruby,eruby let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
-	"autocmd! bufwritepost vimrc source ~/.vim/vimrc " When vimrc is edited, reload it
-	autocmd BufNewFile,BufRead *todo.txt,*.task,*.tasks  setfiletype task
 	autocmd BufReadPost * "skacz do ostatniej pozycji kursora w pliku
 		    \ if line("'\"") > 0 && line("'\"") <= line("$") |
 		    \ exe "normal g`\"" |
