@@ -110,6 +110,7 @@ hi User10 guibg=#FF6639 ctermbg=208 guifg=#000000 ctermfg=16
 hi User11 guibg=#FEC939 ctermbg=215 guifg=#FF0000 ctermfg=169
 
 
+
 set statusline=
 set statusline=%#User0#
 set statusline+=[%f 
@@ -174,6 +175,11 @@ hi MBEVisibleNormal guifg=#A6DB29 guibg=#808080
 hi MBEChanged guifg=#F34227 guibg=#808080
 hi MBENormal guifg=#A6DB29 guibg=#808080
 "MINIBUFEXPLORER END
+
+"SYNTASTIC BEGIN
+let g:syntastic_enable_signs = 1
+let g:syntastic_auto_loc_list = 1
+"SYNTASTIC END
 
 "NERD COMMENTER BEGIN
 " wlaczenie spacji pomiedzy znakiem komentarza, a komentowanym tekstem
@@ -294,6 +300,16 @@ if has("autocmd")
 end
 "VIM TASK END
 
+"UNIMPAIRED BEGIN
+" Bubble single lines
+nmap <C-Up> [e
+nmap <C-Down> ]e
+" Bubble multiple lines
+vmap <C-Up> [egv
+vmap <C-Down> ]egv
+" Visually select the text that was last edited/pasted
+nmap gV `[v`]
+"UNIMPAIRED END
 
 "KEY MAPPING BEGIN
 " moving in a right way :)
@@ -313,14 +329,6 @@ map <leader>n :cnext<cr>
 map <leader>p :cprev<cr>
 map <leader>cx :cclose<cr>
 map <leader>wr :w !ruby -c<cr>
-" Bubble single lines
-nmap <C-Up> [e
-nmap <C-Down> ]e
-" Bubble multiple lines
-vmap <C-Up> [egv
-vmap <C-Down> ]egv
-" Visually select the text that was last edited/pasted
-nmap gV `[v`]
 " windows movement
 map <C-h> <C-w>h
 map <C-j> <C-w>j
