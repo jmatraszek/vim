@@ -59,6 +59,8 @@ I've bundled following plugins:
 * <b>Surround</b> - find and edit surrounding parenthesis and so on.
 * <b>Syntastic</b> - check syntax when saving file.
 * <b>Taglist</b> - browse code's tags.
+* <b>TextObj-User</b> - support for user-defined text objects.
+* <b>TextObj-RubyBlock</b> - support for Ruby block test objects.
 * <b>Tgpg</b> - edit encrypted files.
 * <b>Unimpaired</b> - several pairs of bracket mappings.
 * <b>Vim-Git</b> - Vim git runtime files.
