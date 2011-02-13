@@ -38,9 +38,11 @@ configuration options in my vimrc are grouped by plugin.
 I've bundled following plugins:
 * <b>A</b> - alternate *.c and *.h files quickly.
 * <b>Align</b> - easily align text.
+* <b>ApiDock</b> - search ApiDock for word under the cursor.
 * <b>C</b> - C/C++ IDE.
 * <b>Color-Pack</b> - many colorschemes to choose fro.
 * <b>Command-T</b> - easily open files.
+* <b>DBExt</b> - database extension for Vim.
 * <b>Doxygen-Support</b> - support for writing doxygen.
 * <b>Fugitive</b> - git interface within Vim.
 * <b>MatchIt</b> - extends the % key.
@@ -51,7 +53,6 @@ I've bundled following plugins:
 * <b>Project</b> - organize and navigate project of files.
 * <b>Rails</b> - Ruby on Rails IDE.
 * <b>Repeat</b> - repeat the previous surrounding command.
-* <b>Ruby-Matchit</b> - make % match ruby keywords.
 * <b>ShowMarks</b> - place and hide marks.
 * <b>Speeddating</b> - increment/decrement dates, times and more.
 * <b>Supertab</b> - autocomplete with Tab key.
@@ -63,6 +64,7 @@ I've bundled following plugins:
 * <b>Vim-Git</b> - Vim git runtime files.
 * <b>Vim-Preview</b> - easily preview markup files.
 * <b>Vim-RDoc</b> - adding RDoc syntax.
+* <b>Vim-RSpec</b> - run RSpecs from within Vim.
 * <b>Vim-Task</b> - getting things done in Vim.
 * <b>The Vim Outliner</b> - outliner for Vim.
 * <b>XPTemplate</b> - best code snippets.

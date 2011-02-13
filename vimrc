@@ -2,7 +2,7 @@
 set nocompatible
 filetype off
 call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+" call pathogen#helptags()
 filetype plugin indent on
 "PATHOGEN END
 
@@ -248,6 +248,7 @@ let g:xptemplate_fallback = '<Plug>supertabKey' "jesli nic nie pasowalo w xpt sp
 let g:xptemplate_key = '<Tab>' "xpt uzywa <tab> zamiast <C-\>
 let g:xptemplate_pum_tab_nav = 1 "uzycie <tab>/<S-tab> do nawigacji w popup-msg
 let g:xptemplate_minimal_prefix = 'full' "xpt wlaczy sie tylko po wpisaniu pelnej nazwy snippeta
+let g:xptemplate_brace_complete = 1 "auto complete craces
 "XMTEMPLATE END
 
 "TAGLIST BEGIN

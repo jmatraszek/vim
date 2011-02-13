@@ -1,99 +1,102 @@
 [submodule "bundle/vim-ruby"]
-	path = bundle/vim-ruby
-	url = git://github.com/vim-ruby/vim-ruby.git
+    path = bundle/vim-ruby
+    url = git://github.com/vim-ruby/vim-ruby.git
 [submodule "bundle/rails"]
-	path = bundle/rails
-	url = git://github.com/tpope/vim-rails.git
+    path = bundle/rails
+    url = git://github.com/tpope/vim-rails.git
 [submodule "bundle/vim-git"]
-	path = bundle/vim-git
-	url = https://github.com/tpope/vim-git.git
+    path = bundle/vim-git
+    url = https://github.com/tpope/vim-git.git
 [submodule "bundle/fugitive"]
-	path = bundle/fugitive
-	url = git://github.com/tpope/vim-fugitive.git
+    path = bundle/fugitive
+    url = git://github.com/tpope/vim-fugitive.git
 [submodule "bundle/c"]
-	path = bundle/c
-	url = https://github.com/vim-scripts/c.vim.git
+    path = bundle/c
+    url = https://github.com/vim-scripts/c.vim.git
 [submodule "bundle/a"]
-	path = bundle/a
-	url = https://github.com/vim-scripts/a.vim.git
+    path = bundle/a
+    url = https://github.com/vim-scripts/a.vim.git
 [submodule "bundle/align"]
-	path = bundle/align
-	url = https://github.com/vim-scripts/Align.git
+    path = bundle/align
+    url = https://github.com/vim-scripts/Align.git
 [submodule "bundle/doxygen-support"]
-	path = bundle/doxygen-support
-	url = https://github.com/vim-scripts/doxygen-support.vim.git
+    path = bundle/doxygen-support
+    url = https://github.com/vim-scripts/doxygen-support.vim.git
 [submodule "bundle/matchit"]
-	path = bundle/matchit
-	url = https://github.com/vim-scripts/matchit.zip.git
+    path= bundle/matchit
+    url = https://github.com/vim-scripts/matchit.zip.git
 [submodule "bundle/project"]
-	path = bundle/project
-	url = https://github.com/vim-scripts/project.tar.gz.git
-[submodule "bundle/search_complete"]
-	path = bundle/search_complete
-	url = https://github.com/vim-scripts/SearchCompl.vim.git
+    path = bundle/project
+    url = https://github.com/vim-scripts/project.tar.gz.git
 [submodule "bundle/show_marks"]
-	path = bundle/show_marks
-	url = https://github.com/vim-scripts/ShowMarks.git
+    path = bundle/show_marks
+    url = https://github.com/vim-scripts/ShowMarks.git
 [submodule "bundle/taglist"]
-	path = bundle/taglist
-	url = https://github.com/vim-scripts/taglist.vim.git
+    path = bundle/taglist
+    url = https://github.com/vim-scripts/taglist.vim.git
 [submodule "bundle/vimoutliner"]
-	path = bundle/vimoutliner
-	url = https://github.com/vim-scripts/TVO--The-Vim-Outliner.git
+    path = bundle/vimoutliner
+    url = https://github.com/vim-scripts/TVO--The-Vim-Outliner.git
 [submodule "bundle/yank_ring"]
-	path = bundle/yank_ring
-	url = https://github.com/vim-scripts/YankRing.vim.git
+    path = bundle/yank_ring
+    url = https://github.com/vim-scripts/YankRing.vim.git
 [submodule "bundle/speeddating"]
-	path = bundle/speeddating
-	url = https://github.com/tpope/vim-speeddating.git
+    path = bundle/speeddating
+    url = https://github.com/tpope/vim-speeddating.git
 [submodule "bundle/color_pack"]
-	path = bundle/color_pack
-	url = https://github.com/vim-scripts/Color-Sampler-Pack.git
+    path = bundle/color_pack
+    url = https://github.com/vim-scripts/Color-Sampler-Pack.git
 [submodule "bundle/tgpg"]
-	path = bundle/tgpg
-	url = https://github.com/tomtom/tgpg_vim.git
+    path = bundle/tgpg
+    url = https://github.com/tomtom/tgpg_vim.git
 [submodule "bundle/pastie"]
-	path = bundle/pastie
-	url = https://github.com/tpope/vim-pastie.git
+    path = bundle/pastie
+    url = https://github.com/tpope/vim-pastie.git
 [submodule "bundle/unimpaired"]
-	path = bundle/unimpaired
-	url = https://github.com/tpope/vim-unimpaired.git
+    path = bundle/unimpaired
+    url = https://github.com/tpope/vim-unimpaired.git
 [submodule "bundle/nerd_tree"]
-	path = bundle/nerd_tree
-	url = https://github.com/scrooloose/nerdtree.git
+    path = bundle/nerd_tree
+    url = https://github.com/scrooloose/nerdtree.git
 [submodule "bundle/vim-task"]
-	path = bundle/vim-task
-	url = git://github.com/samsonw/vim-task.git
+    path = bundle/vim-task
+    url = git://github.com/samsonw/vim-task.git
 [submodule "bundle/supertab"]
-	path = bundle/supertab
-	url = https://github.com/ervandew/supertab.git
-[submodule "bundle/ruby-matchit"]
-	path = bundle/ruby-matchit
-	url = https://github.com/vim-scripts/ruby-matchit.git
+    path = bundle/supertab
+    url = https://github.com/ervandew/supertab.git
 [submodule "bundle/syntastic"]
-	path = bundle/syntastic
-	url = https://github.com/scrooloose/syntastic.git
+    path = bundle/syntastic
+    url = https://github.com/scrooloose/syntastic.git
 [submodule "bundle/nerd_commenter"]
-	path = bundle/nerd_commenter
-	url = https://github.com/scrooloose/nerdcommenter.git
+    path = bundle/nerd_commenter
+    url = https://github.com/scrooloose/nerdcommenter.git
 [submodule "bundle/repeat"]
-	path = bundle/repeat
-	url = https://github.com/tpope/vim-repeat.git
+    path = bundle/repeat
+    url = https://github.com/tpope/vim-repeat.git
 [submodule "bundle/command-t"]
-	path = bundle/command-t
-	url = https://github.com/wincent/Command-T.git
+    path = bundle/command-t
+    url = https://github.com/wincent/Command-T.git
 [submodule "bundle/surround"]
-	path = bundle/surround
-	url = https://github.com/tpope/vim-surround.git
+    path = bundle/surround
+    url = https://github.com/tpope/vim-surround.git
 [submodule "bundle/vim-rdoc"]
-	path = bundle/vim-rdoc
-	url = https://github.com/hallison/vim-rdoc.git
+    path = bundle/vim-rdoc
+    url = https://github.com/hallison/vim-rdoc.git
 [submodule "bundle/xptemplate"]
-	path = bundle/xptemplate
-	url = https://github.com/drmingdrmer/xptemplate-dist.git
+    path = bundle/xptemplate
+    url = https://github.com/drmingdrmer/xptemplate-dist.git
 [submodule "bundle/vim-preview"]
-	path = bundle/vim-preview
-	url = https://github.com/greyblake/vim-preview.git
+    path = bundle/vim-preview
+    url = https://github.com/greyblake/vim-preview.git
 [submodule "bundle/minibufexplorer"]
-	path = bundle/minibufexplorer
-	url = https://github.com/fholgado/minibufexpl.vim.git
+    path = bundle/minibufexplorer
+    url = https://github.com/fholgado/minibufexpl.vim.git
+[submodule "bundle/vim-rspec"]
+    path = bundle/vim-rspec
+    url = https://github.com/taq/vim-rspec.git
+[submodule "bundle/apidock"]
+    path = bundle/apidock
+    url = https://github.com/mileszs/apidock.vim.git
+[submodule "bundle/dbext"]
+    path = bundle/dbext
+    url = https://github.com/vim-scripts/dbext.vim.git
