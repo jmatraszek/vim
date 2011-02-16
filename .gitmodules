@@ -88,21 +88,24 @@
 [submodule "bundle/vim-preview"]
     path = bundle/vim-preview
     url = https://github.com/greyblake/vim-preview.git
-[submodule "bundle/minibufexplorer"]
-    path = bundle/minibufexplorer
-    url = https://github.com/fholgado/minibufexpl.vim.git
 [submodule "bundle/vim-rspec"]
     path = bundle/vim-rspec
     url = https://github.com/taq/vim-rspec.git
 [submodule "bundle/apidock"]
     path = bundle/apidock
     url = https://github.com/mileszs/apidock.vim.git
-[submodule "bundle/dbext"]
-    path = bundle/dbext
-    url = https://github.com/vim-scripts/dbext.vim.git
 [submodule "bundle/textobj-user"]
 	path = bundle/textobj-user
 	url = https://github.com/kana/vim-textobj-user.git
 [submodule "bundle/textobj-rubyblock"]
 	path = bundle/textobj-rubyblock
 	url = https://github.com/nelstrom/vim-textobj-rubyblock.git
+[submodule "bundle/tasklist"]
+	path = bundle/tasklist
+	url = https://github.com/vim-scripts/TaskList.vim.git
+[submodule "bundle/tlib"]
+	path = bundle/tlib
+	url = https://github.com/tomtom/tlib_vim.git
+[submodule "bundle/quickfix_signs"]
+	path = bundle/quickfix_signs
+	url = https://github.com/tomtom/tlib_vim.git

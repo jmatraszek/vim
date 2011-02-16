@@ -6,7 +6,7 @@
 == Installation
 First of all you have to clone repository:
 
-  git clone git@github.com:jmatraszek/vim.git .vim
+  git clone git://github.com/jmatraszek/vim.git .vim
 
 and init submodules:
 
@@ -16,6 +16,10 @@ and init submodules:
 After that you have to make a symbolic link to vimrc file:
 
   ln -s .vim/vimrc ~/.vimrc
+
+And create a directory for backup files:
+
+  mkdir ~/.tmp-vim
 
 If you want to use command-t you have to build C extension:
 
@@ -42,15 +46,14 @@ I've bundled following plugins:
 * <b>C</b> - C/C++ IDE.
 * <b>Color-Pack</b> - many colorschemes to choose fro.
 * <b>Command-T</b> - easily open files.
-* <b>DBExt</b> - database extension for Vim.
 * <b>Doxygen-Support</b> - support for writing doxygen.
 * <b>Fugitive</b> - git interface within Vim.
 * <b>MatchIt</b> - extends the % key.
-* <b>MiniBufExplorer</b> - elegant buffer explorer.
 * <b>NERD-Commenter</b> - easily comment (blocks of) code.
 * <b>NERD-Tree</b> - directory tree explorer.
 * <b>Pastie</b> - paste code to Pastie from within Vim.
 * <b>Project</b> - organize and navigate project of files.
+* <b>Quickfix signs</b> - mark quickfix item with marks.
 * <b>Rails</b> - Ruby on Rails IDE.
 * <b>Repeat</b> - repeat the previous surrounding command.
 * <b>ShowMarks</b> - place and hide marks.
@@ -59,8 +62,10 @@ I've bundled following plugins:
 * <b>Surround</b> - find and edit surrounding parenthesis and so on.
 * <b>Syntastic</b> - check syntax when saving file.
 * <b>Taglist</b> - browse code's tags.
+* <b>Tasklist</b> - Eclipse like task list.
 * <b>TextObj-User</b> - support for user-defined text objects.
 * <b>TextObj-RubyBlock</b> - support for Ruby block test objects.
+* <b>Tlib</b> - library providing some utility functions.
 * <b>Tgpg</b> - edit encrypted files.
 * <b>Unimpaired</b> - several pairs of bracket mappings.
 * <b>Vim-Git</b> - Vim git runtime files.

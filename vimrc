@@ -2,7 +2,7 @@
 set nocompatible
 filetype off
 call pathogen#runtime_append_all_bundles()
-" call pathogen#helptags()
+call pathogen#helptags()
 filetype plugin indent on
 "PATHOGEN END
 
@@ -85,7 +85,7 @@ function! FileSize()
 	return ""
     endif
     if bytes < 1024 "w bajtach
-	return bytes
+	return bytes . "B"
     endif
     if bytes < 1048576 "w kilobajtach
 	return (bytes / 1024) . "K"
@@ -109,7 +109,10 @@ hi User9 guibg=#FE396F ctermbg=203 guifg=#000000 ctermfg=16
 hi User10 guibg=#FF6639 ctermbg=208 guifg=#000000 ctermfg=16
 hi User11 guibg=#FEC939 ctermbg=215 guifg=#FF0000 ctermfg=169
 
-
+" source ~/.vim/bundle/fugitive/plugin/fugitive.vim
+" let git_status=fugitive#statusline()
+" let git_status=substitute(git_status, "[Git(", "", "")
+" let git_status=substitute(git_status, ")]", "", "")
 
 set statusline=
 set statusline=%#User0#
@@ -123,23 +126,23 @@ set statusline+=%w]
 set statusline+=%#User1#
 set statusline+=[FORMAT=%{&ff}]
 set statusline+=%#User2#
-set statusline+=[TYPE=%Y]
+set statusline+=[FT=%Y]
 set statusline+=%#User3#
 set statusline+=[ENC=%{strlen(&fenc)?&fenc:'none'}]
 set statusline+=%#User4#
-set statusline+=[SIZE=%{FileSize()}]
+set statusline+=[%{FileSize()}]
 set statusline+=%#User5#
 set statusline+=[POS=%04l,%04v]
 set statusline+=%#User6#
-set statusline+=[POS=%p%%]
+set statusline+=[%p%%]
 set statusline+=%#User7#
 set statusline+=[LEN=%L]
 set statusline+=%#User8#
-set statusline+=[GIT=%{fugitive#statusline()}]
+set statusline+=%{fugitive#statusline()}
 set statusline+=%#User9#
-set statusline+=[ASCII=\%03.3b]
+set statusline+=[\%03.3b]
 set statusline+=%#User10#
-set statusline+=[HEX=\%02.2B]
+set statusline+=[0x\%02.2B]
 set statusline+=%#ro#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%#User11#%=
@@ -162,18 +165,19 @@ let g:C_GlobalTemplateFile = $HOME.'/.vim/bundle/c/c-support/templates/Templates
 "C-SUPPORT END
 
 "MINIBUFEXPLORER BEGIN
-let g:miniBufExplMapWindowNavVim = 1
-let g:miniBufExplMapWindowNavArrows = 1
-let g:miniBufExplMapCTabSwitchBufs = 1
-let g:miniBufExplModSelTarget = 1
-let g:miniBufExplUseSingleClick = 1
+" let g:miniBufExplMapWindowNavVim = 1
+" let g:miniBufExplMapWindowNavArrows = 1
+" let g:miniBufExplMapCTabSwitchBufs = 1
+" let g:miniBufExplModSelTarget = 1
+" let g:miniBufExplUseSingleClick = 1
+" let g:miniBufExplTabWrap = 1
 
-hi MBEVisibleActive guifg=#8181F7 guibg=#5858FA
-hi MBEVisibleChangedActive guifg=#F32020 guibg=#C0C0C0
-hi MBEVisibleChanged guifg=#F34227 guibg=#808080
-hi MBEVisibleNormal guifg=#A6DB29 guibg=#808080
-hi MBEChanged guifg=#F34227 guibg=#808080
-hi MBENormal guifg=#A6DB29 guibg=#808080
+" hi MBEVisibleActive guifg=#8181F7 guibg=#5858FA
+" hi MBEVisibleChangedActive guifg=#F32020 guibg=#C0C0C0
+" hi MBEVisibleChanged guifg=#F34227 guibg=#808080
+" hi MBEVisibleNormal guifg=#A6DB29 guibg=#808080
+" hi MBEChanged guifg=#F34227 guibg=#808080
+" hi MBENormal guifg=#A6DB29 guibg=#808080
 "MINIBUFEXPLORER END
 
 "SYNTASTIC BEGIN
@@ -266,6 +270,10 @@ nmap <leader>gs :Gstatus<cr>
 nmap <leader>gd :Gdiff<cr>
 nmap <leader>gds :Gdiff --staged<cr>
 "FUGITIVE END
+
+"TASKLIST BEGIN
+nmap <leader>tl :TaskList
+"TASKLIST END
 
 "NERD TREE BEGIN
 noremap <F4> <Esc>:NERDTreeToggle<CR>
