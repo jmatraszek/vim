@@ -88,9 +88,6 @@
 [submodule "bundle/vim-preview"]
     path = bundle/vim-preview
     url = https://github.com/greyblake/vim-preview.git
-[submodule "bundle/minibufexplorer"]
-    path = bundle/minibufexplorer
-    url = https://github.com/fholgado/minibufexpl.vim.git
 [submodule "bundle/vim-rspec"]
     path = bundle/vim-rspec
     url = https://github.com/taq/vim-rspec.git

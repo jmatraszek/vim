@@ -5,7 +5,8 @@ call pathogen#runtime_append_all_bundles()
 " call pathogen#helptags()
 filetype plugin indent on
 "PATHOGEN END
-
+"
+"
 set showmode
 set backspace=indent,eol,start
 set virtualedit=onemore
@@ -54,7 +55,7 @@ set listchars=tab:▸\ ,eol:¬
 if &t_Co > 2 || has("gui_running")
     syntax on
     set hlsearch
-    set guifont=Monospace\ 8
+    set guifont=Monospace\ 9
     colorscheme wombat256
     hi SpecialKey ctermfg=12 ctermbg=234
     hi NonText ctermfg=12 ctermbg=234
