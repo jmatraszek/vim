@@ -109,3 +109,9 @@
 [submodule "bundle/quickfix_signs"]
 	path = bundle/quickfix_signs
 	url = https://github.com/tomtom/tlib_vim.git
+[submodule "bundle/headlights"]
+	path = bundle/headlights
+	url = https://github.com/mbadran/headlights.git
+[submodule "bundle/ack"]
+	path = bundle/ack
+	url = https://github.com/mileszs/ack.vim.git
