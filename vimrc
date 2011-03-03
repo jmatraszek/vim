@@ -421,3 +421,5 @@ else
     set autoindent " always set autoindenting on
 endif 
 "AUTOCMD END
+"
+let g:headlights_debug = 1
