@@ -56,7 +56,7 @@ if &t_Co > 2 || has("gui_running")
     syntax on
     set hlsearch
     set guifont=Monospace\ 10
-    colorscheme wombat256
+    colorscheme molokai
     hi SpecialKey ctermfg=12 ctermbg=234
     hi NonText ctermfg=12 ctermbg=234
 endif
@@ -404,6 +404,7 @@ if has("autocmd")
     autocmd QuickfixCmdPost make,grep,grepadd,vimgrep :botright cwindow "wlacz okienko quickfix po kazdym make
     autocmd BufWinLeave *.* mkview! "zapisz widok przy wylaczeniu
     autocmd BufWinEnter *.* silent loadview "wczytaj widok przy wlaczeniu
+    autocmd BufWritePre * :%s/\s\+$//e "usuwa trailing spaces
 
     filetype plugin indent on
     augroup vimrcEx
