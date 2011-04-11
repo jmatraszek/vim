@@ -66,7 +66,7 @@ if has("gui_running")
     hi SpecialKey guibg=grey20
     hi NonText guifg=yellowgreen guibg=grey20
     set lines=58
-    set columns=152
+    set columns=237
     set cursorline
     set guioptions=aegirLt "wylaczony toolbar i menu
 endif
@@ -83,20 +83,24 @@ let html_dynamic_folds=1
 function! FileSize()
     let bytes = getfsize(expand("%:p"))
     if bytes <= 0
-	return ""
+        return ""
     endif
     if bytes < 1024 "w bajtach
-	return bytes . "B"
+        return bytes . "B"
     endif
     if bytes < 1048576 "w kilobajtach
-	return (bytes / 1024) . "K"
+        return (bytes / 1024) . "K"
     else "w megabajtach
-	return (bytes / 1048576) . "M"
+        return (bytes / 1048576) . "M"
     endif
 endfunction
 
+if &diff
+    colorscheme molokai
+endif
+
 hi User0 guibg=#D2FE39 ctermbg=191 guifg=#000000 ctermfg=16
-hi mod guibg=#D2FE39 ctermbg=191 guifg=#FF0000 ctermfg=169 
+hi mod guibg=#D2FE39 ctermbg=191 guifg=#FF0000 ctermfg=169
 hi ro guibg=#FF0000 ctermbg=169 guifg=#000000 ctermfg=16
 hi User1 guibg=#6FFE39 ctermbg=83 guifg=#000000 ctermfg=16
 hi User2 guibg=#39FE66 ctermbg=47 guifg=#000000 ctermfg=16
@@ -117,7 +121,7 @@ hi User11 guibg=#FEC939 ctermbg=215 guifg=#FF0000 ctermfg=169
 
 set statusline=
 set statusline=%#User0#
-set statusline+=[%f 
+set statusline+=[%f
 set statusline+=%#mod#
 set statusline+=%m
 set statusline+=%#ro#
@@ -151,7 +155,23 @@ set statusline+=%#User11#%=
 set laststatus=2
 "STATUSLINE END
 
-"CHANGE CURSOS SHAPE IN DIFFRENT MODES
+"VIMDIFF SETTINGS
+if &diff
+    set guifont=Monospace\ 9
+    set statusline=
+    set statusline=%#User0#
+    set statusline+=[%f
+    set statusline+=%#mod#
+    set statusline+=%m
+    set statusline+=%#ro#
+    set statusline+=%r
+    set statusline+=%#User0#
+    set statusline+=%w]
+    set lines=75
+    set columns=269
+endif
+
+"CHANGE CURSOR SHAPE IN DIFFRENT MODES
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
@@ -199,7 +219,7 @@ let g:rubycomplete_rails = 1
 
 "COMMAND-T BEGIN
 "okno command-t - najwyzej 15 pozycji
-let g:CommandTMaxHeight=15 
+let g:CommandTMaxHeight=15
 noremap <F5> <Esc>:CommandT<CR>
 noremap! <F5> <Esc>:CommandT<CR>
 "COMMAND-T END
@@ -217,11 +237,11 @@ let g:Doxy_LocalTemplateDir   = $HOME.'/.vim/bundle/doxygen-support/doxygen-supp
 ""domyslnie wylaczone, mozemy wlaczyc przez <mapleader>mt
 let showmarks_enable=0
 "znaczniki, ktorych bedziemy uzywac, bez Z zeby nam nie kolidowalo z mapowaniem <F2>
-let showmarks_include = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXY" 
+let showmarks_include = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXY"
 "kolory dla znacznikow a-z
-highlight ShowMarksHLl gui=bold guibg=LightBlue guifg=Blue 
+highlight ShowMarksHLl gui=bold guibg=LightBlue guifg=Blue
 "dla znacznikow A-Z
-highlight ShowMarksHLu gui=bold guibg=LightRed guifg=DarkRed 
+highlight ShowMarksHLu gui=bold guibg=LightRed guifg=DarkRed
 "dla innych znacznikow
 highlight ShowMarksHLo gui=bold guibg=LightYellow guifg=DarkYellow
 "dla wielu znacznikow w tej samej linii
@@ -273,7 +293,7 @@ nmap <leader>gds :Gdiff --staged<cr>
 "FUGITIVE END
 
 "TASKLIST BEGIN
-nmap <leader>tl :TaskList
+nmap <leader>tl :TaskList<cr>
 "TASKLIST END
 
 "NERD TREE BEGIN
@@ -347,7 +367,7 @@ map <C-l> <C-w>l
 
 map Q gq
 " szybkie wylaczenie podswietlania wynikow wyszukiwania
-map gn :nohlsearch<CR> 
+map gn :nohlsearch<CR>
 " zapis pliku w stylu gorszych edytorow tekstowych :)
 noremap! <C-S> <Esc>:w<CR><INSERT>
 " wyjscie w stylu gorzych edytorow tekstowych :)
@@ -388,9 +408,9 @@ noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 function ToggleFlag(option,flag)
     exec ('let lopt = &' . a:option)
     if lopt =~ (".*" . a:flag . ".*")
-	exec ('set ' . a:option . '-=' . a:flag)
+        exec ('set ' . a:option . '-=' . a:flag)
     else
-	exec ('set ' . a:option . '+=' . a:flag)
+        exec ('set ' . a:option . '+=' . a:flag)
     endif
 endfunction
 noremap <silent> <A-1> :call ToggleFlag("guioptions","m")<BAR>set guioptions?<CR>
@@ -408,19 +428,19 @@ if has("autocmd")
 
     filetype plugin indent on
     augroup vimrcEx
-	au!
-	autocmd FileType make setlocal noexpandtab "wylacz zamiane tabow na spacje gdy edytujemy makefile
-	autocmd FileType text setlocal textwidth=120
-	autocmd FileType c setlocal formatoptions=croq "wrap only comments, not code
-	"autocmd FileType ruby,eruby let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
-	autocmd BufReadPost * "skacz do ostatniej pozycji kursora w pliku
-		    \ if line("'\"") > 0 && line("'\"") <= line("$") |
-		    \ exe "normal g`\"" |
-		    \ endif
+        au!
+        autocmd FileType make setlocal noexpandtab "wylacz zamiane tabow na spacje gdy edytujemy makefile
+        autocmd FileType text setlocal textwidth=120
+        autocmd FileType c setlocal formatoptions=croq "wrap only comments, not code
+        "autocmd FileType ruby,eruby let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
+        autocmd BufReadPost * "skacz do ostatniej pozycji kursora w pliku
+                    \ if line("'\"") > 0 && line("'\"") <= line("$") |
+                    \ exe "normal g`\"" |
+                    \ endif
     augroup END
 else
     set autoindent " always set autoindenting on
-endif 
+endif
 "AUTOCMD END
 "
 let g:headlights_debug = 1
