@@ -353,6 +353,8 @@ nnoremap <right> <nop>
 " inoremap <right> <nop>
 nnoremap j gj
 nnoremap k gk
+" enter command mode quickly
+nnoremap ; :
 
 map <leader>cp :botright cope<cr>
 map <leader>n :cnext<cr>
