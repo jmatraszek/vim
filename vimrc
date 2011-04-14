@@ -62,7 +62,8 @@ if &t_Co > 2 || has("gui_running")
 endif
 if has("gui_running")
     "set background=dark
-    colorscheme desert
+    " colorscheme desert
+    colorscheme wombat
     hi SpecialKey guibg=grey20
     hi NonText guifg=yellowgreen guibg=grey20
     set lines=58
