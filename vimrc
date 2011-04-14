@@ -223,6 +223,7 @@ let g:rubycomplete_rails = 1
 let g:CommandTMaxHeight=15
 noremap <F5> <Esc>:CommandT<CR>
 noremap! <F5> <Esc>:CommandT<CR>
+nmap <silent> <Leader>cd :CommandT<CR>
 "COMMAND-T END
 
 "DOXYGEN TOOLKIT BEGIN
