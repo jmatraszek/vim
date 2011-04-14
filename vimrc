@@ -80,6 +80,10 @@ let html_use_css=1
 let html_dynamic_folds=1
 "TOHTML END
 
+if &diff
+    colorscheme molokai
+endif
+
 "STATUSLINE BEGIN
 function! FileSize()
     let bytes = getfsize(expand("%:p"))
@@ -96,9 +100,7 @@ function! FileSize()
     endif
 endfunction
 
-if &diff
-    colorscheme molokai
-endif
+
 
 hi User0 guibg=#D2FE39 ctermbg=191 guifg=#000000 ctermfg=16
 hi mod guibg=#D2FE39 ctermbg=191 guifg=#FF0000 ctermfg=169
@@ -223,7 +225,7 @@ let g:rubycomplete_rails = 1
 let g:CommandTMaxHeight=15
 noremap <F5> <Esc>:CommandT<CR>
 noremap! <F5> <Esc>:CommandT<CR>
-nmap <silent> <Leader>cd :CommandT<CR>
+nmap <silent> <Leader>c :CommandT<CR>
 "COMMAND-T END
 
 "DOXYGEN TOOLKIT BEGIN
