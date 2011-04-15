@@ -82,15 +82,15 @@ let html_dynamic_folds=1
 function! FileSize()
     let bytes = getfsize(expand("%:p"))
     if bytes <= 0
-	return ""
+        return ""
     endif
     if bytes < 1024 "w bajtach
-	return bytes . "B"
+        return bytes . "B"
     endif
     if bytes < 1048576 "w kilobajtach
-	return (bytes / 1024) . "K"
+        return (bytes / 1024) . "K"
     else "w megabajtach
-	return (bytes / 1048576) . "M"
+        return (bytes / 1048576) . "M"
     endif
 endfunction
 
@@ -346,7 +346,9 @@ map <C-l> <C-w>l
 
 map Q gq
 " szybkie wylaczenie podswietlania wynikow wyszukiwania
-map gn :nohlsearch<CR> 
+map gn :nohlsearch<CR>
+" latwe powrot z taga do ktorego skoczylismy
+map gr :pop<CR>
 " zapis pliku w stylu gorszych edytorow tekstowych :)
 noremap! <C-S> <Esc>:w<CR><INSERT>
 " wyjscie w stylu gorzych edytorow tekstowych :)
@@ -387,16 +389,14 @@ noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 function ToggleFlag(option,flag)
     exec ('let lopt = &' . a:option)
     if lopt =~ (".*" . a:flag . ".*")
-	exec ('set ' . a:option . '-=' . a:flag)
+        exec ('set ' . a:option . '-=' . a:flag)
     else
-	exec ('set ' . a:option . '+=' . a:flag)
+        exec ('set ' . a:option . '+=' . a:flag)
     endif
 endfunction
 noremap <silent> <A-1> :call ToggleFlag("guioptions","m")<BAR>set guioptions?<CR>
 imap <A-1> <C-O><A-1>
 "KEY MAPPINGS END
-
-
 
 "AUTOCMD BEGIN
 if has("autocmd")
@@ -406,15 +406,15 @@ if has("autocmd")
 
     filetype plugin indent on
     augroup vimrcEx
-	au!
-	autocmd FileType make setlocal noexpandtab "wylacz zamiane tabow na spacje gdy edytujemy makefile
-	autocmd FileType text setlocal textwidth=120
-	autocmd FileType c setlocal formatoptions=croq "wrap only comments, not code
-	"autocmd FileType ruby,eruby let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
-	autocmd BufReadPost * "skacz do ostatniej pozycji kursora w pliku
-		    \ if line("'\"") > 0 && line("'\"") <= line("$") |
-		    \ exe "normal g`\"" |
-		    \ endif
+        au!
+        autocmd FileType make setlocal noexpandtab "wylacz zamiane tabow na spacje gdy edytujemy makefile
+        autocmd FileType text setlocal textwidth=120
+        autocmd FileType c setlocal formatoptions=croq "wrap only comments, not code
+        "autocmd FileType ruby,eruby let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
+        autocmd BufReadPost * "skacz do ostatniej pozycji kursora w pliku
+                    \ if line("'\"") > 0 && line("'\"") <= line("$") |
+                    \ exe "normal g`\"" |
+                    \ endif
     augroup END
 else
     set autoindent " always set autoindenting on
