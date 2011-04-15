@@ -225,7 +225,8 @@ let g:rubycomplete_rails = 1
 let g:CommandTMaxHeight=15
 noremap <F5> <Esc>:CommandT<CR>
 noremap! <F5> <Esc>:CommandT<CR>
-nmap <silent> <Leader>c :CommandT<CR>
+nmap <silent> <Leader>cd :CommandT<CR>
+nmap <silent> <Leader>vf :CommandTFlush<CR>
 "COMMAND-T END
 
 "DOXYGEN TOOLKIT BEGIN
@@ -260,6 +261,7 @@ noremap! <F6> <Esc>:YRShow<CR>
 
 "SUPERTAB BEGIN
 " let g:SuperTabLongestEnhanced = 1
+let g:SuperTabDefaultCompletionType = "<c-p>"
 let g:SuperTabMappingForward = '<Tab>'
 let g:SuperTabMappingBackward = '<S-Tab>'
 "kolory dla pop up menu
