@@ -5,7 +5,8 @@ call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 filetype plugin indent on
 "PATHOGEN END
-
+"
+"
 set showmode
 set backspace=indent,eol,start
 set virtualedit=onemore
@@ -54,18 +55,19 @@ set listchars=tab:▸\ ,eol:¬
 if &t_Co > 2 || has("gui_running")
     syntax on
     set hlsearch
-    set guifont=Monospace\ 8
-    colorscheme wombat256
+    set guifont=Monospace\ 10
+    colorscheme molokai
     hi SpecialKey ctermfg=12 ctermbg=234
     hi NonText ctermfg=12 ctermbg=234
 endif
 if has("gui_running")
     "set background=dark
-    colorscheme desert
+    " colorscheme desert
+    colorscheme wombat
     hi SpecialKey guibg=grey20
     hi NonText guifg=yellowgreen guibg=grey20
     set lines=58
-    set columns=152
+    set columns=237
     set cursorline
     set guioptions=aegirLt "wylaczony toolbar i menu
 endif
@@ -77,6 +79,10 @@ let use_xhtml=1
 let html_use_css=1
 let html_dynamic_folds=1
 "TOHTML END
+
+if &diff
+    colorscheme molokai
+endif
 
 "STATUSLINE BEGIN
 function! FileSize()
@@ -94,8 +100,10 @@ function! FileSize()
     endif
 endfunction
 
+
+
 hi User0 guibg=#D2FE39 ctermbg=191 guifg=#000000 ctermfg=16
-hi mod guibg=#D2FE39 ctermbg=191 guifg=#FF0000 ctermfg=169 
+hi mod guibg=#D2FE39 ctermbg=191 guifg=#FF0000 ctermfg=169
 hi ro guibg=#FF0000 ctermbg=169 guifg=#000000 ctermfg=16
 hi User1 guibg=#6FFE39 ctermbg=83 guifg=#000000 ctermfg=16
 hi User2 guibg=#39FE66 ctermbg=47 guifg=#000000 ctermfg=16
@@ -116,7 +124,7 @@ hi User11 guibg=#FEC939 ctermbg=215 guifg=#FF0000 ctermfg=169
 
 set statusline=
 set statusline=%#User0#
-set statusline+=[%f 
+set statusline+=[%f
 set statusline+=%#mod#
 set statusline+=%m
 set statusline+=%#ro#
@@ -150,7 +158,23 @@ set statusline+=%#User11#%=
 set laststatus=2
 "STATUSLINE END
 
-"CHANGE CURSOS SHAPE IN DIFFRENT MODES
+"VIMDIFF SETTINGS
+if &diff
+    set guifont=Monospace\ 9
+    set statusline=
+    set statusline=%#User0#
+    set statusline+=[%f
+    set statusline+=%#mod#
+    set statusline+=%m
+    set statusline+=%#ro#
+    set statusline+=%r
+    set statusline+=%#User0#
+    set statusline+=%w]
+    set lines=75
+    set columns=269
+endif
+
+"CHANGE CURSOR SHAPE IN DIFFRENT MODES
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
@@ -198,9 +222,11 @@ let g:rubycomplete_rails = 1
 
 "COMMAND-T BEGIN
 "okno command-t - najwyzej 15 pozycji
-let g:CommandTMaxHeight=15 
+let g:CommandTMaxHeight=15
 noremap <F5> <Esc>:CommandT<CR>
 noremap! <F5> <Esc>:CommandT<CR>
+nmap <silent> <Leader>cd :CommandT<CR>
+nmap <silent> <Leader>vf :CommandTFlush<CR>
 "COMMAND-T END
 
 "DOXYGEN TOOLKIT BEGIN
@@ -216,11 +242,11 @@ let g:Doxy_LocalTemplateDir   = $HOME.'/.vim/bundle/doxygen-support/doxygen-supp
 ""domyslnie wylaczone, mozemy wlaczyc przez <mapleader>mt
 let showmarks_enable=0
 "znaczniki, ktorych bedziemy uzywac, bez Z zeby nam nie kolidowalo z mapowaniem <F2>
-let showmarks_include = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXY" 
+let showmarks_include = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXY"
 "kolory dla znacznikow a-z
-highlight ShowMarksHLl gui=bold guibg=LightBlue guifg=Blue 
+highlight ShowMarksHLl gui=bold guibg=LightBlue guifg=Blue
 "dla znacznikow A-Z
-highlight ShowMarksHLu gui=bold guibg=LightRed guifg=DarkRed 
+highlight ShowMarksHLu gui=bold guibg=LightRed guifg=DarkRed
 "dla innych znacznikow
 highlight ShowMarksHLo gui=bold guibg=LightYellow guifg=DarkYellow
 "dla wielu znacznikow w tej samej linii
@@ -235,13 +261,14 @@ noremap! <F6> <Esc>:YRShow<CR>
 
 "SUPERTAB BEGIN
 " let g:SuperTabLongestEnhanced = 1
+let g:SuperTabDefaultCompletionType = "<c-p>"
 let g:SuperTabMappingForward = '<Tab>'
 let g:SuperTabMappingBackward = '<S-Tab>'
 "kolory dla pop up menu
-highlight Pmenu term=NONE cterm=NONE ctermfg=7 ctermbg=5 gui=NONE guifg=White guibg=Magenta
-highlight PmenuSel term=NONE cterm=NONE ctermfg=0 ctermbg=7 gui=NONE guifg=Black guibg=White
-highlight PmenuSbar term=NONE cterm=NONE ctermfg=7 ctermbg=0 gui=NONE guifg=White guibg=Black
-highlight PmenuThumb term=NONE cterm=NONE ctermfg=0 ctermbg=7 gui=NONE guifg=Black guibg=White
+" highlight Pmenu term=NONE cterm=NONE ctermfg=7 ctermbg=5 gui=NONE guifg=White guibg=Magenta
+" highlight PmenuSel term=NONE cterm=NONE ctermfg=0 ctermbg=7 gui=NONE guifg=Black guibg=White
+" highlight PmenuSbar term=NONE cterm=NONE ctermfg=7 ctermbg=0 gui=NONE guifg=White guibg=Black
+" highlight PmenuThumb term=NONE cterm=NONE ctermfg=0 ctermbg=7 gui=NONE guifg=Black guibg=White
 "SUPERTAB END
 
 "XPTEMPLATES BEGIN
@@ -272,7 +299,7 @@ nmap <leader>gds :Gdiff --staged<cr>
 "FUGITIVE END
 
 "TASKLIST BEGIN
-nmap <leader>tl :TaskList
+nmap <leader>tl :TaskList<cr>
 "TASKLIST END
 
 "NERD TREE BEGIN
@@ -332,6 +359,8 @@ nnoremap <right> <nop>
 " inoremap <right> <nop>
 nnoremap j gj
 nnoremap k gk
+" enter command mode quickly
+nnoremap ; :
 
 map <leader>cp :botright cope<cr>
 map <leader>n :cnext<cr>
@@ -403,6 +432,7 @@ if has("autocmd")
     autocmd QuickfixCmdPost make,grep,grepadd,vimgrep :botright cwindow "wlacz okienko quickfix po kazdym make
     autocmd BufWinLeave *.* mkview! "zapisz widok przy wylaczeniu
     autocmd BufWinEnter *.* silent loadview "wczytaj widok przy wlaczeniu
+    autocmd BufWritePre * :%s/\s\+$//e "usuwa trailing spaces
 
     filetype plugin indent on
     augroup vimrcEx
@@ -418,5 +448,7 @@ if has("autocmd")
     augroup END
 else
     set autoindent " always set autoindenting on
-endif 
+endif
 "AUTOCMD END
+"
+let g:headlights_debug = 1
