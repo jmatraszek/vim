@@ -124,3 +124,9 @@
 [submodule "bundle/vim-session"]
 	path = bundle/vim-session
 	url = https://github.com/xolox/vim-session.git
+[submodule "bundle/wombat256i"]
+	path = bundle/wombat256i
+	url = https://github.com/echofish/wombat256i.git
+[submodule "bundle/ruby-refactoring"]
+	path = bundle/ruby-refactoring
+	url = https://github.com/ecomba/vim-ruby-refactoring.git

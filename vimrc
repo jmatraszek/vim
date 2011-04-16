@@ -262,9 +262,9 @@ noremap! <F6> <Esc>:YRShow<CR>
 
 "SUPERTAB BEGIN
 " let g:SuperTabLongestEnhanced = 1
-let g:SuperTabDefaultCompletionType = "<c-p>"
-let g:SuperTabMappingForward = '<Tab>'
-let g:SuperTabMappingBackward = '<S-Tab>'
+" let g:SuperTabDefaultCompletionType = "<c-p>"
+" let g:SuperTabMappingForward = '<Tab>'
+" let g:SuperTabMappingBackward = '<S-Tab>'
 "kolory dla pop up menu
 " highlight Pmenu term=NONE cterm=NONE ctermfg=7 ctermbg=5 gui=NONE guifg=White guibg=Magenta
 " highlight PmenuSel term=NONE cterm=NONE ctermfg=0 ctermbg=7 gui=NONE guifg=Black guibg=White
