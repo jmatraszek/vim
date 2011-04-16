@@ -272,6 +272,12 @@ noremap! <F6> <Esc>:YRShow<CR>
 " highlight PmenuThumb term=NONE cterm=NONE ctermfg=0 ctermbg=7 gui=NONE guifg=Black guibg=White
 "SUPERTAB END
 
+"VIM-SESSION BEGIN
+let g:session_directory = '~/.vim-sessions'
+let g:session_autosave = 1
+let g:session_autoload = 1
+"VIM-SESSION END
+
 "XPTEMPLATES BEGIN
 let g:xptemplate_vars = "SParg=&BRloop=\n&SPcmd=&BRif=\n&BRstc=\n&SPop=" "dostosowanie snippetow do stylu kodowania
 let g:SuperTabMappingForward = '<Plug>supertabKey' "avoid key conflict with supertab
