@@ -55,7 +55,7 @@ set listchars=tab:▸\ ,eol:¬
 if &t_Co > 2 || has("gui_running")
     syntax on
     set hlsearch
-    set guifont=Monospace\ 10
+    set guifont=Monospace\ 8
     colorscheme molokai
     hi SpecialKey ctermfg=12 ctermbg=234
     hi NonText ctermfg=12 ctermbg=234

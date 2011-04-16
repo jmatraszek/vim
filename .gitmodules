@@ -61,9 +61,6 @@
 [submodule "bundle/vim-task"]
     path = bundle/vim-task
     url = git://github.com/samsonw/vim-task.git
-[submodule "bundle/supertab"]
-    path = bundle/supertab
-    url = https://github.com/ervandew/supertab.git
 [submodule "bundle/syntastic"]
     path = bundle/syntastic
     url = https://github.com/scrooloose/syntastic.git
@@ -121,12 +118,12 @@
 [submodule "bundle/robokai"]
 	path = bundle/robokai
 	url = https://github.com/vim-scripts/robokai.git
-[submodule "bundle/vim-session"]
-	path = bundle/vim-session
-	url = https://github.com/xolox/vim-session.git
 [submodule "bundle/wombat256i"]
 	path = bundle/wombat256i
 	url = https://github.com/echofish/wombat256i.git
 [submodule "bundle/ruby-refactoring"]
 	path = bundle/ruby-refactoring
 	url = https://github.com/ecomba/vim-ruby-refactoring.git
+[submodule "bundle/supertab"]
+	path = bundle/supertab
+	url = https://github.com/ervandew/supertab.git
