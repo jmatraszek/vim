@@ -273,7 +273,6 @@ noremap! <F6> <Esc>:YRShow<CR>
 "SUPERTAB END
 
 "VIM-SESSION BEGIN
-let g:session_directory = '~/.vim-sessions'
 let g:session_autosave = 1
 let g:session_autoload = 1
 "VIM-SESSION END
