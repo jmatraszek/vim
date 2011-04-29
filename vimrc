@@ -55,7 +55,7 @@ set listchars=tab:▸\ ,eol:¬
 if &t_Co > 2 || has("gui_running")
     syntax on
     set hlsearch
-    set guifont=Monospace\ 8
+    set guifont=Monospace\ 10
     colorscheme molokai
     hi SpecialKey ctermfg=12 ctermbg=234
     hi NonText ctermfg=12 ctermbg=234
@@ -160,7 +160,7 @@ set laststatus=2
 
 "VIMDIFF SETTINGS
 if &diff
-    set guifont=Monospace\ 8
+    set guifont=Monospace\ 10
     set statusline=
     set statusline=%#User0#
     set statusline+=[%f
@@ -189,20 +189,20 @@ let g:C_GlobalTemplateFile = $HOME.'/.vim/bundle/c/c-support/templates/Templates
 "C-SUPPORT END
 
 "MINIBUFEXPLORER BEGIN
-" let g:miniBufExplShowBufNumbers = 1
-" let g:miniBufExplMapWindowNavVim = 1
-" let g:miniBufExplMapWindowNavArrows = 1
-" let g:miniBufExplMapCTabSwitchBufs = 1
-" let g:miniBufExplModSelTarget = 1
-" let g:miniBufExplUseSingleClick = 1
-" let g:miniBufExplTabWrap = 1
+let g:miniBufExplShowBufNumbers = 0
+let g:miniBufExplMapWindowNavVim = 1
+let g:miniBufExplMapWindowNavArrows = 1
+let g:miniBufExplMapCTabSwitchBufs = 1
+let g:miniBufExplModSelTarget = 1
+let g:miniBufExplUseSingleClick = 1
+let g:miniBufExplTabWrap = 1
 
-" hi MBEVisibleActive guifg=#8181F7 guibg=#5858FA
-" hi MBEVisibleChangedActive guifg=#F32020 guibg=#C0C0C0
-" hi MBEVisibleChanged guifg=#F34227 guibg=#808080
-" hi MBEVisibleNormal guifg=#A6DB29 guibg=#808080
-" hi MBEChanged guifg=#F34227 guibg=#808080
-" hi MBENormal guifg=#A6DB29 guibg=#808080
+hi MBEVisibleActive guifg=#8181F7 guibg=#5858FA
+hi MBEVisibleChangedActive guifg=#F32020 guibg=#C0C0C0
+hi MBEVisibleChanged guifg=#F34227 guibg=#808080
+hi MBEVisibleNormal guifg=#A6DB29 guibg=#808080
+hi MBEChanged guifg=#F34227 guibg=#808080
+hi MBENormal guifg=#A6DB29 guibg=#808080
 "MINIBUFEXPLORER END
 
 "SYNTASTIC BEGIN
@@ -273,8 +273,8 @@ noremap! <F6> <Esc>:YRShow<CR>
 "SUPERTAB END
 
 "VIM-SESSION BEGIN
-let g:session_autosave = 1
-let g:session_autoload = 1
+let g:session_autosave = 0
+let g:session_autoload = 0
 "VIM-SESSION END
 
 "XPTEMPLATES BEGIN
