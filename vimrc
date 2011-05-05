@@ -308,6 +308,10 @@ nmap <leader>gds :Gdiff --staged<cr>
 nmap <leader>tl :TaskList<cr>
 "TASKLIST END
 
+"CONQUE BEGIN
+let g:ConqueTerm_FastMode = 1
+"CONQUE END
+
 "NERD TREE BEGIN
 noremap <F4> <Esc>:NERDTreeToggle<CR>
 noremap! <F4> <Esc>:NERDTreeToggle<CR>
