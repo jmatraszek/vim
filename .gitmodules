@@ -88,3 +88,9 @@
 [submodule "bundle/conque"]
 	path = bundle/conque
 	url = https://github.com/rson/vim-conque.git
+[submodule "bundle/molokai"]
+	path = bundle/molokai
+	url = https://github.com/tomasr/molokai.git
+[submodule "bundle/wombat"]
+	path = bundle/wombat
+	url = https://jmatraszek@github.com/jmatraszek/vim-wombat.git
