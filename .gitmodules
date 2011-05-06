@@ -94,3 +94,6 @@
 [submodule "bundle/wombat"]
 	path = bundle/wombat
 	url = https://jmatraszek@github.com/jmatraszek/vim-wombat.git
+[submodule "bundle/gitv"]
+	path = bundle/gitv
+	url = https://github.com/gregsexton/gitv.git
