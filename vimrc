@@ -81,10 +81,6 @@ let html_use_css=1
 let html_dynamic_folds=1
 "TOHTML END
 
-if &diff
-    colorscheme molokai
-endif
-
 "STATUSLINE BEGIN
 function! FileSize()
     let bytes = getfsize(expand("%:p"))
