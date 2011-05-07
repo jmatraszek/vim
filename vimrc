@@ -296,7 +296,7 @@ end
 "FUGITIVE BEGIN
 nmap <leader>gw :Gwrite<cr>
 nmap <leader>gc :Gcommit<cr>
-nmap <leader>gs :Gstatus<cr>
+nmap <leader>gs :Gvsplit :<cr>
 nmap <leader>gd :Gdiff<cr>
 nmap <leader>gds :Gdiff --staged<cr>
 "FUGITIVE END
