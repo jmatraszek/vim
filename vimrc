@@ -45,6 +45,7 @@ set shiftwidth=4 "4 spacje przyautoformatowaniu kodu"
 set softtabstop=4 "tylko spacje w formatowaniu kodu
 set nocursorline
 set paste
+set lazyredraw
 source $VIMRUNTIME/ftplugin/man.vim "wlaczamy plugin man
 " no list special keys
 set nolist
