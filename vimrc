@@ -81,7 +81,7 @@ let html_dynamic_folds=1
 "TOHTML END
 
 if &diff
-    colorscheme molokai
+    colorscheme solarized " molokai
 endif
 
 "STATUSLINE BEGIN
@@ -189,21 +189,23 @@ let g:C_GlobalTemplateFile = $HOME.'/.vim/bundle/c/c-support/templates/Templates
 "C-SUPPORT END
 
 "MINIBUFEXPLORER BEGIN
-let g:miniBufExplShowBufNumbers = 0
-let g:miniBufExplMapWindowNavVim = 1
-let g:miniBufExplMapWindowNavArrows = 1
-let g:miniBufExplMapCTabSwitchBufs = 1
-let g:miniBufExplModSelTarget = 1
-let g:miniBufExplUseSingleClick = 1
-let g:miniBufExplTabWrap = 1
+"MINIBUFEXPLORER BEGIN
+"MINIBUFEXPLORER BEGIN
+" let g:miniBufExplShowBufNumbers = 0
+" let g:miniBufExplMapCTabSwitchBufs = 1
+" let g:miniBufExplModSelTarget = 1
+" let g:miniBufExplUseSingleClick = 1
+" let g:miniBufExplTabWrap = 1
 
-hi MBEVisibleActive guifg=#8181F7 guibg=#5858FA
-hi MBEVisibleChangedActive guifg=#F32020 guibg=#C0C0C0
-hi MBEVisibleChanged guifg=#F34227 guibg=#808080
-hi MBEVisibleNormal guifg=#A6DB29 guibg=#808080
-hi MBEChanged guifg=#F34227 guibg=#808080
-hi MBENormal guifg=#A6DB29 guibg=#808080
+" hi MBEVisibleActive guifg=#8181F7 guibg=#5858FA
+" hi MBEVisibleChangedActive guifg=#F32020 guibg=#C0C0C0
+" hi MBENormal guifg=#A6DB29 guibg=#808080
+" lalalalalalalalala
+" slslslslslslsls
 "MINIBUFEXPLORER END
+"
+"
+"ssslslslslslsls
 
 "SYNTASTIC BEGIN
 let g:syntastic_enable_signs = 1
