@@ -188,7 +188,7 @@ let g:C_GlobalTemplateFile = $HOME.'/.vim/bundle/c/c-support/templates/Templates
 "MINIBUFEXPLORER BEGIN
 let g:miniBufExplShowBufNumbers = 0
 let g:miniBufExplMapWindowNavVim = 1
-let g:miniBufExplMapWindowNavArrows = 1
+let g:miniBufExplMapWindowNavArrows = 0
 let g:miniBufExplMapCTabSwitchBufs = 1
 let g:miniBufExplModSelTarget = 1
 let g:miniBufExplUseSingleClick = 1
