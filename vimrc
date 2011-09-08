@@ -345,11 +345,11 @@ end
 
 "UNIMPAIRED BEGIN
 " Bubble single lines
-nmap <C-Up> [e
-nmap <C-Down> ]e
+nmap <A-k> [e
+nmap <A-j> ]e
 " Bubble multiple lines
-vmap <C-Up> [egv
-vmap <C-Down> ]egv
+vmap <A-k> [egv
+vmap <A-j> ]egv
 " Visually select the text that was last edited/pasted
 nmap gV `[v`]
 "UNIMPAIRED END
