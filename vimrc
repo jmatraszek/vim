@@ -25,6 +25,7 @@ set incsearch " do incremental searching
 set completeopt=menu,longest,preview
 set wildmenu "ladne dopelnianie komend
 set wildchar=<TAB>
+set wildignore+=*.o,*.obj,.git,public/system
 set number "numerowanie linii
 set fencs=utf8
 set enc=utf8
@@ -221,6 +222,7 @@ let g:rubycomplete_rails = 1
 "COMMAND-T BEGIN
 "okno command-t - najwyzej 15 pozycji
 let g:CommandTMaxHeight=15
+let g:CommandTMaxFiles=15000
 noremap <F5> <Esc>:CommandT<CR>
 noremap! <F5> <Esc>:CommandT<CR>
 nmap <silent> <Leader>cd :CommandT<CR>
