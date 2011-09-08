@@ -25,6 +25,7 @@ set incsearch " do incremental searching
 set completeopt=menu,longest,preview
 set wildmenu "ladne dopelnianie komend
 set wildchar=<TAB>
+set wildignore+=*.o,*.obj,.git,public/system
 set number "numerowanie linii
 set fencs=utf8
 set enc=utf8
@@ -188,7 +189,7 @@ let g:C_GlobalTemplateFile = $HOME.'/.vim/bundle/c/c-support/templates/Templates
 "MINIBUFEXPLORER BEGIN
 let g:miniBufExplShowBufNumbers = 0
 let g:miniBufExplMapWindowNavVim = 1
-let g:miniBufExplMapWindowNavArrows = 1
+let g:miniBufExplMapWindowNavArrows = 0
 let g:miniBufExplMapCTabSwitchBufs = 1
 let g:miniBufExplModSelTarget = 1
 let g:miniBufExplUseSingleClick = 1
@@ -221,6 +222,7 @@ let g:rubycomplete_rails = 1
 "COMMAND-T BEGIN
 "okno command-t - najwyzej 15 pozycji
 let g:CommandTMaxHeight=15
+let g:CommandTMaxFiles=15000
 noremap <F5> <Esc>:CommandT<CR>
 noremap! <F5> <Esc>:CommandT<CR>
 nmap <silent> <Leader>cd :CommandT<CR>
@@ -345,11 +347,11 @@ end
 
 "UNIMPAIRED BEGIN
 " Bubble single lines
-nmap <C-Up> [e
-nmap <C-Down> ]e
+nmap <A-k> [e
+nmap <A-j> ]e
 " Bubble multiple lines
-vmap <C-Up> [egv
-vmap <C-Down> ]egv
+vmap <A-k> [egv
+vmap <A-j> ]egv
 " Visually select the text that was last edited/pasted
 nmap gV `[v`]
 "UNIMPAIRED END
@@ -432,6 +434,24 @@ function ToggleFlag(option,flag)
 endfunction
 noremap <silent> <A-1> :call ToggleFlag("guioptions","m")<BAR>set guioptions?<CR>
 imap <A-1> <C-O><A-1>
+
+
+nmap <leader>yt :call RunCurrentTest()<CR>
+nmap <leader>ht :call RunLastTest()<CR>
+nmap <leader>gt :!bundle exec rspec <C-R>% --no-color --drb<CR>
+
+function RunLastTest ()
+  if exists('w:current_test')
+    exe '!bundle exec rspec ' . w:current_test . ' --no-color --drb'
+  else
+    call RunCurrentTest()
+  endif
+endfunction
+
+function RunCurrentTest ()
+  let w:current_test = expand("%:.") . ':' . line(".")
+  exe '!bundle exec rspec ' . w:current_test . ' --no-color --drb'
+endfunction
 "KEY MAPPINGS END
 
 "AUTOCMD BEGIN
