@@ -432,6 +432,24 @@ function ToggleFlag(option,flag)
 endfunction
 noremap <silent> <A-1> :call ToggleFlag("guioptions","m")<BAR>set guioptions?<CR>
 imap <A-1> <C-O><A-1>
+
+
+nmap <leader>yt :call RunCurrentTest()<CR>
+nmap <leader>ht :call RunLastTest()<CR>
+nmap <leader>gt :!bundle exec rspec <C-R>% --no-color --drb<CR>
+
+function RunLastTest ()
+  if exists('w:current_test')
+    exe '!bundle exec rspec ' . w:current_test . ' --no-color --drb'
+  else
+    call RunCurrentTest()
+  endif
+endfunction
+
+function RunCurrentTest ()
+  let w:current_test = expand("%:.") . ':' . line(".")
+  exe '!bundle exec rspec ' . w:current_test . ' --no-color --drb'
+endfunction
 "KEY MAPPINGS END
 
 "AUTOCMD BEGIN
