@@ -52,12 +52,6 @@
 [submodule "bundle/surround"]
     path = bundle/surround
     url = https://github.com/tpope/vim-surround.git
-[submodule "bundle/vim-rdoc"]
-    path = bundle/vim-rdoc
-    url = https://github.com/hallison/vim-rdoc.git
-[submodule "bundle/xptemplate"]
-    path = bundle/xptemplate
-    url = https://github.com/drmingdrmer/xptemplate-dist.git
 [submodule "bundle/vim-preview"]
     path = bundle/vim-preview
     url = https://github.com/greyblake/vim-preview.git
