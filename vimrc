@@ -451,8 +451,6 @@ endfunction
 "AUTOCMD BEGIN
 if has("autocmd")
     autocmd QuickfixCmdPost make,grep,grepadd,vimgrep :botright cwindow "wlacz okienko quickfix po kazdym make
-    autocmd BufWinLeave *.* mkview! "zapisz widok przy wylaczeniu
-    autocmd BufWinEnter *.* silent loadview "wczytaj widok przy wlaczeniu
     autocmd BufWritePre * :%s/\s\+$//e "usuwa trailing spaces
 
     filetype plugin indent on
