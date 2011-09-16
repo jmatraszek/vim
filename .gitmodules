@@ -115,3 +115,6 @@
 [submodule "bundle/vim-coffe-script"]
 	path = bundle/vim-coffe-script
 	url = https://github.com/kchmck/vim-coffee-script.git
+[submodule "bundle/gundo"]
+	path = bundle/gundo
+	url = https://github.com/sjl/gundo.vim.git
