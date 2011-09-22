@@ -380,7 +380,7 @@ map Q gq
 " szybkie wylaczenie podswietlania wynikow wyszukiwania
 map gn :nohlsearch<CR>
 " latwe powrot z taga do ktorego skoczylismy
-map gr :pop<CR>
+map <C-[> :pop<CR>
 " zapis pliku w stylu gorszych edytorow tekstowych :)
 noremap! <C-S> <Esc>:w<CR><INSERT>
 " wyjscie w stylu gorzych edytorow tekstowych :)
