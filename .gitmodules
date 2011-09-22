@@ -121,3 +121,6 @@
 [submodule "bundle/vim-orgmode"]
 	path = bundle/vim-orgmode
 	url = https://github.com/jceb/vim-orgmode.git
+[submodule "bundle/tagbar"]
+	path = bundle/tagbar
+	url = https://github.com/majutsushi/tagbar.git
