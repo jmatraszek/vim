@@ -185,7 +185,7 @@ let g:C_GlobalTemplateFile = $HOME.'/.vim/bundle/c/c-support/templates/Templates
 "C-SUPPORT END
 
 "MINIBUFEXPLORER BEGIN
-let g:miniBufExplShowBufNumbers = 0
+let g:miniBufExplShowBufNumbers = 1
 let g:miniBufExplMapWindowNavVim = 1
 let g:miniBufExplMapWindowNavArrows = 0
 let g:miniBufExplMapCTabSwitchBufs = 1
@@ -352,7 +352,7 @@ map Q gq
 " szybkie wylaczenie podswietlania wynikow wyszukiwania
 map gn :nohlsearch<CR>
 " latwe powrot z taga do ktorego skoczylismy
-map <C-[> :pop<CR>
+map <silent> <A-]> :pop<CR>
 " latwa nawigacja zakladkami
 noremap! <A-Up> <Esc>:tabnew<CR><Esc>:e<Space>
 noremap <A-Up> <Esc>:tabnew<CR><Esc>:e<Space>
