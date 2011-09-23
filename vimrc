@@ -215,11 +215,14 @@ let NERDSpaceDelims=1
 "okno command-t - najwyzej 15 pozycji
 let g:CommandTMaxHeight=15
 let g:CommandTMaxFiles=15000
-noremap <F5> <Esc>:CommandT<CR>
-noremap! <F5> <Esc>:CommandT<CR>
 nmap <silent> <Leader>cd :CommandT<CR>
+nmap <silent> <Leader>bg :CommandTBuffer<CR>
 nmap <silent> <Leader>vf :CommandTFlush<CR>
 "COMMAND-T END
+
+"GUNDO BEGIN
+nmap <silent> <Leader>gn :GundoToggle<CR>
+"GUNDO END
 
 "DOXYGEN TOOLKIT BEGIN
 " menu Doxy jako submenu Plugin
@@ -230,25 +233,9 @@ let g:Doxy_LocalTemplateDir   = $HOME.'/.vim/bundle/doxygen-support/doxygen-supp
 "DOXYGEN TOOLKIT END
 
 
-"SHOWMARKS BEGIN
-""domyslnie wylaczone, mozemy wlaczyc przez <mapleader>mt
-let showmarks_enable=0
-"znaczniki, ktorych bedziemy uzywac, bez Z zeby nam nie kolidowalo z mapowaniem <F2>
-let showmarks_include = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXY"
-"kolory dla znacznikow a-z
-highlight ShowMarksHLl gui=bold guibg=LightBlue guifg=Blue
-"dla znacznikow A-Z
-highlight ShowMarksHLu gui=bold guibg=LightRed guifg=DarkRed
-"dla innych znacznikow
-highlight ShowMarksHLo gui=bold guibg=LightYellow guifg=DarkYellow
-"dla wielu znacznikow w tej samej linii
-highlight ShowMarksHLm gui=bold guibg=LightGreen guifg=DarkGreen
-"SHOWMARKS END
-
 "YANKRING BEGIN
 let g:yankring_history_file = '.yankring_history.txt'
-noremap <F6> <Esc>:YRShow<CR>
-noremap! <F6> <Esc>:YRShow<CR>
+nmap <silent> <Leader>yr :YRShow<CR>
 "YANKRING END
 
 "SUPERTAB BEGIN
@@ -263,11 +250,6 @@ noremap! <F6> <Esc>:YRShow<CR>
 " highlight PmenuThumb term=NONE cterm=NONE ctermfg=0 ctermbg=7 gui=NONE guifg=Black guibg=White
 "SUPERTAB END
 
-"VIM-SESSION BEGIN
-let g:session_autosave = 0
-let g:session_autoload = 0
-"VIM-SESSION END
-
 "XPTEMPLATES BEGIN
 let g:xptemplate_vars = "SParg=&BRloop=\n&SPcmd=&BRif=\n&BRstc=\n&SPop=" "dostosowanie snippetow do stylu kodowania
 let g:SuperTabMappingForward = '<Plug>supertabKey' "avoid key conflict with supertab
@@ -279,13 +261,10 @@ let g:xptemplate_minimal_prefix = 'full' "xpt wlaczy sie tylko po wpisaniu pelne
 let g:xptemplate_brace_complete = 1 "auto complete craces
 "XMTEMPLATE END
 
-"TAGLIST BEGIN
-noremap <F3> <Esc>:TlistToggle<CR>
-noremap! <F3> <Esc>:TlistToggle<CR>
-if has("autocmd")
-    autocmd BufWinEnter *Tag_List* setlocal statusline=%#User11#%F
-end
-"TAGLIST END
+"TAGBAR BEGIN
+nmap <silent> <Leader>tg :TagbarToggle<CR>
+nmap <silent> <Leader>th :TagbarOpenAutoClose<CR>
+"TAGBAR END
 
 "FUGITIVE BEGIN
 nmap <leader>gw :Gwrite<cr>
@@ -295,17 +274,12 @@ nmap <leader>gd :Gdiff<cr>
 nmap <leader>gds :Gdiff --staged<cr>
 "FUGITIVE END
 
-"TASKLIST BEGIN
-nmap <leader>tl :TaskList<cr>
-"TASKLIST END
-
 "CONQUE BEGIN
 let g:ConqueTerm_FastMode = 1
 "CONQUE END
 
 "NERD TREE BEGIN
-noremap <F4> <Esc>:NERDTreeToggle<CR>
-noremap! <F4> <Esc>:NERDTreeToggle<CR>
+nmap <silent> <Leader>nt :NERDTreeToggle<CR>
 let g:NERDTreeMapActivateNode='<CR>' "otwieramy plik/katalog enterem
 let g:NERDTreeWinSize = 35 "szerokość okna nerd tree
 let g:NERDTreeWinPos = "left" "pozycja okna nerd tree
@@ -379,11 +353,6 @@ map Q gq
 map gn :nohlsearch<CR>
 " latwe powrot z taga do ktorego skoczylismy
 map <C-[> :pop<CR>
-" zapis pliku w stylu gorszych edytorow tekstowych :)
-noremap! <C-S> <Esc>:w<CR><INSERT>
-" wyjscie w stylu gorzych edytorow tekstowych :)
-noremap! <C-Q> <Esc>:quit<CR>
-noremap <C-Q> <Esc>:quit<CR>
 " latwa nawigacja zakladkami
 noremap! <A-Up> <Esc>:tabnew<CR><Esc>:e<Space>
 noremap <A-Up> <Esc>:tabnew<CR><Esc>:e<Space>
@@ -401,10 +370,8 @@ cmap w!! w !sudo tee % >/dev/null
 cmap W w
 cmap Wq wq
 cmap WQ wq
+cmap qw wq
 cmap Q q
-
-noremap <F1> :help<Space>
-noremap! <F1> :help<Space>
 
 noremap <F2> <Esc>mZggVG=`Z:delmarks Z<CR>lzz<Insert>
 noremap! <F2> <Esc>mZggVG=`Z:delmarks Z<CR>lzz<Insert>
@@ -422,6 +389,8 @@ function ToggleFlag(option,flag)
         exec ('set ' . a:option . '-=' . a:flag)
     else
         exec ('set ' . a:option . '+=' . a:flag)
+
+
     endif
 endfunction
 noremap <silent> <A-1> :call ToggleFlag("guioptions","m")<BAR>set guioptions?<CR>
