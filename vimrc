@@ -68,8 +68,8 @@ if has("gui_running")
     colorscheme wombat
     hi SpecialKey guibg=grey20
     hi NonText guifg=yellowgreen guibg=grey20
-    set lines=68
-    set columns=237
+    set lines=999
+    set columns=999
     set cursorline
     set guioptions=aegirLt "wylaczony toolbar i menu
 endif
@@ -168,8 +168,6 @@ if &diff
     set statusline+=%r
     set statusline+=%#User0#
     set statusline+=%w]
-    set lines=75
-    set columns=269
 endif
 
 "CHANGE CURSOR SHAPE IN DIFFRENT MODES
