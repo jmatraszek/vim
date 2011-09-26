@@ -222,6 +222,7 @@ nmap <silent> <Leader>vf :CommandTFlush<CR>
 
 "GUNDO BEGIN
 nmap <silent> <Leader>gn :GundoToggle<CR>
+nmap <silent> <Leader>gr :GundoRenderGraph<CR>
 "GUNDO END
 
 "DOXYGEN TOOLKIT BEGIN
