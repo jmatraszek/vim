@@ -201,6 +201,10 @@ hi MBEChanged guifg=#F34227 guibg=#808080
 hi MBENormal guifg=#A6DB29 guibg=#808080
 "MINIBUFEXPLORER END
 
+"VIM-LATEX BEGIN
+let g:tex_flavor='latex'
+"VIM-LATEX END
+
 "SYNTASTIC BEGIN
 let g:syntastic_enable_signs = 1
 let g:syntastic_auto_loc_list = 1
