@@ -193,12 +193,12 @@ let g:miniBufExplModSelTarget = 1
 let g:miniBufExplUseSingleClick = 1
 let g:miniBufExplTabWrap = 1
 
-hi MBEVisibleActive guifg=#8181F7 guibg=#5858FA
-hi MBEVisibleChangedActive guifg=#F32020 guibg=#C0C0C0
-hi MBEVisibleChanged guifg=#F34227 guibg=#808080
-hi MBEVisibleNormal guifg=#A6DB29 guibg=#808080
-hi MBEChanged guifg=#F34227 guibg=#808080
-hi MBENormal guifg=#A6DB29 guibg=#808080
+hi MBEVisibleActive guifg=#8181F7 guibg=#242424
+hi MBEVisibleChangedActive guifg=#FF2200 guibg=#242424
+hi MBEVisibleChanged guifg=#E45B46 guibg=#242424
+hi MBEVisibleNormal guifg=#A6DB29 guibg=#242424
+hi MBEChanged guifg=#E45B46 guibg=#242424
+hi MBENormal guifg=#A6DB29 guibg=#242424
 "MINIBUFEXPLORER END
 
 "VIM-LATEX BEGIN
