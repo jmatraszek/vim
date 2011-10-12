@@ -387,7 +387,7 @@ nnoremap - o<esc>
 " Remove the Windows ^M - when the encodings gets messed up
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
-fu! PasteWindow(direction) "{{{
+fu! Pastewindow(direction) "{{{
     if exists("g:yanked_buffer")
         if a:direction == 'edit'
             let temp_buffer = bufnr('%')
@@ -404,10 +404,10 @@ endf "}}}
 "yank/paste buffers
 nmap <silent> <leader>wy  :let g:yanked_buffer=bufnr('%')<cr>
 nmap <silent> <leader>wd  :let g:yanked_buffer=bufnr('%')<cr>:q<cr>
-nmap <silent> <leader>wp :call PasteWindow('edit')<cr>
-nmap <silent> <leader>ws :call PasteWindow('split')<cr>
-nmap <silent> <leader>wv :call PasteWindow('vsplit')<cr>
-nmap <silent> <leader>wt :call PasteWindow('tabnew')<cr>
+nmap <silent> <leader>wp :call Pastewindow('edit')<cr>
+nmap <silent> <leader>ws :call Pastewindow('split')<cr>
+nmap <silent> <leader>wv :call Pastewindow('vsplit')<cr>
+nmap <silent> <leader>wt :call Pastewindow('tabnew')<cr>
 
 " wlaczenie/wylaczenie menu
 function ToggleFlag(option,flag)
