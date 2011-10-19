@@ -52,6 +52,7 @@ source $VIMRUNTIME/ftplugin/man.vim "wlaczamy plugin man
 set nolist
 " set special keys, just in case
 set listchars=tab:▸\ ,eol:¬
+set foldmethod=syntax
 
 "GUI BEGIN
 if &t_Co > 2 || has("gui_running")
