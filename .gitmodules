@@ -91,9 +91,6 @@
 [submodule "bundle/gist"]
 	path = bundle/gist
 	url = https://github.com/mattn/gist-vim.git
-[submodule "bundle/minibufexpl"]
-	path = bundle/minibufexpl
-	url = git://github.com/fholgado/minibufexpl.vim.git
 [submodule "bundle/vim-rdoc"]
 	path = bundle/vim-rdoc
 	url = https://github.com/depuracao/vim-rdoc.git
@@ -124,3 +121,6 @@
 [submodule "bundle/vim-latex"]
 	path = bundle/vim-latex
 	url = https://github.com/jcf/vim-latex.git
+[submodule "bundle/a"]
+	path = bundle/a
+	url = https://github.com/vim-scripts/a.vim.git
