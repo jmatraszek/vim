@@ -54,6 +54,7 @@ set nolist
 set listchars=tab:▸\ ,eol:¬
 set foldmethod=syntax
 set nofoldenable
+set updatetime=4100
 
 "GUI BEGIN
 if &t_Co > 2 || has("gui_running")
