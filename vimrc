@@ -25,7 +25,7 @@ set incsearch " do incremental searching
 set completeopt=menu,longest,preview
 set wildmenu "ladne dopelnianie komend
 set wildchar=<TAB>
-set wildignore+=*.o,*.obj,.git,public/system
+set wildignore+=*.o,*.obj,.git,public/system,build/**
 set number "numerowanie linii
 set fencs=utf8
 set enc=utf8
@@ -53,6 +53,7 @@ set nolist
 " set special keys, just in case
 set listchars=tab:▸\ ,eol:¬
 set foldmethod=syntax
+set nofoldenable
 
 "GUI BEGIN
 if &t_Co > 2 || has("gui_running")
