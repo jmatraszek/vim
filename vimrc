@@ -185,6 +185,7 @@ let g:alternateSearchPath = 'sfr:../source,sfr:../src,sfr:../include,sfr:../inc,
 "C-SUPPORT BEGIN
 let g:C_LocalTemplateFile = $HOME.'/.vim/bundle/c/c-support/templates/Templates'
 let g:C_GlobalTemplateFile = $HOME.'/.vim/bundle/c/c-support/templates/Templates'
+let g:C_MapLeader = ','
 "C-SUPPORT END
 
 "MINIBUFEXPLORER BEGIN
