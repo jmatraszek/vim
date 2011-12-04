@@ -207,6 +207,9 @@ hi MBENormal guifg=#A6DB29 guibg=#242424
 
 "VIM-LATEX BEGIN
 let g:tex_flavor='latex'
+let g:Tex_DefaultTargetFormat='pdf'
+let g:Tex_CompileRule_pd='pdflatex -src-specials -interaction=nonstopmode $*'
+let g:Tex_MultipleCompileFormats='dvi,pdf'
 "VIM-LATEX END
 
 "SYNTASTIC BEGIN
