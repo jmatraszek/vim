@@ -483,6 +483,7 @@ if has("autocmd")
         au!
         autocmd FileType make setlocal noexpandtab "wylacz zamiane tabow na spacje gdy edytujemy makefile
         autocmd FileType text setlocal textwidth=120
+        autocmd FileType tex setlocal formatoptions=tcroqMl
         autocmd FileType c setlocal formatoptions=croq "wrap only comments, not code
         "autocmd FileType ruby,eruby let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
         autocmd BufReadPost * "skacz do ostatniej pozycji kursora w pliku
