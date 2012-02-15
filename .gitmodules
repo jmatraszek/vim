@@ -19,21 +19,12 @@
 [submodule "bundle/matchit"]
     path= bundle/matchit
     url = https://github.com/vim-scripts/matchit.zip.git
-[submodule "bundle/vimoutliner"]
-    path = bundle/vimoutliner
-    url = https://github.com/vim-scripts/TVO--The-Vim-Outliner.git
 [submodule "bundle/yank_ring"]
     path = bundle/yank_ring
     url = https://github.com/vim-scripts/YankRing.vim.git
-[submodule "bundle/unimpaired"]
-    path = bundle/unimpaired
-    url = https://github.com/tpope/vim-unimpaired.git
 [submodule "bundle/nerd_tree"]
     path = bundle/nerd_tree
     url = https://github.com/scrooloose/nerdtree.git
-[submodule "bundle/vim-task"]
-    path = bundle/vim-task
-    url = git://github.com/samsonw/vim-task.git
 [submodule "bundle/syntastic"]
     path = bundle/syntastic
     url = https://github.com/scrooloose/syntastic.git
@@ -49,66 +40,33 @@
 [submodule "bundle/surround"]
     path = bundle/surround
     url = https://github.com/tpope/vim-surround.git
-[submodule "bundle/vim-preview"]
-    path = bundle/vim-preview
-    url = https://github.com/greyblake/vim-preview.git
-[submodule "bundle/textobj-user"]
-	path = bundle/textobj-user
-	url = https://github.com/kana/vim-textobj-user.git
-[submodule "bundle/textobj-rubyblock"]
-	path = bundle/textobj-rubyblock
-	url = https://github.com/nelstrom/vim-textobj-rubyblock.git
-[submodule "bundle/ack"]
-	path = bundle/ack
-	url = https://github.com/mileszs/ack.vim.git
 [submodule "bundle/easytags"]
 	path = bundle/easytags
 	url = https://github.com/vim-scripts/easytags.vim.git
 [submodule "bundle/robokai"]
 	path = bundle/robokai
 	url = https://github.com/vim-scripts/robokai.git
-[submodule "bundle/ruby-refactoring"]
-	path = bundle/ruby-refactoring
-	url = https://github.com/ecomba/vim-ruby-refactoring.git
 [submodule "bundle/supertab"]
 	path = bundle/supertab
 	url = https://github.com/ervandew/supertab.git
 [submodule "bundle/solarized"]
 	path = bundle/solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
-[submodule "bundle/conque"]
-	path = bundle/conque
-	url = https://github.com/rson/vim-conque.git
 [submodule "bundle/molokai"]
 	path = bundle/molokai
 	url = https://github.com/tomasr/molokai.git
 [submodule "bundle/wombat"]
 	path = bundle/wombat
 	url = https://jmatraszek@github.com/jmatraszek/vim-wombat.git
-[submodule "bundle/gitv"]
-	path = bundle/gitv
-	url = https://github.com/gregsexton/gitv.git
-[submodule "bundle/gist"]
-	path = bundle/gist
-	url = https://github.com/mattn/gist-vim.git
-[submodule "bundle/vim-rdoc"]
-	path = bundle/vim-rdoc
-	url = https://github.com/depuracao/vim-rdoc.git
 [submodule "bundle/xptemplate"]
 	path = bundle/xptemplate
 	url = https://github.com/drmingdrmer/xptemplate.git
-[submodule "bundle/textile"]
-	path = bundle/textile
-	url = https://github.com/timcharper/textile.vim.git
 [submodule "bundle/bufkill"]
 	path = bundle/bufkill
 	url = https://github.com/vim-scripts/bufkill.vim.git
 [submodule "bundle/threesome"]
 	path = bundle/threesome
 	url = https://github.com/sjl/threesome.vim.git
-[submodule "bundle/vim-coffe-script"]
-	path = bundle/vim-coffe-script
-	url = https://github.com/kchmck/vim-coffee-script.git
 [submodule "bundle/gundo"]
 	path = bundle/gundo
 	url = https://github.com/sjl/gundo.vim.git
