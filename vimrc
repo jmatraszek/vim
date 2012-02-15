@@ -9,7 +9,7 @@ filetype plugin indent on
 "
 set showmode
 set backspace=indent,eol,start
-set virtualedit=onemore
+" set virtualedit=onemore
 set noautochdir
 if has("vms")
     set nobackup " do not keep a backup file, use versions instead
@@ -237,15 +237,6 @@ nmap <silent> <Leader>gn :GundoToggle<CR>
 nmap <silent> <Leader>gr :GundoRenderGraph<CR>
 "GUNDO END
 
-"DOXYGEN TOOLKIT BEGIN
-" menu Doxy jako submenu Plugin
-let g:Doxy_RootMenu = "&Plugin.Do&xy."
-" naprawiamy sciezki do szablonow, popsute przez pathogen'a :)
-let g:Doxy_LocalTemplateFile  = $HOME.'/.vim/bundle/doxygen-support/doxygen-support/templates/doxygen.templates'
-let g:Doxy_LocalTemplateDir   = $HOME.'/.vim/bundle/doxygen-support/doxygen-support/templates/'
-"DOXYGEN TOOLKIT END
-
-
 "YANKRING BEGIN
 let g:yankring_history_file = '.yankring_history.txt'
 nmap <silent> <Leader>yr :YRShow<CR>
@@ -287,10 +278,6 @@ nmap <leader>gd :Gdiff<cr>
 nmap <leader>gds :Gdiff --staged<cr>
 "FUGITIVE END
 
-"CONQUE BEGIN
-let g:ConqueTerm_FastMode = 1
-"CONQUE END
-
 "NERD TREE BEGIN
 nmap <silent> <Leader>nt :NERDTreeToggle<CR>
 let g:NERDTreeMapActivateNode='<CR>' "otwieramy plik/katalog enterem
@@ -314,25 +301,16 @@ if has("autocmd")
     autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 end
 "VIM RUBY END
-
-
-"VIM TASK BEGIN
-inoremap <silent> <buffer> <C-S-CR> <ESC>:call Toggle_task_status()<CR>i
-noremap <silent> <buffer> <C-S-CR> :call Toggle_task_status()<CR>
-if has("autocmd")
-    autocmd BufNewFile,BufRead *todo.txt,*.task,*.tasks  setfiletype task
-end
-"VIM TASK END
-
+"
 "UNIMPAIRED BEGIN
 " Bubble single lines
-nmap <A-k> [e
-nmap <A-j> ]e
+" nmap <A-k> [e
+" nmap <A-j> ]e
 " Bubble multiple lines
-vmap <A-k> [egv
-vmap <A-j> ]egv
+" vmap <A-k> [egv
+" vmap <A-j> ]egv
 " Visually select the text that was last edited/pasted
-nmap gV `[v`]
+" nmap gV `[v`]
 "UNIMPAIRED END
 
 "KEY MAPPING BEGIN
@@ -356,7 +334,6 @@ map <leader>cp :botright cope<cr>
 map <leader>n :cnext<cr>
 map <leader>p :cprev<cr>
 map <leader>cx :cclose<cr>
-map <leader>wr :w !ruby -c<cr>
 " windows movement
 map <C-h> <C-w>h
 map <C-j> <C-w>j
@@ -497,5 +474,3 @@ else
     set autoindent " always set autoindenting on
 endif
 "AUTOCMD END
-"
-let g:headlights_debug = 1
