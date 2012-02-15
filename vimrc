@@ -350,6 +350,8 @@ nnoremap k gk
 " enter command mode quickly
 nnoremap ; :
 
+map Y y$
+
 map <leader>cp :botright cope<cr>
 map <leader>n :cnext<cr>
 map <leader>p :cprev<cr>
