@@ -301,17 +301,6 @@ if has("autocmd")
     autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 end
 "VIM RUBY END
-"
-"UNIMPAIRED BEGIN
-" Bubble single lines
-" nmap <A-k> [e
-" nmap <A-j> ]e
-" Bubble multiple lines
-" vmap <A-k> [egv
-" vmap <A-j> ]egv
-" Visually select the text that was last edited/pasted
-" nmap gV `[v`]
-"UNIMPAIRED END
 
 "KEY MAPPING BEGIN
 " moving in a right way :)
@@ -330,10 +319,6 @@ nnoremap ; :
 
 map Y y$
 
-map <leader>cp :botright cope<cr>
-map <leader>n :cnext<cr>
-map <leader>p :cprev<cr>
-map <leader>cx :cclose<cr>
 " windows movement
 map <C-h> <C-w>h
 map <C-j> <C-w>j
@@ -345,25 +330,8 @@ map Q gq
 map gn :nohlsearch<CR>
 " latwe powrot z taga do ktorego skoczylismy
 map <silent> <A-]> :pop<CR>
-" latwa nawigacja zakladkami
-noremap! <A-Up> <Esc>:tabnew<CR><Esc>:e<Space>
-noremap <A-Up> <Esc>:tabnew<CR><Esc>:e<Space>
-noremap <C-T> <Esc>:tabnew<CR>
-noremap! <A-Down> <Esc>:tabclose<CR><INSERT>
-noremap <A-Down> <Esc>:tabclose<CR><INSERT>
-noremap! <A-Left> <Esc>:tabp<CR><INSERT>
-noremap <A-Left> <Esc>:tabp<CR><INSERT>
-noremap! <A-Right> <Esc>:tabn<CR><INSERT>
-noremap <A-Right> <Esc>:tabn<CR><INSERT>
 " zapis gdy edytujemy plik bez uprawnien do zapisu
 cmap w!! w !sudo tee % >/dev/null
-
-" unikniecie bledow spowodowanym shiftem
-cmap W w
-cmap Wq wq
-cmap WQ wq
-cmap qw wq
-cmap Q q
 
 noremap <F2> <Esc>mZggVG=`Z:delmarks Z<CR>lzz<Insert>
 noremap! <F2> <Esc>mZggVG=`Z:delmarks Z<CR>lzz<Insert>
@@ -426,30 +394,10 @@ function ToggleFlag(option,flag)
         exec ('set ' . a:option . '-=' . a:flag)
     else
         exec ('set ' . a:option . '+=' . a:flag)
-
-
     endif
 endfunction
 noremap <silent> <A-1> :call ToggleFlag("guioptions","m")<BAR>set guioptions?<CR>
 imap <A-1> <C-O><A-1>
-
-
-nmap <leader>yt :call RunCurrentTest()<CR>
-nmap <leader>ht :call RunLastTest()<CR>
-nmap <leader>gt :!bundle exec rspec <C-R>% --no-color --drb<CR>
-
-function RunLastTest ()
-  if exists('w:current_test')
-    exe '!bundle exec rspec ' . w:current_test . ' --no-color --drb'
-  else
-    call RunCurrentTest()
-  endif
-endfunction
-
-function RunCurrentTest ()
-  let w:current_test = expand("%:.") . ':' . line(".")
-  exe '!bundle exec rspec ' . w:current_test . ' --no-color --drb'
-endfunction
 "KEY MAPPINGS END
 
 "AUTOCMD BEGIN
