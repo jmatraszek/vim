@@ -42,13 +42,12 @@ set ignorecase
 set smartcase "case sensitive tylko jesli wyszukiwana fraza zawiera wielka litere
 set smarttab
 set expandtab
-" set tabstop=4 "4 spacje zamiast taba
+set tabstop=4 "4 spacje zamiast taba
 set shiftwidth=4 "4 spacje przyautoformatowaniu kodu"
 set softtabstop=4 "tylko spacje w formatowaniu kodu
 set nocursorline
 set paste
 set lazyredraw
-source $VIMRUNTIME/ftplugin/man.vim "wlaczamy plugin man
 " no list special keys
 set nolist
 " set special keys, just in case
@@ -60,14 +59,15 @@ set updatetime=4100
 "GUI BEGIN
 if &t_Co > 2 || has("gui_running")
     syntax on
+    set background=dark
     set hlsearch
     set guifont=Monospace\ 10
-    colorscheme molokai
+    " colorscheme molokai
+    colorscheme wombat256
     hi SpecialKey ctermfg=12 ctermbg=234
     hi NonText ctermfg=12 ctermbg=234
 endif
 if has("gui_running")
-    "set background=dark
     " colorscheme desert
     colorscheme wombat
     hi SpecialKey guibg=grey20
@@ -326,7 +326,7 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-map Q gq
+map Q gqap
 " szybkie wylaczenie podswietlania wynikow wyszukiwania
 map gn :nohlsearch<CR>
 " latwe powrot z taga do ktorego skoczylismy
