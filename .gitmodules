@@ -85,3 +85,6 @@
 [submodule "bundle/vim-latex"]
 	path = bundle/vim-latex
 	url = https://github.com/jcf/vim-latex.git
+[submodule "bundle/void"]
+	path = bundle/void
+	url = https://github.com/vim-scripts/void.git

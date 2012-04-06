@@ -70,6 +70,7 @@ endif
 if has("gui_running")
     " colorscheme desert
     colorscheme wombat
+    " colorscheme void
     hi SpecialKey guibg=grey20
     hi NonText guifg=yellowgreen guibg=grey20
     set lines=999
@@ -263,7 +264,7 @@ let g:xptemplate_fallback = '<Plug>supertabKey' "jesli nic nie pasowalo w xpt sp
 let g:xptemplate_key = '<Tab>' "xpt uzywa <tab> zamiast <C-\>
 let g:xptemplate_pum_tab_nav = 1 "uzycie <tab>/<S-tab> do nawigacji w popup-msg
 let g:xptemplate_minimal_prefix = 'full' "xpt wlaczy sie tylko po wpisaniu pelnej nazwy snippeta
-let g:xptemplate_brace_complete = 1 "auto complete craces
+let g:xptemplate_brace_complete = 1 "auto complete braces
 "XMTEMPLATE END
 
 "TAGBAR BEGIN
