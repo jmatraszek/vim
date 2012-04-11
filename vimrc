@@ -212,6 +212,12 @@ let g:tex_flavor='latex'
 let g:Tex_DefaultTargetFormat='pdf'
 let g:Tex_CompileRule_pd='pdflatex -src-specials -interaction=nonstopmode $*'
 let g:Tex_MultipleCompileFormats='dvi,pdf'
+if !hasmapto('<Plug>IMAP_JumpForward', 'i')
+    imap <C-M> <Plug>IMAP_JumpForward
+endif
+if !hasmapto('<Plug>IMAP_JumpForward', 'n')
+    nmap <C-M> <Plug>IMAP_JumpForward
+endif
 "VIM-LATEX END
 
 "SYNTASTIC BEGIN
