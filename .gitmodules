@@ -88,3 +88,6 @@
 [submodule "bundle/void"]
 	path = bundle/void
 	url = https://github.com/vim-scripts/void.git
+[submodule "bundle/vim-haml"]
+	path = bundle/vim-haml
+	url = https://github.com/tpope/vim-haml.git

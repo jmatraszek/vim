@@ -412,6 +412,7 @@ imap <A-1> <C-O><A-1>
 if has("autocmd")
     autocmd QuickfixCmdPost make,grep,grepadd,vimgrep :botright cwindow "wlacz okienko quickfix po kazdym make
     autocmd BufWritePre * :%s/\s\+$//e "usuwa trailing spaces
+    autocmd BufNewFile,BufRead *.less setf scss
 
     filetype plugin indent on
     augroup vimrcEx
