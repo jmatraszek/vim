@@ -242,7 +242,7 @@ nnoremap k gk
 " enter command mode quickly
 nnoremap ; :
 
-map Y y$
+nmap Y y$
 
 " windows movement
 map <C-h> <C-w>h
