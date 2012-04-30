@@ -61,7 +61,7 @@ if &t_Co > 2 || has("gui_running")
     syntax on
     set background=dark
     set hlsearch
-    set guifont=Monospace\ 10
+    set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 10 " install this using: git clone git://gist.github.com/1630581.git ~/.fonts/ttf-dejavu-powerline
     " colorscheme molokai
     colorscheme wombat256
     hi SpecialKey ctermfg=12 ctermbg=234
@@ -88,92 +88,9 @@ let html_dynamic_folds=1
 "TOHTML END
 
 "STATUSLINE BEGIN
-function! FileSize()
-    let bytes = getfsize(expand("%:p"))
-    if bytes <= 0
-        return ""
-    endif
-    if bytes < 1024 "w bajtach
-        return bytes . "B"
-    endif
-    if bytes < 1048576 "w kilobajtach
-        return (bytes / 1024) . "K"
-    else "w megabajtach
-        return (bytes / 1048576) . "M"
-    endif
-endfunction
-
-
-
-hi User0 guibg=#D2FE39 ctermbg=191 guifg=#000000 ctermfg=16
-hi mod guibg=#D2FE39 ctermbg=191 guifg=#FF0000 ctermfg=169
-hi ro guibg=#FF0000 ctermbg=169 guifg=#000000 ctermfg=16
-hi User1 guibg=#6FFE39 ctermbg=83 guifg=#000000 ctermfg=16
-hi User2 guibg=#39FE66 ctermbg=47 guifg=#000000 ctermfg=16
-hi User3 guibg=#39FEC9 ctermbg=87 guifg=#000000 ctermfg=16
-hi User4 guibg=#39D2FE ctermbg=75 guifg=#000000 ctermfg=16
-hi User5 guibg=#396FFE ctermbg=63 guifg=#000000 ctermfg=16
-hi User6 guibg=#6639FE ctermbg=99 guifg=#000000 ctermfg=16
-hi User7 guibg=#C939FE ctermbg=171 guifg=#000000 ctermfg=16
-hi User8 guibg=#FE39D2 ctermbg=206 guifg=#000000 ctermfg=16
-hi User9 guibg=#FE396F ctermbg=203 guifg=#000000 ctermfg=16
-hi User10 guibg=#FF6639 ctermbg=208 guifg=#000000 ctermfg=16
-hi User11 guibg=#FEC939 ctermbg=215 guifg=#FF0000 ctermfg=169
-
-" source ~/.vim/bundle/fugitive/plugin/fugitive.vim
-" let git_status=fugitive#statusline()
-" let git_status=substitute(git_status, "[Git(", "", "")
-" let git_status=substitute(git_status, ")]", "", "")
-
-set statusline=
-set statusline=%#User0#
-set statusline+=[%f
-set statusline+=%#mod#
-set statusline+=%m
-set statusline+=%#ro#
-set statusline+=%r
-set statusline+=%#User0#
-set statusline+=%w]
-set statusline+=%#User1#
-set statusline+=[FORMAT=%{&ff}]
-set statusline+=%#User2#
-set statusline+=[FT=%Y]
-set statusline+=%#User3#
-set statusline+=[ENC=%{strlen(&fenc)?&fenc:'none'}]
-set statusline+=%#User4#
-set statusline+=[%{FileSize()}]
-set statusline+=%#User5#
-set statusline+=[POS=%04l,%04v]
-set statusline+=%#User6#
-set statusline+=[%p%%]
-set statusline+=%#User7#
-set statusline+=[LEN=%L]
-set statusline+=%#User8#
-set statusline+=%{fugitive#statusline()}
-set statusline+=%#User9#
-set statusline+=[\%03.3b]
-set statusline+=%#User10#
-set statusline+=[0x\%02.2B]
-set statusline+=%#ro#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%#User11#%=
-" set statusline+=%*
+let g:Powerline_symbols = 'fancy'
 set laststatus=2
 "STATUSLINE END
-
-"VIMDIFF SETTINGS
-if &diff
-    set guifont=Monospace\ 10
-    set statusline=
-    set statusline=%#User0#
-    set statusline+=[%f
-    set statusline+=%#mod#
-    set statusline+=%m
-    set statusline+=%#ro#
-    set statusline+=%r
-    set statusline+=%#User0#
-    set statusline+=%w]
-endif
 
 "CHANGE CURSOR SHAPE IN DIFFRENT MODES
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
