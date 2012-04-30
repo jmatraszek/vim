@@ -69,7 +69,7 @@ if &t_Co > 2 || has("gui_running")
 endif
 if has("gui_running")
     " colorscheme desert
-    colorscheme wombat
+    colorscheme badwolf
     " colorscheme void
     hi SpecialKey guibg=grey20
     hi NonText guifg=yellowgreen guibg=grey20
