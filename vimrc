@@ -231,6 +231,10 @@ if has("autocmd")
 end
 "VIM RUBY END
 
+"VIMERL BEGIN
+let erlang_show_errors = 0 "let syntastic do the job
+"VIMERL END
+
 "KEY MAPPING BEGIN
 " moving in a right way :)
 nnoremap <up> <nop>
