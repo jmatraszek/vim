@@ -42,9 +42,9 @@ set ignorecase
 set smartcase "case sensitive tylko jesli wyszukiwana fraza zawiera wielka litere
 set smarttab
 set expandtab
-set tabstop=4 "4 spacje zamiast taba
-set shiftwidth=4 "4 spacje przyautoformatowaniu kodu"
-set softtabstop=4 "tylko spacje w formatowaniu kodu
+set tabstop=2 "2 spacje zamiast taba
+set shiftwidth=2 "2 spacje przyautoformatowaniu kodu"
+set softtabstop=2 "tylko spacje w formatowaniu kodu
 set nocursorline
 set paste
 set lazyredraw
@@ -172,10 +172,10 @@ nmap <silent> <Leader>yr :YRShow<CR>
 "YANKRING END
 
 "SUPERTAB BEGIN
-" let g:SuperTabLongestEnhanced = 1
-" let g:SuperTabDefaultCompletionType = "<c-p>"
-" let g:SuperTabMappingForward = '<Tab>'
-" let g:SuperTabMappingBackward = '<S-Tab>'
+let g:SuperTabLongestEnhanced = 1
+let g:SuperTabDefaultCompletionType = "<c-p>"
+let g:SuperTabMappingForward = '<Tab>'
+let g:SuperTabMappingBackward = '<S-Tab>'
 "kolory dla pop up menu
 " highlight Pmenu term=NONE cterm=NONE ctermfg=7 ctermbg=5 gui=NONE guifg=White guibg=Magenta
 " highlight PmenuSel term=NONE cterm=NONE ctermfg=0 ctermbg=7 gui=NONE guifg=Black guibg=White
@@ -184,14 +184,14 @@ nmap <silent> <Leader>yr :YRShow<CR>
 "SUPERTAB END
 
 "XPTEMPLATES BEGIN
-let g:xptemplate_vars = "SParg=&BRloop=\n&SPcmd=&BRif=\n&BRstc=\n&SPop=" "dostosowanie snippetow do stylu kodowania
-let g:SuperTabMappingForward = '<Plug>supertabKey' "avoid key conflict with supertab
-let g:xptemplate_fallback = '<Plug>supertabKey' "jesli nic nie pasowalo w xpt sprawdzamy supertab'a
-" let g:xptemplate_key = '<C-\>'
-let g:xptemplate_key = '<Tab>' "xpt uzywa <tab> zamiast <C-\>
-let g:xptemplate_pum_tab_nav = 1 "uzycie <tab>/<S-tab> do nawigacji w popup-msg
-let g:xptemplate_minimal_prefix = 'full' "xpt wlaczy sie tylko po wpisaniu pelnej nazwy snippeta
-let g:xptemplate_brace_complete = 1 "auto complete braces
+" let g:xptemplate_vars = "SParg=&BRloop=\n&SPcmd=&BRif=\n&BRstc=\n&SPop=" "dostosowanie snippetow do stylu kodowania
+" let g:SuperTabMappingForward = '<Plug>supertabKey' "avoid key conflict with supertab
+" let g:xptemplate_fallback = '<Plug>supertabKey' "jesli nic nie pasowalo w xpt sprawdzamy supertab'a
+" " let g:xptemplate_key = '<C-\>'
+" let g:xptemplate_key = '<Tab>' "xpt uzywa <tab> zamiast <C-\>
+" let g:xptemplate_pum_tab_nav = 1 "uzycie <tab>/<S-tab> do nawigacji w popup-msg
+" let g:xptemplate_minimal_prefix = 'full' "xpt wlaczy sie tylko po wpisaniu pelnej nazwy snippeta
+" let g:xptemplate_brace_complete = 1 "auto complete braces
 "XMTEMPLATE END
 
 "TAGBAR BEGIN

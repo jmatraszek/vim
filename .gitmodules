@@ -58,9 +58,6 @@
 [submodule "bundle/wombat"]
 	path = bundle/wombat
 	url = https://jmatraszek@github.com/jmatraszek/vim-wombat.git
-[submodule "bundle/xptemplate"]
-	path = bundle/xptemplate
-	url = https://github.com/drmingdrmer/xptemplate.git
 [submodule "bundle/bufkill"]
 	path = bundle/bufkill
 	url = https://github.com/vim-scripts/bufkill.vim.git
