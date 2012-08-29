@@ -103,3 +103,6 @@
 [submodule "bundle/vimerl"]
 	path = bundle/vimerl
 	url = https://github.com/jimenezrick/vimerl.git
+[submodule "bundle/hybrid"]
+	path = bundle/hybrid
+	url = git://github.com/w0ng/vim-hybrid.git
