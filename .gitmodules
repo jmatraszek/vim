@@ -106,3 +106,6 @@
 [submodule "bundle/hybrid"]
 	path = bundle/hybrid
 	url = git://github.com/w0ng/vim-hybrid.git
+[submodule "bundle/tommorow"]
+	path = bundle/tommorow
+	url = git://github.com/wolverian/Tomorrow-Theme.git
