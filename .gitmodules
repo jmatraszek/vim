@@ -109,3 +109,15 @@
 [submodule "bundle/tommorow"]
 	path = bundle/tommorow
 	url = git://github.com/wolverian/Tomorrow-Theme.git
+[submodule "bundle/tlib-vim"]
+	path = bundle/tlib-vim
+	url = https://github.com/tomtom/tlib_vim.git
+[submodule "bundle/snipmate-snippets"]
+	path = bundle/snipmate-snippets
+	url = https://github.com/honza/snipmate-snippets.git
+[submodule "bundle/vim-snipmate"]
+	path = bundle/vim-snipmate
+	url = git://github.com/garbas/vim-snipmate.git
+[submodule "bundle/autoclose"]
+	path = bundle/autoclose
+	url = git://github.com/partkyle/AutoClose.git
