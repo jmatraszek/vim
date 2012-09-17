@@ -124,3 +124,6 @@
 [submodule "bundle/vim-addon-mw-utils"]
 	path = bundle/vim-addon-mw-utils
 	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
+[submodule "bundle/vim-gnupg"]
+	path = bundle/vim-gnupg
+	url = git://github.com/jamessan/vim-gnupg.git
