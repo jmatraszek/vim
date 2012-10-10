@@ -143,6 +143,7 @@ endif
 
 "SYNTASTIC BEGIN
 let g:syntastic_enable_signs = 1
+let g:syntastic_quiet_warnings=1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_cpp_compiler_options = ' -Wall -Wno-write-strings -g `pkg-config --cflags opencv` `pkg-config --cflags sigc++-2.0`'
 "SYNTASTIC END
