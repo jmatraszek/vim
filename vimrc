@@ -342,6 +342,7 @@ if has("autocmd")
     filetype plugin indent on
     augroup vimrcEx
         au!
+        autocmd BufRead /tmp/mutt* :source ~/.vim/mail.vim
         autocmd FileType make setlocal noexpandtab "wylacz zamiane tabow na spacje gdy edytujemy makefile
         autocmd FileType text setlocal textwidth=120
         autocmd FileType tex setlocal formatoptions=tcroqMl
