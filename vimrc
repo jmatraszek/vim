@@ -7,7 +7,6 @@ filetype plugin indent on
 "PATHOGEN END
 "
 set hidden
-set title
 set showmode
 set backspace=indent,eol,start
 " set virtualedit=onemore
