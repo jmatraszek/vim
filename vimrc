@@ -1,7 +1,21 @@
 "PATHOGEN BEGIN
 set nocompatible
 filetype off
-call pathogen#runtime_append_all_bundles()
+" To disable a plugin, add it's bundle name to the following list
+let g:pathogen_disabled = []
+
+" for some reason the csscolor plugin is very slow when run on the terminal
+" but not in GVim, so disable it if no GUI is running
+if !has('gui_running')
+    " call add(g:pathogen_disabled, 'autoclose')
+endif
+
+" Gundo requires at least vim 7.3
+if v:version < '703' || !has('python')
+    call add(g:pathogen_disabled, 'gundo')
+endif
+
+call pathogen#infect()
 call pathogen#helptags()
 filetype plugin indent on
 "PATHOGEN END
