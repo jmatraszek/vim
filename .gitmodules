@@ -127,3 +127,6 @@
 [submodule "bundle/vim-gnupg"]
 	path = bundle/vim-gnupg
 	url = git://github.com/jamessan/vim-gnupg.git
+[submodule "bundle/delimit-mate"]
+	path = bundle/delimit-mate
+	url = git://github.com/Raimondi/delimitMate.git
