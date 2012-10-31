@@ -86,6 +86,11 @@ let html_use_css=1
 let html_dynamic_folds=1
 "TOHTML END
 
+"DELIMITMATE BEGIN
+let delimitMate_expand_cr = 1
+let delimitMate_expand_space = 1
+"DELIMITMATE END
+
 "POWERLINE BEGIN
 if has("gui_running")
     let g:Powerline_symbols = 'fancy'
