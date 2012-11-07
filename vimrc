@@ -23,7 +23,6 @@ filetype plugin indent on
 set hidden
 set showmode
 set backspace=indent,eol,start
-" set virtualedit=onemore
 set noautochdir
 if has("vms")
     set nobackup " do not keep a backup file, use versions instead
@@ -45,7 +44,7 @@ set fencs=utf8
 set enc=utf8
 set tenc=utf8
 set mouse=a
-set formatoptions=tcqmM
+set formatoptions=atcqomM
 set textwidth=120
 set helplang=pl,en
 set autoindent
@@ -58,9 +57,6 @@ set expandtab
 set tabstop=2 "2 spacje zamiast taba
 set shiftwidth=2 "2 spacje przyautoformatowaniu kodu"
 set softtabstop=2 "tylko spacje w formatowaniu kodu
-set nocursorline
-set paste
-set lazyredraw
 " no list special keys
 set nolist
 " set special keys, just in case
@@ -68,6 +64,8 @@ set listchars=tab:▸\ ,eol:¬
 set foldmethod=syntax
 set nofoldenable
 set updatetime=4100
+set lazyredraw
+set pastetoggle=<F4>
 
 "GUI BEGIN
 if &t_Co > 2 || has("gui_running")
@@ -90,6 +88,11 @@ if has("gui_running")
     set columns=999
     set cursorline
     set guioptions=aegirLt "wylaczony toolbar i menu
+else
+    set nopaste
+    " set ttymouse=xterm2
+    " behave xterm
+    " set selectmode=mouse
 endif
 "GUI END
 
@@ -237,9 +240,6 @@ let g:NERDTreeHighlightCursorline = 0 "podswietlanie linii z kursorem
 let g:NERDTreeChDirMode = 0
 let g:NERDTreeShowBookmarks = 1 "wyswietl zakladki
 let g:NERDTreeStatusline = -1
-if has("autocmd")
-    autocmd BufWinEnter NERD_* setlocal statusline=%#User11#%F
-end
 "NERD TREE END
 
 "VIM RUBY BEGIN
@@ -367,11 +367,6 @@ if has("autocmd")
         autocmd FileType text setlocal textwidth=120
         autocmd FileType tex setlocal formatoptions=tcroqMl
         autocmd FileType c setlocal formatoptions=croq "wrap only comments, not code
-        "autocmd FileType ruby,eruby let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
-        autocmd BufReadPost * "skacz do ostatniej pozycji kursora w pliku
-                    \ if line("'\"") > 0 && line("'\"") <= line("$") |
-                    \ exe "normal g`\"" |
-                    \ endif
     augroup END
 else
     set autoindent " always set autoindenting on
