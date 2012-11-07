@@ -186,6 +186,7 @@ nmap <silent> <Leader>gr :GundoRenderGraph<CR>
 "GUNDO END
 
 "YANKRING BEGIN
+let g:yankring_n_keys = ''
 let g:yankring_history_file = '.yankring_history.txt'
 nmap <silent> <Leader>yr :YRShow<CR>
 "YANKRING END
@@ -270,6 +271,7 @@ nnoremap k gk
 nnoremap ; :
 
 nmap Y y$
+nmap S hs
 
 " windows movement
 map <C-h> <C-w>h
