@@ -44,7 +44,7 @@ set fencs=utf8
 set enc=utf8
 set tenc=utf8
 set mouse=a
-set formatoptions=atcqomM
+set formatoptions=tcqomM
 set textwidth=120
 set helplang=pl,en
 set autoindent
