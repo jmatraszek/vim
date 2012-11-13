@@ -73,15 +73,12 @@ if &t_Co > 2 || has("gui_running")
     set background=dark
     set hlsearch
     set guifont=Inconsolata-dz\ for\ Powerline\ 10 " install this using: https://github.com/Lokaltog/vim-powerline/wiki/Patched-fonts
-    " colorscheme molokai
-    colorscheme wombat256
+    colorscheme badwolf
     hi SpecialKey ctermfg=12 ctermbg=234
     hi NonText ctermfg=12 ctermbg=234
 endif
 if has("gui_running")
-    " colorscheme desert
     colorscheme badwolf
-    " colorscheme void
     hi SpecialKey guibg=grey20
     hi NonText guifg=yellowgreen guibg=grey20
     set lines=999
