@@ -10,11 +10,6 @@ if !has('gui_running')
     " call add(g:pathogen_disabled, 'autoclose')
 endif
 
-" Gundo requires at least vim 7.3
-if v:version < '703' || !has('python')
-    call add(g:pathogen_disabled, 'gundo')
-endif
-
 call pathogen#infect()
 call pathogen#helptags()
 filetype plugin indent on
@@ -180,10 +175,9 @@ nmap <silent> <Leader>bg :CommandTBuffer<CR>
 nmap <silent> <Leader>vf :CommandTFlush<CR>
 "COMMAND-T END
 
-"GUNDO BEGIN
-nmap <silent> <Leader>gn :GundoToggle<CR>
-nmap <silent> <Leader>gr :GundoRenderGraph<CR>
-"GUNDO END
+"UNDOTREE BEGIN
+nmap <silent> <Leader>ut :UndotreeToggle<CR>
+"UNDOTREE END
 
 "YANKRING BEGIN
 let g:yankring_n_keys = ''

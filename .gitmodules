@@ -64,9 +64,6 @@
 [submodule "bundle/threesome"]
 	path = bundle/threesome
 	url = https://github.com/sjl/threesome.vim.git
-[submodule "bundle/gundo"]
-	path = bundle/gundo
-	url = https://github.com/sjl/gundo.vim.git
 [submodule "bundle/vim-orgmode"]
 	path = bundle/vim-orgmode
 	url = https://github.com/jceb/vim-orgmode.git
@@ -127,3 +124,6 @@
 [submodule "bundle/delimit-mate"]
 	path = bundle/delimit-mate
 	url = git://github.com/Raimondi/delimitMate.git
+[submodule "bundle/undotree"]
+	path = bundle/undotree
+	url = git://github.com/mbbill/undotree.git
