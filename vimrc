@@ -25,6 +25,10 @@ else
     set backup " keep a backup file
     set backupdir=~/.tmp-vim
 endif
+if has("persistent_undo")
+    set undodir=~/.undo-vim/
+    set undofile
+endif
 set history=500 " keep 50 lines of command line history
 set ruler " show the cursor position all the time
 set showcmd " display incomplete commands
