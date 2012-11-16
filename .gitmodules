@@ -127,3 +127,15 @@
 [submodule "bundle/undotree"]
 	path = bundle/undotree
 	url = git://github.com/mbbill/undotree.git
+[submodule "bundle/tagmabufmgr"]
+	path = bundle/tagmabufmgr
+	url = git://github.com/LStinson/TagmaBufMgr.git
+[submodule "bundle/yankstack"]
+	path = bundle/yankstack
+	url = git://github.com/maxbrunsfeld/vim-yankstack.git
+[submodule "bundle/vim-commentary"]
+	path = bundle/vim-commentary
+	url = git://github.com/tpope/vim-commentary.git
+[submodule "bundle/vim-addon-commenting"]
+	path = bundle/vim-addon-commenting
+	url = git://github.com/MarcWeber/vim-addon-commenting.git

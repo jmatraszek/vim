@@ -2,7 +2,7 @@
 set nocompatible
 filetype off
 " To disable a plugin, add it's bundle name to the following list
-let g:pathogen_disabled = []
+let g:pathogen_disabled = ['minibufexpl', 'nerd_tree', 'yank_ring']
 
 " for some reason the csscolor plugin is very slow when run on the terminal
 " but not in GVim, so disable it if no GUI is running
@@ -128,21 +128,25 @@ let g:C_GlobalTemplateFile = $HOME.'/.vim/bundle/c/c-support/templates/Templates
 let g:C_MapLeader = ','
 "C-SUPPORT END
 
-"MINIBUFEXPLORER BEGIN
-let g:miniBufExplShowBufNumbers = 1
-let g:miniBufExplMapWindowNavVim = 1
-let g:miniBufExplMapWindowNavArrows = 0
-let g:miniBufExplMapCTabSwitchBufs = 1
-let g:miniBufExplModSelTarget = 1
-let g:miniBufExplUseSingleClick = 1
-let g:miniBufExplTabWrap = 1
+"TAGMABUFMGR BEGIN
+let g:TagmaBufMgrLastWindow = 1
+"TAGMABUFMGR END
 
-hi MBEVisibleActive guifg=#8181F7 guibg=#242424
-hi MBEVisibleChangedActive guifg=#FF2200 guibg=#242424
-hi MBEVisibleChanged guifg=#E45B46 guibg=#242424
-hi MBEVisibleNormal guifg=#A6DB29 guibg=#242424
-hi MBEChanged guifg=#E45B46 guibg=#242424
-hi MBENormal guifg=#A6DB29 guibg=#242424
+"MINIBUFEXPLORER BEGIN
+" let g:miniBufExplShowBufNumbers = 1
+" let g:miniBufExplMapWindowNavVim = 1
+" let g:miniBufExplMapWindowNavArrows = 0
+" let g:miniBufExplMapCTabSwitchBufs = 1
+" let g:miniBufExplModSelTarget = 1
+" let g:miniBufExplUseSingleClick = 1
+" let g:miniBufExplTabWrap = 1
+
+" hi MBEVisibleActive guifg=#8181F7 guibg=#242424
+" hi MBEVisibleChangedActive guifg=#FF2200 guibg=#242424
+" hi MBEVisibleChanged guifg=#E45B46 guibg=#242424
+" hi MBEVisibleNormal guifg=#A6DB29 guibg=#242424
+" hi MBEChanged guifg=#E45B46 guibg=#242424
+" hi MBENormal guifg=#A6DB29 guibg=#242424
 "MINIBUFEXPLORER END
 
 "VIM-LATEX BEGIN
@@ -183,10 +187,17 @@ nmap <silent> <Leader>vf :CommandTFlush<CR>
 nmap <silent> <Leader>ut :UndotreeToggle<CR>
 "UNDOTREE END
 
+"YANKSTACK BEGIN
+let g:yankstack_map_keys = 0
+nmap <C-p> <Plug>yankstack_substitute_older_paste
+nmap <C-n> <Plug>yankstack_substitute_newer_paste
+call yankstack#setup() " this should be called before any custom mappings related to yanking
+"YANKSTACK END
+
 "YANKRING BEGIN
-let g:yankring_n_keys = ''
-let g:yankring_history_file = '.yankring_history.txt'
-nmap <silent> <Leader>yr :YRShow<CR>
+" let g:yankring_n_keys = ''
+" let g:yankring_history_file = '.yankring_history.txt'
+" nmap <silent> <Leader>yr :YRShow<CR>
 "YANKRING END
 
 "SUPERTAB BEGIN
@@ -226,15 +237,15 @@ nmap <leader>gds :Gdiff --staged<cr>
 "FUGITIVE END
 
 "NERD TREE BEGIN
-nmap <silent> <Leader>nt :NERDTreeToggle<CR>
-let g:NERDTreeMapActivateNode='<CR>' "otwieramy plik/katalog enterem
-let g:NERDTreeWinSize = 35 "szerokość okna nerd tree
-let g:NERDTreeWinPos = "left" "pozycja okna nerd tree
-let g:NERDTreeAutoCenter = 0 "wycentrowanie
-let g:NERDTreeHighlightCursorline = 0 "podswietlanie linii z kursorem
-let g:NERDTreeChDirMode = 0
-let g:NERDTreeShowBookmarks = 1 "wyswietl zakladki
-let g:NERDTreeStatusline = -1
+" nmap <silent> <Leader>nt :NERDTreeToggle<CR>
+" let g:NERDTreeMapActivateNode='<CR>' "otwieramy plik/katalog enterem
+" let g:NERDTreeWinSize = 35 "szerokość okna nerd tree
+" let g:NERDTreeWinPos = "left" "pozycja okna nerd tree
+" let g:NERDTreeAutoCenter = 0 "wycentrowanie
+" let g:NERDTreeHighlightCursorline = 0 "podswietlanie linii z kursorem
+" let g:NERDTreeChDirMode = 0
+" let g:NERDTreeShowBookmarks = 1 "wyswietl zakladki
+" let g:NERDTreeStatusline = -1
 "NERD TREE END
 
 "VIM RUBY BEGIN
