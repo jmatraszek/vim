@@ -130,6 +130,7 @@ let g:C_MapLeader = ','
 
 "TAGMABUFMGR BEGIN
 let g:TagmaBufMgrLastWindow = 1
+let g:TagmaBufMgrStatusLine = ''
 "TAGMABUFMGR END
 
 "MINIBUFEXPLORER BEGIN
