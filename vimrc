@@ -133,7 +133,7 @@ let g:C_MapLeader = ','
 "C-SUPPORT END
 
 "TAGMABUFMGR BEGIN
-let g:TagmaBufMgrLastWindow = 1
+let g:TagmaBufMgrLastWindow = 0
 let g:TagmaBufMgrStatusLine = ''
 "TAGMABUFMGR END
 
