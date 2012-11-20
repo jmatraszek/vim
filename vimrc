@@ -2,7 +2,7 @@
 set nocompatible
 filetype off
 " To disable a plugin, add it's bundle name to the following list
-let g:pathogen_disabled = ['minibufexpl', 'nerd_commenter', 'nerd_tree', 'yank_ring']
+let g:pathogen_disabled = ['bufkill', 'minibufexpl', 'nerd_commenter', 'nerd_tree', 'yank_ring']
 
 " for some reason the csscolor plugin is very slow when run on the terminal
 " but not in GVim, so disable it if no GUI is running
@@ -98,6 +98,10 @@ let use_xhtml=1
 let html_use_css=1
 let html_dynamic_folds=1
 "TOHTML END
+
+"BUTANE BEGIN
+command BD Bclose
+"BUTANE END
 
 "DELIMITMATE BEGIN
 let delimitMate_expand_cr = 1
