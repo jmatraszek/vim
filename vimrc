@@ -207,7 +207,8 @@ call yankstack#setup() " this should be called before any custom mappings relate
 
 "SUPERTAB BEGIN
 let g:SuperTabLongestEnhanced = 1
-let g:SuperTabDefaultCompletionType = "<c-p>"
+let g:SuperTabDefaultCompletionType = "context"
+let g:SuperTabContextDefaultCompletionType = "<c-n>"
 let g:SuperTabMappingForward = '<Tab>'
 let g:SuperTabMappingBackward = '<S-Tab>'
 "kolory dla pop up menu
