@@ -1,3 +1,4 @@
+
 "PATHOGEN BEGIN
 set nocompatible
 filetype off
@@ -135,6 +136,14 @@ let g:C_MapLeader = ','
 "TAGMABUFMGR BEGIN
 let g:TagmaBufMgrLastWindow = 0
 let g:TagmaBufMgrStatusLine = ''
+hi def link     TagmaBufMgrPlain        Identifier
+hi def link     TagmaBufMgrActive       Type
+hi def link     TagmaBufMgrChanged      Directory
+hi def link     TagmaBufMgrChgAct       Statement
+hi def link     TagmaBufMgrHelp         Special
+hi def link     TagmaBufMgrQFoLL        Special
+hi def link     TagmaBufMgrHelpText     String
+hi def link     TagmaBufMgrUnloaded     Comment
 "TAGMABUFMGR END
 
 "MINIBUFEXPLORER BEGIN
