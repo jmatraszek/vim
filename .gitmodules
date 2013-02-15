@@ -139,3 +139,6 @@
 [submodule "bundle/butane"]
 	path = bundle/butane
 	url = git://github.com/Soares/butane.vim.git
+[submodule "bundle/bck"]
+	path = bundle/bck
+	url = git://github.com/vim-scripts/Bck.git
