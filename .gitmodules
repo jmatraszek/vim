@@ -142,3 +142,6 @@
 [submodule "bundle/bck"]
 	path = bundle/bck
 	url = git://github.com/vim-scripts/Bck.git
+[submodule "bundle/sleuth"]
+	path = bundle/sleuth
+	url = git://github.com/tpope/vim-sleuth.git

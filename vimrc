@@ -53,10 +53,6 @@ set smartindent
 set ignorecase
 set smartcase "case sensitive tylko jesli wyszukiwana fraza zawiera wielka litere
 set smarttab
-set expandtab
-set tabstop=2 "2 spacje zamiast taba
-set shiftwidth=2 "2 spacje przyautoformatowaniu kodu"
-set softtabstop=2 "tylko spacje w formatowaniu kodu
 " no list special keys
 set nolist
 " set special keys, just in case
@@ -384,7 +380,6 @@ if has("autocmd")
     augroup vimrcEx
         au!
         autocmd BufRead /tmp/mutt* :source ~/.vim/mail.vim
-        autocmd FileType make setlocal noexpandtab "wylacz zamiane tabow na spacje gdy edytujemy makefile
         autocmd FileType text setlocal textwidth=120
         autocmd FileType tex setlocal formatoptions=tcroqMl
         autocmd FileType c setlocal formatoptions=croq "wrap only comments, not code
