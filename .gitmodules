@@ -19,18 +19,9 @@
 [submodule "bundle/matchit"]
     path= bundle/matchit
     url = https://github.com/vim-scripts/matchit.zip.git
-[submodule "bundle/yank_ring"]
-    path = bundle/yank_ring
-    url = https://github.com/vim-scripts/YankRing.vim.git
-[submodule "bundle/nerd_tree"]
-    path = bundle/nerd_tree
-    url = https://github.com/scrooloose/nerdtree.git
 [submodule "bundle/syntastic"]
     path = bundle/syntastic
     url = https://github.com/scrooloose/syntastic.git
-[submodule "bundle/nerd_commenter"]
-    path = bundle/nerd_commenter
-    url = https://github.com/scrooloose/nerdcommenter.git
 [submodule "bundle/repeat"]
     path = bundle/repeat
     url = https://github.com/tpope/vim-repeat.git
@@ -58,12 +49,6 @@
 [submodule "bundle/wombat"]
 	path = bundle/wombat
 	url = https://jmatraszek@github.com/jmatraszek/vim-wombat.git
-[submodule "bundle/bufkill"]
-	path = bundle/bufkill
-	url = https://github.com/vim-scripts/bufkill.vim.git
-[submodule "bundle/threesome"]
-	path = bundle/threesome
-	url = https://github.com/sjl/threesome.vim.git
 [submodule "bundle/vim-orgmode"]
 	path = bundle/vim-orgmode
 	url = https://github.com/jceb/vim-orgmode.git
@@ -73,9 +58,6 @@
 [submodule "bundle/a"]
 	path = bundle/a
 	url = https://github.com/vim-scripts/a.vim.git
-[submodule "bundle/minibufexpl"]
-	path = bundle/minibufexpl
-	url = https://github.com/fholgado/minibufexpl.vim.git
 [submodule "bundle/vim-latex"]
 	path = bundle/vim-latex
 	url = https://github.com/jcf/vim-latex.git
