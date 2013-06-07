@@ -4,9 +4,6 @@ set nocompatible
 filetype off
 " To disable a plugin, add it's bundle name to the following list
 let g:pathogen_disabled = []
-
-" for some reason the csscolor plugin is very slow when run on the terminal
-" but not in GVim, so disable it if no GUI is running
 if !has('gui_running')
     " call add(g:pathogen_disabled, 'autoclose')
 endif
@@ -49,13 +46,10 @@ set textwidth=120
 set helplang=pl,en
 set autoindent
 set smartindent
-" set cindent
 set ignorecase
 set smartcase "case sensitive tylko jesli wyszukiwana fraza zawiera wielka litere
 set smarttab
-" no list special keys
 set nolist
-" set special keys, just in case
 set listchars=tab:▸\ ,eol:¬
 set foldmethod=syntax
 set nofoldenable
@@ -118,11 +112,6 @@ set laststatus=2
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
-"ALTERNATE BEGIN
-" dodane sciazki do plikow naglowkowych kilku bibliotek
-let g:alternateSearchPath = 'sfr:../source,sfr:../src,sfr:../include,sfr:../inc,abs:/usr/include/opencv,abs:/usr/include/curl'
-"ALTERNATE END
-
 "C-SUPPORT BEGIN
 let g:C_LocalTemplateFile = $HOME.'/.vim/bundle/c/c-support/templates/Templates'
 let g:C_GlobalTemplateFile = $HOME.'/.vim/bundle/c/c-support/templates/Templates'
@@ -141,23 +130,6 @@ hi def link     TagmaBufMgrQFoLL        Special
 hi def link     TagmaBufMgrHelpText     String
 hi def link     TagmaBufMgrUnloaded     Comment
 "TAGMABUFMGR END
-
-"MINIBUFEXPLORER BEGIN
-" let g:miniBufExplShowBufNumbers = 1
-" let g:miniBufExplMapWindowNavVim = 1
-" let g:miniBufExplMapWindowNavArrows = 0
-" let g:miniBufExplMapCTabSwitchBufs = 1
-" let g:miniBufExplModSelTarget = 1
-" let g:miniBufExplUseSingleClick = 1
-" let g:miniBufExplTabWrap = 1
-
-" hi MBEVisibleActive guifg=#8181F7 guibg=#242424
-" hi MBEVisibleChangedActive guifg=#FF2200 guibg=#242424
-" hi MBEVisibleChanged guifg=#E45B46 guibg=#242424
-" hi MBEVisibleNormal guifg=#A6DB29 guibg=#242424
-" hi MBEChanged guifg=#E45B46 guibg=#242424
-" hi MBENormal guifg=#A6DB29 guibg=#242424
-"MINIBUFEXPLORER END
 
 "VIM-LATEX BEGIN
 let g:tex_flavor='latex'
@@ -179,11 +151,6 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_cpp_compiler_options = ' -Wall -Wno-write-strings -g `pkg-config --cflags opencv` `pkg-config --cflags sigc++-2.0`'
 "SYNTASTIC END
 
-"NERD COMMENTER BEGIN
-" wlaczenie spacji pomiedzy znakiem komentarza, a komentowanym tekstem
-let NERDSpaceDelims=1
-"NERD COMMENTER END
-
 "COMMAND-T BEGIN
 "okno command-t - najwyzej 15 pozycji
 let g:CommandTMaxHeight=15
@@ -204,35 +171,13 @@ nmap <C-n> <Plug>yankstack_substitute_newer_paste
 call yankstack#setup() " this should be called before any custom mappings related to yanking
 "YANKSTACK END
 
-"YANKRING BEGIN
-" let g:yankring_n_keys = ''
-" let g:yankring_history_file = '.yankring_history.txt'
-" nmap <silent> <Leader>yr :YRShow<CR>
-"YANKRING END
-
 "SUPERTAB BEGIN
 let g:SuperTabLongestEnhanced = 1
 let g:SuperTabDefaultCompletionType = "context"
 let g:SuperTabContextDefaultCompletionType = "<c-n>"
 let g:SuperTabMappingForward = '<Tab>'
 let g:SuperTabMappingBackward = '<S-Tab>'
-"kolory dla pop up menu
-" highlight Pmenu term=NONE cterm=NONE ctermfg=7 ctermbg=5 gui=NONE guifg=White guibg=Magenta
-" highlight PmenuSel term=NONE cterm=NONE ctermfg=0 ctermbg=7 gui=NONE guifg=Black guibg=White
-" highlight PmenuSbar term=NONE cterm=NONE ctermfg=7 ctermbg=0 gui=NONE guifg=White guibg=Black
-" highlight PmenuThumb term=NONE cterm=NONE ctermfg=0 ctermbg=7 gui=NONE guifg=Black guibg=White
 "SUPERTAB END
-
-"XPTEMPLATES BEGIN
-" let g:xptemplate_vars = "SParg=&BRloop=\n&SPcmd=&BRif=\n&BRstc=\n&SPop=" "dostosowanie snippetow do stylu kodowania
-" let g:SuperTabMappingForward = '<Plug>supertabKey' "avoid key conflict with supertab
-" let g:xptemplate_fallback = '<Plug>supertabKey' "jesli nic nie pasowalo w xpt sprawdzamy supertab'a
-" " let g:xptemplate_key = '<C-\>'
-" let g:xptemplate_key = '<Tab>' "xpt uzywa <tab> zamiast <C-\>
-" let g:xptemplate_pum_tab_nav = 1 "uzycie <tab>/<S-tab> do nawigacji w popup-msg
-" let g:xptemplate_minimal_prefix = 'full' "xpt wlaczy sie tylko po wpisaniu pelnej nazwy snippeta
-" let g:xptemplate_brace_complete = 1 "auto complete braces
-"XMTEMPLATE END
 
 "TAGBAR BEGIN
 nmap <silent> <Leader>tg :TagbarToggle<CR>
@@ -246,18 +191,6 @@ nmap <leader>gs :Gvsplit :<cr>
 nmap <leader>gd :Gdiff<cr>
 nmap <leader>gds :Gdiff --staged<cr>
 "FUGITIVE END
-
-"NERD TREE BEGIN
-" nmap <silent> <Leader>nt :NERDTreeToggle<CR>
-" let g:NERDTreeMapActivateNode='<CR>' "otwieramy plik/katalog enterem
-" let g:NERDTreeWinSize = 35 "szerokość okna nerd tree
-" let g:NERDTreeWinPos = "left" "pozycja okna nerd tree
-" let g:NERDTreeAutoCenter = 0 "wycentrowanie
-" let g:NERDTreeHighlightCursorline = 0 "podswietlanie linii z kursorem
-" let g:NERDTreeChDirMode = 0
-" let g:NERDTreeShowBookmarks = 1 "wyswietl zakladki
-" let g:NERDTreeStatusline = -1
-"NERD TREE END
 
 "VIM RUBY BEGIN
 if has("autocmd")
