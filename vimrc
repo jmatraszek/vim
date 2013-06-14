@@ -118,6 +118,11 @@ let g:C_GlobalTemplateFile = $HOME.'/.vim/bundle/c/c-support/templates/Templates
 let g:C_MapLeader = ','
 "C-SUPPORT END
 
+"EASY BUFFER SWITCHING IN CONSOLE
+map <leader>a :bprev<cr>
+map <leader>s :bnext<cr>
+"
+
 "TAGMABUFMGR BEGIN
 let g:TagmaBufMgrLastWindow = 0
 let g:TagmaBufMgrStatusLine = ''
