@@ -3,7 +3,7 @@
 set nocompatible
 filetype off
 " To disable a plugin, add it's bundle name to the following list
-let g:pathogen_disabled = []
+let g:pathogen_disabled = ['tagmabufmgr']
 if !has('gui_running')
     " call add(g:pathogen_disabled, 'autoclose')
 endif
@@ -118,10 +118,17 @@ let g:C_GlobalTemplateFile = $HOME.'/.vim/bundle/c/c-support/templates/Templates
 let g:C_MapLeader = ','
 "C-SUPPORT END
 
-"EASY BUFFER SWITCHING IN CONSOLE
-map <leader>a :bprev<cr>
-map <leader>s :bnext<cr>
-"
+"MINIBUFEXPL BEGIN
+map <leader>a :MBEbp<cr>
+map <leader>s :MBEbn<cr>
+map <leader>q :MBEbb<cr>
+map <leader>w :MBEbf<cr>
+noremap <C-TAB>   :MBEbn<CR>
+noremap <C-S-TAB> :MBEbp<CR>
+let g:miniBufExplBuffersNeeded = 1
+let g:miniBufExplSetUT = 200
+let g:miniBufExplCycleArround = 1
+"MINIBUFEXPL END
 
 "TAGMABUFMGR BEGIN
 let g:TagmaBufMgrLastWindow = 0
