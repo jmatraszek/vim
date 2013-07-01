@@ -115,9 +115,6 @@
 [submodule "bundle/vim-addon-commenting"]
 	path = bundle/vim-addon-commenting
 	url = git://github.com/MarcWeber/vim-addon-commenting.git
-[submodule "bundle/butane"]
-	path = bundle/butane
-	url = git://github.com/Soares/butane.vim.git
 [submodule "bundle/bck"]
 	path = bundle/bck
 	url = git://github.com/vim-scripts/Bck.git

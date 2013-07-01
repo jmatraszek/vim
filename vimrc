@@ -90,10 +90,6 @@ let html_use_css=1
 let html_dynamic_folds=1
 "TOHTML END
 
-"BUTANE BEGIN
-command BD Bclose
-"BUTANE END
-
 "DELIMITMATE BEGIN
 let delimitMate_expand_cr = 1
 let delimitMate_expand_space = 1
@@ -125,6 +121,7 @@ map <leader>q :MBEbb<cr>
 map <leader>w :MBEbf<cr>
 noremap <C-TAB>   :MBEbn<CR>
 noremap <C-S-TAB> :MBEbp<CR>
+command BD MBEbd
 let g:miniBufExplBuffersNeeded = 1
 let g:miniBufExplSetUT = 200
 let g:miniBufExplCycleArround = 1
