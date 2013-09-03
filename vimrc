@@ -3,7 +3,7 @@
 set nocompatible
 filetype off
 " To disable a plugin, add it's bundle name to the following list
-let g:pathogen_disabled = ['tagmabufmgr', 'easytags']
+let g:pathogen_disabled = ['tagmabufmgr', 'easytags', 'vim-snipmate']
 if !has('gui_running')
     " call add(g:pathogen_disabled, 'autoclose')
 endif
