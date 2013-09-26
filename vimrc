@@ -1,4 +1,3 @@
-
 "PATHOGEN BEGIN
 set nocompatible
 filetype off
@@ -96,6 +95,10 @@ let delimitMate_expand_space = 1
 "DELIMITMATE END
 
 "POWERLINE BEGIN
+set rtp+=$HOME/.vim/bundle/powerline-new/powerline/bindings/vim
+" python from powerline.vim import setup as powerline_setup
+" python powerline_setup()
+" python del powerline_setup
 if has("gui_running")
     let g:Powerline_symbols = 'fancy'
 else
