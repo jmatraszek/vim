@@ -1,6 +1,6 @@
 *.swp
 view/*
 .directory
-.netrwhits
+.netrwhist
 sessions/*
 spell
