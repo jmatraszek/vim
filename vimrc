@@ -95,7 +95,7 @@ let delimitMate_expand_space = 1
 "DELIMITMATE END
 
 "POWERLINE BEGIN
-set rtp+=$HOME/.vim/bundle/powerline-new/powerline/bindings/vim
+set rtp+=$HOME/.vim/bundle/powerline/powerline/bindings/vim
 " python from powerline.vim import setup as powerline_setup
 " python powerline_setup()
 " python del powerline_setup
