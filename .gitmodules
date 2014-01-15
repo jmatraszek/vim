@@ -136,3 +136,6 @@
 [submodule "bundle/powerline-new"]
 	path = bundle/powerline-new
 	url = https://github.com/Lokaltog/powerline.git
+[submodule "bundle/calendar"]
+	path = bundle/calendar
+	url = https://github.com/itchyny/calendar.vim

@@ -143,6 +143,11 @@ hi def link     TagmaBufMgrHelpText     String
 hi def link     TagmaBufMgrUnloaded     Comment
 "TAGMABUFMGR END
 
+"CALENDAR BEGIN
+let g:calendar_google_calendar = 1
+let g:calendar_google_task = 1
+"CALENDAR END
+
 "VIM-LATEX BEGIN
 let g:tex_flavor='latex'
 let g:Tex_DefaultTargetFormat='pdf'
