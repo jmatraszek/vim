@@ -2,7 +2,7 @@
 set nocompatible
 filetype off
 " To disable a plugin, add it's bundle name to the following list
-let g:pathogen_disabled = ['tagmabufmgr', 'easytags', 'vim-snipmate', 'vim-snippets']
+let g:pathogen_disabled = ['tagmabufmgr', 'easytags', 'vim-snipmate', 'vim-latex', 'supertab']
 if !has('gui_running')
     " call add(g:pathogen_disabled, 'autoclose')
 endif
@@ -149,16 +149,16 @@ let g:calendar_google_task = 1
 "CALENDAR END
 
 "VIM-LATEX BEGIN
-let g:tex_flavor='latex'
-let g:Tex_DefaultTargetFormat='pdf'
-let g:Tex_CompileRule_pd='pdflatex -src-specials -interaction=nonstopmode $*'
-let g:Tex_MultipleCompileFormats='dvi,pdf'
-if !hasmapto('<Plug>IMAP_JumpForward', 'i')
-    imap <C-M> <Plug>IMAP_JumpForward
-endif
-if !hasmapto('<Plug>IMAP_JumpForward', 'n')
-    nmap <C-M> <Plug>IMAP_JumpForward
-endif
+" let g:tex_flavor='latex'
+" let g:Tex_DefaultTargetFormat='pdf'
+" let g:Tex_CompileRule_pd='pdflatex -src-specials -interaction=nonstopmode $*'
+" let g:Tex_MultipleCompileFormats='dvi,pdf'
+" if !hasmapto('<Plug>IMAP_JumpForward', 'i')
+"     imap <C-M> <Plug>IMAP_JumpForward
+" endif
+" if !hasmapto('<Plug>IMAP_JumpForward', 'n')
+"     nmap <C-M> <Plug>IMAP_JumpForward
+" endif
 "VIM-LATEX END
 
 "SYNTASTIC BEGIN
@@ -189,11 +189,11 @@ call yankstack#setup() " this should be called before any custom mappings relate
 "YANKSTACK END
 
 "SUPERTAB BEGIN
-let g:SuperTabLongestEnhanced = 1
-let g:SuperTabDefaultCompletionType = "context"
-let g:SuperTabContextDefaultCompletionType = "<c-n>"
-let g:SuperTabMappingForward = '<Tab>'
-let g:SuperTabMappingBackward = '<S-Tab>'
+" let g:SuperTabLongestEnhanced = 1
+" let g:SuperTabDefaultCompletionType = "context"
+" let g:SuperTabContextDefaultCompletionType = "<c-n>"
+" let g:SuperTabMappingForward = '<Tab>'
+" let g:SuperTabMappingBackward = '<S-Tab>'
 "SUPERTAB END
 
 "TAGBAR BEGIN
