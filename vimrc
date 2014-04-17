@@ -89,6 +89,10 @@ let html_use_css=1
 let html_dynamic_folds=1
 "TOHTML END
 
+"INDENT GUID BEGIN
+let g:indent_guides_guide_size = 1
+"INDENT GUIDE END
+
 "DELIMITMATE BEGIN
 let delimitMate_expand_cr = 1
 let delimitMate_expand_space = 1
