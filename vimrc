@@ -2,9 +2,9 @@
 set nocompatible
 filetype off
 " To disable a plugin, add it's bundle name to the following list
-let g:pathogen_disabled = ['tagmabufmgr', 'easytags', 'vim-snipmate', 'vim-latex', 'supertab']
+let g:pathogen_disabled = ['easytags']
 if !has('gui_running')
-    " call add(g:pathogen_disabled, 'autoclose')
+    " call add(g:pathogen_disabled, 'example-vim-plugin')
 endif
 
 call pathogen#infect()
@@ -139,36 +139,10 @@ hi MBEVisibleActiveNormal  guifg=#A6DB29 guibg=fg cterm=underline gui=underline
 hi MBEVisibleActiveChanged guifg=#F1266F guibg=fg cterm=underline gui=underline
 "MINIBUFEXPL END
 
-"TAGMABUFMGR BEGIN
-let g:TagmaBufMgrLastWindow = 0
-let g:TagmaBufMgrStatusLine = ''
-hi def link     TagmaBufMgrPlain        Identifier
-hi def link     TagmaBufMgrActive       Type
-hi def link     TagmaBufMgrChanged      Directory
-hi def link     TagmaBufMgrChgAct       Statement
-hi def link     TagmaBufMgrHelp         Special
-hi def link     TagmaBufMgrQFoLL        Special
-hi def link     TagmaBufMgrHelpText     String
-hi def link     TagmaBufMgrUnloaded     Comment
-"TAGMABUFMGR END
-
 "CALENDAR BEGIN
 let g:calendar_google_calendar = 1
 let g:calendar_google_task = 1
 "CALENDAR END
-
-"VIM-LATEX BEGIN
-" let g:tex_flavor='latex'
-" let g:Tex_DefaultTargetFormat='pdf'
-" let g:Tex_CompileRule_pd='pdflatex -src-specials -interaction=nonstopmode $*'
-" let g:Tex_MultipleCompileFormats='dvi,pdf'
-" if !hasmapto('<Plug>IMAP_JumpForward', 'i')
-"     imap <C-M> <Plug>IMAP_JumpForward
-" endif
-" if !hasmapto('<Plug>IMAP_JumpForward', 'n')
-"     nmap <C-M> <Plug>IMAP_JumpForward
-" endif
-"VIM-LATEX END
 
 "SYNTASTIC BEGIN
 let g:syntastic_enable_signs = 1
@@ -196,14 +170,6 @@ nmap <C-p> <Plug>yankstack_substitute_older_paste
 nmap <C-n> <Plug>yankstack_substitute_newer_paste
 call yankstack#setup() " this should be called before any custom mappings related to yanking
 "YANKSTACK END
-
-"SUPERTAB BEGIN
-" let g:SuperTabLongestEnhanced = 1
-" let g:SuperTabDefaultCompletionType = "context"
-" let g:SuperTabContextDefaultCompletionType = "<c-n>"
-" let g:SuperTabMappingForward = '<Tab>'
-" let g:SuperTabMappingBackward = '<S-Tab>'
-"SUPERTAB END
 
 "TAGBAR BEGIN
 nmap <silent> <Leader>tg :TagbarToggle<CR>
