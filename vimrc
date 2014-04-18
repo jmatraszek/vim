@@ -54,6 +54,10 @@ set updatetime=4100
 set lazyredraw
 set pastetoggle=<F4>
 
+"CHANGE CURSOR SHAPE IN DIFFRENT MODES
+let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+
 " GUI {{{
 if &t_Co > 2 || has("gui_running")
     syntax on
@@ -86,9 +90,9 @@ let html_use_css=1
 let html_dynamic_folds=1
 " TOHTML }}}
 
-" INDENT GUID {{{
+" INDENT GUIDES {{{
 let g:indent_guides_guide_size = 1
-" INDENT GUIDE }}}
+" INDENT GUIDES }}}
 
 " DELIMITMATE {{{
 let delimitMate_expand_cr = 1
@@ -107,10 +111,6 @@ else
 endif
 set laststatus=2
 " POWERLINE }}}
-
-"CHANGE CURSOR SHAPE IN DIFFRENT MODES
-let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
 " C-SUPPORT {{{
 let g:C_LocalTemplateFile = $HOME.'/.vim/bundle/c/c-support/templates/Templates'
