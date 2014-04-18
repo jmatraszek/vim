@@ -269,7 +269,7 @@ noremap! <F2> <Esc>mZggVG=`Z:delmarks Z<CR>lzz<Insert>
 
 " nowe linie powyzej/ponizej w trybie normal
 nnoremap + O<esc>
-nnoremap - o<esc>
+nnoremap _ o<esc>
 " Remove the Windows ^M - when the encodings gets messed up
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
