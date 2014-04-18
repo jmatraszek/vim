@@ -1,4 +1,6 @@
-"PATHOGEN BEGIN
+" vim:fdm=marker
+
+" PATHOGEN {{{
 set nocompatible
 filetype off
 " To disable a plugin, add it's bundle name to the following list
@@ -10,8 +12,8 @@ endif
 call pathogen#infect()
 call pathogen#helptags()
 filetype plugin indent on
-"PATHOGEN END
-"
+" PATHOGEN }}}
+
 set hidden
 set showmode
 set backspace=indent,eol,start
@@ -21,10 +23,6 @@ if has("vms")
 else
     set backup " keep a backup file
     set backupdir=~/.tmp-vim
-endif
-if has("persistent_undo")
-    set undodir=~/.undo-vim/
-    set undofile
 endif
 set history=500 " keep 50 lines of command line history
 set ruler " show the cursor position all the time
@@ -56,7 +54,7 @@ set updatetime=4100
 set lazyredraw
 set pastetoggle=<F4>
 
-"GUI BEGIN
+" GUI {{{
 if &t_Co > 2 || has("gui_running")
     syntax on
     set background=dark
@@ -79,25 +77,25 @@ else
     " behave xterm
     " set selectmode=mouse
 endif
-"GUI END
+" GUI }}}
 
-"TOHTML BEGIN
+" TOHTML {{{
 let html_number_lines=0
 let use_xhtml=1
 let html_use_css=1
 let html_dynamic_folds=1
-"TOHTML END
+" TOHTML }}}
 
-"INDENT GUID BEGIN
+" INDENT GUID {{{
 let g:indent_guides_guide_size = 1
-"INDENT GUIDE END
+" INDENT GUIDE }}}
 
-"DELIMITMATE BEGIN
+" DELIMITMATE {{{
 let delimitMate_expand_cr = 1
 let delimitMate_expand_space = 1
-"DELIMITMATE END
+" DELIMITMATE }}}
 
-"POWERLINE BEGIN
+" POWERLINE {{{
 set rtp+=$HOME/.vim/bundle/powerline/powerline/bindings/vim
 " python from powerline.vim import setup as powerline_setup
 " python powerline_setup()
@@ -108,19 +106,19 @@ else
     let g:Powerline_symbols = 'unicode'
 endif
 set laststatus=2
-"POWERLINE END
+" POWERLINE }}}
 
 "CHANGE CURSOR SHAPE IN DIFFRENT MODES
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
-"C-SUPPORT BEGIN
+" C-SUPPORT {{{
 let g:C_LocalTemplateFile = $HOME.'/.vim/bundle/c/c-support/templates/Templates'
 let g:C_GlobalTemplateFile = $HOME.'/.vim/bundle/c/c-support/templates/Templates'
 let g:C_MapLeader = ','
-"C-SUPPORT END
+" C-SUPPORT }}}
 
-"MINIBUFEXPL BEGIN
+" MINIBUFEXPL {{{
 map <leader>a :MBEbp<cr>
 map <leader>s :MBEbn<cr>
 map <leader>q :MBEbb<cr>
@@ -137,67 +135,71 @@ hi MBEVisibleNormal        guifg=#5DC2D6 guibg=fg
 hi MBEVisibleChanged       guifg=#F1266F guibg=fg
 hi MBEVisibleActiveNormal  guifg=#A6DB29 guibg=fg cterm=underline gui=underline
 hi MBEVisibleActiveChanged guifg=#F1266F guibg=fg cterm=underline gui=underline
-"MINIBUFEXPL END
+" MINIBUFEXPL }}}
 
-"CALENDAR BEGIN
+" CALENDAR {{{
 let g:calendar_google_calendar = 1
 let g:calendar_google_task = 1
-"CALENDAR END
+" CALENDAR }}}
 
-"SYNTASTIC BEGIN
+" SYNTASTIC {{{
 let g:syntastic_enable_signs = 1
 let g:syntastic_quiet_messages = { "level": "warnings" }
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_cpp_compiler_options = ' -Wall -Wno-write-strings -g `pkg-config --cflags opencv` `pkg-config --cflags sigc++-2.0`'
-"SYNTASTIC END
+" SYNTASTIC }}}
 
-"COMMAND-T BEGIN
+" COMMAND-T {{{
 "okno command-t - najwyzej 15 pozycji
 let g:CommandTMaxHeight=15
 let g:CommandTMaxFiles=15000
 nmap <silent> <Leader>cd :CommandT<CR>
 nmap <silent> <Leader>bg :CommandTBuffer<CR>
 nmap <silent> <Leader>vf :CommandTFlush<CR>
-"COMMAND-T END
+" COMMAND-T }}}
 
-"UNDOTREE BEGIN
+" UNDOTREE {{{
+if has("persistent_undo")
+    set undodir=~/.undo-vim/
+    set undofile
+endif
 nmap <silent> <Leader>ut :UndotreeToggle<CR>
-"UNDOTREE END
+" UNDOTREE }}}
 
-"YANKSTACK BEGIN
+" YANKSTACK {{{
 let g:yankstack_map_keys = 0
 nmap <C-p> <Plug>yankstack_substitute_older_paste
 nmap <C-n> <Plug>yankstack_substitute_newer_paste
 call yankstack#setup() " this should be called before any custom mappings related to yanking
-"YANKSTACK END
+" YANKSTACK }}}
 
-"TAGBAR BEGIN
+" TAGBAR {{{
 nmap <silent> <Leader>tg :TagbarToggle<CR>
 nmap <silent> <Leader>th :TagbarOpenAutoClose<CR>
-"TAGBAR END
+" TAGBAR }}}
 
-"FUGITIVE BEGIN
+" FUGITIVE {{{
 nmap <leader>gw :Gwrite<cr>
 nmap <leader>gc :Gcommit<cr>
 nmap <leader>gs :Gvsplit :<cr>
 nmap <leader>gd :Gdiff<cr>
 nmap <leader>gds :Gdiff --staged<cr>
-"FUGITIVE END
+" FUGITIVE }}}
 
-"VIM RUBY BEGIN
+" VIM RUBY {{{
 if has("autocmd")
     autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
     autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
     autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
     autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 end
-"VIM RUBY END
+" VIM RUBY }}}
 
-"VIMERL BEGIN
+" VIMERL {{{
 let erlang_show_errors = 0 "let syntastic do the job
-"VIMERL END
+" VIMERL }}}
 
-"KEY MAPPING BEGIN
+" KEY MAPPING {{{
 " moving in a right way :)
 nnoremap <up> <nop>
 nnoremap <down> <nop>
@@ -294,22 +296,18 @@ function ToggleFlag(option,flag)
 endfunction
 noremap <silent> <A-1> :call ToggleFlag("guioptions","m")<BAR>set guioptions?<CR>
 imap <A-1> <C-O><A-1>
-"KEY MAPPINGS END
+" KEY MAPPINGS }}}
 
-"AUTOCMD BEGIN
+" AUTOCMD {{{
 if has("autocmd")
     autocmd QuickfixCmdPost make,grep,grepadd,vimgrep :botright cwindow "wlacz okienko quickfix po kazdym make
     autocmd BufWritePre * :%s/\s\+$//e "usuwa trailing spaces
 
-    filetype plugin indent on
     augroup vimrcEx
         au!
         autocmd BufRead /tmp/mutt* :source ~/.vim/mail.vim
-        autocmd FileType text setlocal textwidth=120
         autocmd FileType tex setlocal formatoptions=tcroqMl
         autocmd FileType c setlocal formatoptions=croq "wrap only comments, not code
     augroup END
-else
-    set autoindent " always set autoindenting on
 endif
-"AUTOCMD END
+" AUTOCMD }}}
