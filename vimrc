@@ -14,6 +14,7 @@ call pathogen#helptags()
 filetype plugin indent on
 " PATHOGEN }}}
 
+" BASIC SETTINGS {{{
 set hidden
 set showmode
 set backspace=indent,eol,start
@@ -53,6 +54,7 @@ set pastetoggle=<F4>
 "CHANGE CURSOR SHAPE IN DIFFRENT MODES
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+" BASIC SETTINGS }}}
 
 " GUI {{{
 if &t_Co > 2 || has("gui_running")
@@ -302,8 +304,6 @@ if has("autocmd")
     augroup vimrcEx
         au!
         autocmd BufRead /tmp/mutt* :source ~/.vim/mail.vim
-        autocmd FileType tex setlocal formatoptions=tcroqMl
-        autocmd FileType c setlocal formatoptions=croq "wrap only comments, not code
     augroup END
 endif
 " AUTOCMD }}}
