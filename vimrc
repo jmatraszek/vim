@@ -1,4 +1,4 @@
-" vim:fdm=marker
+" vim:fdm=marker:foldenable
 
 " PATHOGEN {{{
 set nocompatible
