@@ -238,7 +238,8 @@ nnoremap _ o<esc>
 " Remove the Windows ^M - when the encodings gets messed up
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
-fu! Pastewindow(direction) "{{{
+" PasteWindow {{{
+fu! Pastewindow(direction)
     if exists("g:yanked_buffer")
         if a:direction == 'edit'
             let temp_buffer = bufnr('%')
@@ -250,7 +251,7 @@ fu! Pastewindow(direction) "{{{
             let g:yanked_buffer = temp_buffer
         endif
     endif
-endf "}}}
+endf
 
 "yank/paste buffers
 nmap <silent> <leader>wy  :let g:yanked_buffer=bufnr('%')<cr>
@@ -259,6 +260,7 @@ nmap <silent> <leader>wp :call Pastewindow('edit')<cr>
 nmap <silent> <leader>ws :call Pastewindow('split')<cr>
 nmap <silent> <leader>wv :call Pastewindow('vsplit')<cr>
 nmap <silent> <leader>wt :call Pastewindow('tabnew')<cr>
+" PasteWindow }}}
 
 fu! CustomFoldText()
     "get first non-blank line
