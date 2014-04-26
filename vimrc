@@ -34,7 +34,7 @@ set number "numerowanie linii
 set fencs=utf8
 set enc=utf8
 set tenc=utf8
-set mouse=a
+set mouse=a " select using mouse with shift pressed on
 set formatoptions=tcqomM
 set textwidth=120
 set helplang=pl,en
@@ -88,7 +88,6 @@ if &t_Co > 2 || has("gui_running")
     set background=dark
     set hlsearch
     set guifont=Inconsolata-dz\ for\ Powerline\ 10 " install this using: https://github.com/Lokaltog/vim-powerline/wiki/Patched-fonts
-    colorscheme gruvbox
     hi SpecialKey ctermfg=12 ctermbg=234
     hi NonText ctermfg=12 ctermbg=234
 endif
@@ -101,11 +100,18 @@ if has("gui_running")
     set guioptions=aegirLt "wylaczony toolbar i menu
 else
     set nopaste
-    " set ttymouse=xterm2
-    " behave xterm
-    " set selectmode=mouse
+    set ttyfast
 endif
 " GUI }}}
+
+" COLORSCHEME {{{
+if !has('gui_running')
+    let g:gruvbox_italic=0
+    colorscheme gruvbox
+else
+    colorscheme gruvbox
+end
+" COLORSCHEME }}}
 
 " TOHTML {{{
 let html_number_lines=0
