@@ -129,18 +129,11 @@ let delimitMate_expand_cr = 1
 let delimitMate_expand_space = 1
 " DELIMITMATE }}}
 
-" POWERLINE {{{
-set rtp+=$HOME/.vim/bundle/powerline/powerline/bindings/vim
-" python from powerline.vim import setup as powerline_setup
-" python powerline_setup()
-" python del powerline_setup
-if has("gui_running")
-    let g:Powerline_symbols = 'fancy'
-else
-    let g:Powerline_symbols = 'unicode'
-endif
-set laststatus=2
-" POWERLINE }}}
+" AIRLINE {{{
+  let g:airline_powerline_fonts=1
+  let g:airline_inactive_collapse=0
+  let g:airline_theme='powerlineish'
+" AIRLINE }}}
 
 " C-SUPPORT {{{
 let g:C_LocalTemplateFile = $HOME.'/.vim/bundle/c/c-support/templates/Templates'
