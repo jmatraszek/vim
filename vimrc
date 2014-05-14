@@ -172,6 +172,23 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_cpp_compiler_options = ' -Wall -Wno-write-strings -g `pkg-config --cflags opencv` `pkg-config --cflags sigc++-2.0`'
 " SYNTASTIC }}}
 
+" UNITE {{{
+call unite#filters#matcher_default#use(['matcher_fuzzy'])
+nnoremap <C-u> :<C-u>Unite -buffer-name=files -start-insert file_rec/async:!<cr>
+nnoremap <C-b> :<C-u>Unite -quick-match buffer<cr>
+inoremap <silent><buffer><expr> <C-s>     unite#do_action('split')
+inoremap <silent><buffer><expr> <C-v>     unite#do_action('vsplit')
+if executable('ag')
+  let g:unite_source_grep_command='ag'
+  let g:unite_source_grep_default_opts='--nocolor --nogroup -C4'
+  let g:unite_source_grep_recursive_opt=''
+elseif executable('ack')
+  let g:unite_source_grep_command='ack'
+  let g:unite_source_grep_default_opts='--no-heading --no-color -C4'
+  let g:unite_source_grep_recursive_opt=''
+endif
+" UNITE }}}
+
 " COMMAND-T {{{
 "okno command-t - najwyzej 15 pozycji
 let g:CommandTMaxHeight=15
