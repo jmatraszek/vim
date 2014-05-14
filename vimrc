@@ -173,17 +173,20 @@ let g:syntastic_cpp_compiler_options = ' -Wall -Wno-write-strings -g `pkg-config
 " SYNTASTIC }}}
 
 " UNITE {{{
+let g:unite_source_history_yank_enable = 1
+let g:unite_enable_start_insert = 1
+let g:unite_prompt='» '
+
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
 call unite#filters#sorter_default#use(['sorter_rank'])
 call unite#set_profile('files', 'smartcase', 1)
 call unite#custom#source('line,outline','matchers','matcher_fuzzy')
 
-nnoremap <C-u> :<C-u>Unite -buffer-name=files -start-insert file_rec/async:!<cr>
-nnoremap <C-b> :<C-u>Unite -quick-match buffer<cr>
-inoremap <silent><buffer><expr> <C-s>     unite#do_action('split')
-inoremap <silent><buffer><expr> <C-v>     unite#do_action('vsplit')
+nnoremap <C-u> :<C-u>Unite -buffer-name=files file_rec/async:!<cr>
+nnoremap <C-b> :<C-u>Unite -buffer-name=buffers -quick-match buffer<cr>
+nnoremap <C-\> :<C-u>Unite -buffer-name=grep grep:.<cr>
+nnoremap <C-y> :<C-u>Unite -buffer-name=yanks history/yank<cr>
 
-let g:unite_prompt='» '
 if executable('ag')
   let g:unite_source_grep_command='ag'
   let g:unite_source_grep_default_opts='--nocolor --nogroup -C4'
@@ -196,6 +199,12 @@ endif
 
 function! s:unite_settings()
   nmap <buffer> <esc> <plug>(unite_exit)
+  imap <buffer> <C-j> <Plug>(unite_select_next_line)
+  imap <buffer> <C-k> <Plug>(unite_select_previous_line)
+  inoremap <silent><buffer><expr> <C-s>     unite#do_action('split')
+  inoremap <silent><buffer><expr> <C-v>     unite#do_action('vsplit')
+  nnoremap <silent><buffer><expr> <C-s>     unite#do_action('split')
+  nnoremap <silent><buffer><expr> <C-v>     unite#do_action('vsplit')
 endfunction
 autocmd FileType unite call s:unite_settings()
 " UNITE }}}
