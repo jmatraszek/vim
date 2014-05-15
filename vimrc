@@ -176,16 +176,17 @@ let g:syntastic_cpp_compiler_options = ' -Wall -Wno-write-strings -g `pkg-config
 let g:unite_source_history_yank_enable = 1
 let g:unite_enable_start_insert = 1
 let g:unite_prompt='» '
+let g:unite_split_rule='botright'
 
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
 call unite#filters#sorter_default#use(['sorter_rank'])
 call unite#set_profile('files', 'smartcase', 1)
 call unite#custom#source('line,outline','matchers','matcher_fuzzy')
 
-nnoremap <C-u> :<C-u>Unite -buffer-name=files file_rec/async:!<cr>
-nnoremap <C-b> :<C-u>Unite -buffer-name=buffers -quick-match buffer<cr>
-nnoremap <C-\> :<C-u>Unite -buffer-name=grep grep:.<cr>
-nnoremap <C-y> :<C-u>Unite -buffer-name=yanks history/yank<cr>
+nnoremap <C-u> :<C-u>Unite -buffer-name=files -auto-resize file_rec/async:!<cr>
+nnoremap <C-b> :<C-u>Unite -buffer-name=buffers -quick-match -auto-resize buffer<cr>
+nnoremap <C-\> :<C-u>Unite -buffer-name=grep -auto-resize grep:.<cr>
+nnoremap <C-y> :<C-u>Unite -buffer-name=yanks -auto-resize history/yank<cr>
 
 if executable('ag')
   let g:unite_source_grep_command='ag'
