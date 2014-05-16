@@ -187,7 +187,7 @@ nnoremap <C-u> :<C-u>Unite -buffer-name=files -auto-resize file_rec/async:!<cr>
 nnoremap <C-m> :<C-u>Unite -buffer-name=mru -auto-resize neomru/file<cr>
 nnoremap <C-b> :<C-u>Unite -buffer-name=buffers -quick-match -auto-resize buffer<cr>
 nnoremap <C-\> :<C-u>Unite -buffer-name=grep -auto-resize grep:.<cr>
-nnoremap <C-y> :<C-u>Unite -buffer-name=yanks -auto-resize history/yank<cr>
+nnoremap <C-y> :<C-u>Unite -buffer-name=yanks -quick-match -auto-resize history/yank<cr>
 
 if executable('ag')
   let g:unite_source_grep_command='ag'
