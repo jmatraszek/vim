@@ -184,6 +184,7 @@ call unite#set_profile('files', 'smartcase', 1)
 call unite#custom#source('line,outline','matchers','matcher_fuzzy')
 
 nnoremap <C-u> :<C-u>Unite -buffer-name=files -auto-resize file_rec/async:!<cr>
+nnoremap <C-m> :<C-u>Unite -buffer-name=mru -auto-resize neomru/file<cr>
 nnoremap <C-b> :<C-u>Unite -buffer-name=buffers -quick-match -auto-resize buffer<cr>
 nnoremap <C-\> :<C-u>Unite -buffer-name=grep -auto-resize grep:.<cr>
 nnoremap <C-y> :<C-u>Unite -buffer-name=yanks -auto-resize history/yank<cr>
