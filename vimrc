@@ -17,17 +17,12 @@ filetype plugin indent on
 " BASIC SETTINGS {{{
 set hidden
 set showmode
-set backspace=indent,eol,start
-set noautochdir
 set backup " keep a backup file
 set backupdir=~/.tmp-vim
 set history=500 " keep 50 lines of command line history
-set ruler " show the cursor position all the time
-set showcmd " display incomplete commands
 set showmatch "show matching brackets/parenthesis
 set incsearch " do incremental searching
 set completeopt=menu,longest,preview
-set wildmenu "ladne dopelnianie komend
 set wildchar=<TAB>
 set wildignore+=*.o,*.obj,.git,public/system,build/**
 set number "numerowanie linii
@@ -38,7 +33,6 @@ set mouse=a " select using mouse with shift pressed on
 set formatoptions=tcqomM
 set textwidth=120
 set helplang=pl,en
-set autoindent
 set smartindent
 set ignorecase
 set smartcase "case sensitive tylko jesli wyszukiwana fraza zawiera wielka litere

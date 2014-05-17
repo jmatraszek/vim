@@ -142,3 +142,6 @@
 [submodule "bundle/neomru"]
 	path = bundle/neomru
 	url = https://github.com/Shougo/neomru.vim.git
+[submodule "bundle/sensible"]
+	path = bundle/sensible
+	url = https://github.com/tpope/vim-sensible.git
