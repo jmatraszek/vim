@@ -1,6 +1,7 @@
 " vim:fdm=marker:foldenable
 
 " PATHOGEN {{{
+source ~/.vim/bundle/pathogen/autoload/pathogen.vim
 set nocompatible
 filetype off
 " To disable a plugin, add it's bundle name to the following list
