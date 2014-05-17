@@ -1,0 +1,40 @@
+" vim:fdm=marker:foldenable
+" SENSIBLE {{{
+set nocompatible
+source $HOME/.vim/bundle/sensible/plugin/sensible.vim
+" }}}
+
+" SETTINGS {{{
+set number
+set hlsearch
+set pastetoggle=<F4>
+set completeopt=menu,longest,preview
+" }}}
+
+" COLORSCHEME {{{
+colorscheme desert
+" }}}
+
+" KEY MAPPINGS {{{
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+nnoremap j gj
+nnoremap k gk
+nnoremap ; :
+
+nmap Y y$
+nmap S hs
+
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
+map gn :nohlsearch<CR>
+cmap w!! w !sudo tee % >/dev/null
+
+nnoremap + O<esc>
+nnoremap _ o<esc>
+" }}}
