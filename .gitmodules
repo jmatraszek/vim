@@ -148,3 +148,6 @@
 [submodule "bundle/pathogen"]
 	path = bundle/pathogen
 	url = https://github.com/tpope/vim-pathogen.git
+[submodule "bundle/pencil"]
+	path = bundle/pencil
+	url = https://github.com/reedes/vim-pencil.git

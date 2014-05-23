@@ -32,7 +32,6 @@ set enc=utf8
 set tenc=utf8
 set mouse=a " select using mouse with shift pressed on
 set formatoptions=tcqomM
-set textwidth=120
 set helplang=pl,en
 set smartindent
 set ignorecase
@@ -166,6 +165,17 @@ let g:syntastic_quiet_messages = { "level": "warnings" }
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_cpp_compiler_options = ' -Wall -Wno-write-strings -g `pkg-config --cflags opencv` `pkg-config --cflags sigc++-2.0`'
 " SYNTASTIC }}}
+
+" PENCIL {{{
+let g:pencil#wrapModeDefault = 'hard' " or 'soft'
+
+augroup pencil
+  autocmd!
+  autocmd FileType markdown call pencil#init()
+  autocmd FileType textile call pencil#init()
+  autocmd FileType text call pencil#init({'wrap': 'hard'})
+augroup END
+"  PENCIL }}}
 
 " UNITE {{{
 let g:unite_source_history_yank_enable = 1
