@@ -151,3 +151,6 @@
 [submodule "bundle/pencil"]
 	path = bundle/pencil
 	url = https://github.com/reedes/vim-pencil.git
+[submodule "bundle/unite-spell-suggest"]
+	path = bundle/unite-spell-suggest
+	url = https://github.com/kopischke/unite-spell-suggest.git

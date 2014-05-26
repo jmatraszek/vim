@@ -193,6 +193,7 @@ nnoremap <C-m> :<C-u>Unite -buffer-name=mru -auto-resize neomru/file<cr>
 nnoremap <C-b> :<C-u>Unite -buffer-name=buffers -quick-match -auto-resize buffer<cr>
 nnoremap <C-\> :<C-u>Unite -buffer-name=grep -auto-resize grep:.<cr>
 nnoremap <C-y> :<C-u>Unite -buffer-name=yanks -quick-match -auto-resize history/yank<cr>
+nnoremap <C-e> :<C-u>Unite -buffer-name=spell -auto-resize spell_suggest<cr>
 
 if executable('ag')
   let g:unite_source_grep_command='ag'
@@ -339,6 +340,21 @@ endfunction
 noremap <silent> <A-1> :call ToggleFlag("guioptions","m")<BAR>set guioptions?<CR>
 imap <A-1> <C-O><A-1>
 " KEY MAPPINGS }}}
+
+" PROSE {{{
+command! Prose setlocal spell spelllang=pl,en
+command! Code setlocal nospell
+highlight clear SpellBad
+highlight SpellBad term=standout ctermfg=1 term=underline cterm=underline
+highlight clear SpellCap
+highlight SpellCap term=underline cterm=underline
+highlight clear SpellRare
+highlight SpellRare term=underline cterm=underline
+highlight clear SpellLocal
+highlight SpellLocal term=underline cterm=underline
+" where it should get the dictionary files
+let g:spellfile_URL = 'http://ftp.vim.org/vim/runtime/spell'
+" PROSE }}}
 
 " AUTOCMD {{{
 if has("autocmd")
