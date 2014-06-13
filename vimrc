@@ -217,15 +217,6 @@ endfunction
 autocmd FileType unite call s:unite_settings()
 " UNITE }}}
 
-" COMMAND-T {{{
-"okno command-t - najwyzej 15 pozycji
-let g:CommandTMaxHeight=15
-let g:CommandTMaxFiles=15000
-nmap <silent> <Leader>cd :CommandT<CR>
-nmap <silent> <Leader>bg :CommandTBuffer<CR>
-nmap <silent> <Leader>vf :CommandTFlush<CR>
-" COMMAND-T }}}
-
 " UNDOTREE {{{
 if has("persistent_undo")
     set undodir=~/.undo-vim/
