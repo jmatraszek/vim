@@ -338,14 +338,16 @@ imap <A-1> <C-O><A-1>
 " PROSE {{{
 command! Prose setlocal spell spelllang=pl,en
 command! Code setlocal nospell
-highlight clear SpellBad
-highlight SpellBad term=standout ctermfg=1 term=underline cterm=underline
-highlight clear SpellCap
-highlight SpellCap term=underline cterm=underline
-highlight clear SpellRare
-highlight SpellRare term=underline cterm=underline
-highlight clear SpellLocal
-highlight SpellLocal term=underline cterm=underline
+if !has('gui_running')
+  highlight clear SpellBad
+  highlight SpellBad term=standout ctermfg=1 term=underline cterm=underline
+  highlight clear SpellCap
+  highlight SpellCap term=underline cterm=underline
+  highlight clear SpellRare
+  highlight SpellRare term=underline cterm=underline
+  highlight clear SpellLocal
+  highlight SpellLocal term=underline cterm=underline
+end
 " where it should get the dictionary files
 let g:spellfile_URL = 'http://ftp.vim.org/vim/runtime/spell'
 " PROSE }}}
