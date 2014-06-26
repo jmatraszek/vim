@@ -91,7 +91,8 @@ if has("gui_running")
     set lines=999
     set columns=999
     set cursorline
-    set guioptions=aegirLt "wylaczony toolbar i menu
+    set guioptions=aegit "wylaczony toolbar i menu
+    set guiheadroom=0
 else
     set nopaste
     set ttyfast
