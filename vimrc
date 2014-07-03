@@ -128,6 +128,7 @@ let delimitMate_expand_space = 1
   let g:airline_powerline_fonts=1
   let g:airline_inactive_collapse=0
   let g:airline_theme='powerlineish'
+  let g:airline#extensions#branch#displayed_head_limit = 12
 " AIRLINE }}}
 
 " C-SUPPORT {{{
