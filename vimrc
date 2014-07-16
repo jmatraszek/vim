@@ -81,7 +81,8 @@ if &t_Co > 2 || has("gui_running")
     syntax on
     set background=dark
     set hlsearch
-    set guifont=Inconsolata-dz\ for\ Powerline\ 10 " install this using: https://github.com/Lokaltog/vim-powerline/wiki/Patched-fonts
+    " set guifont=Inconsolata-dz\ for\ Powerline\ 10 " install this using: https://github.com/Lokaltog/vim-powerline/wiki/Patched-fonts
+    set guifont=Inconsolata-dz\ for\ Powerline\ 9 " install this using: https://github.com/Lokaltog/vim-powerline/wiki/Patched-fonts
     hi SpecialKey ctermfg=12 ctermbg=234
     hi NonText ctermfg=12 ctermbg=234
 endif
@@ -192,8 +193,8 @@ call unite#custom#source('line,outline','matchers','matcher_fuzzy')
 
 nnoremap <C-u> :<C-u>Unite -buffer-name=files -auto-resize file_rec/async:!<cr>
 nnoremap <C-m> :<C-u>Unite -buffer-name=mru -auto-resize neomru/file<cr>
-nnoremap <C-b> :<C-u>Unite -buffer-name=buffers -quick-match -auto-resize buffer<cr>
-nnoremap <C-\> :<C-u>Unite -buffer-name=grep -auto-resize grep:.<cr>
+nnoremap <S-b> :<C-u>Unite -buffer-name=buffers -quick-match -auto-resize buffer<cr>
+nnoremap <C-\> :<C-u>Unite -buffer-name=grep -auto-resize grep<cr>
 nnoremap <C-y> :<C-u>Unite -buffer-name=yanks -quick-match -auto-resize history/yank<cr>
 nnoremap <C-e> :<C-u>Unite -buffer-name=spell -auto-resize spell_suggest<cr>
 
