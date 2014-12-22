@@ -151,3 +151,6 @@
 [submodule "bundle/unite-spell-suggest"]
 	path = bundle/unite-spell-suggest
 	url = https://github.com/kopischke/unite-spell-suggest.git
+[submodule "bundle/geeknote"]
+	path = bundle/geeknote
+	url = https://github.com/neilagabriel/vim-geeknote.git
