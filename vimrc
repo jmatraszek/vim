@@ -193,7 +193,7 @@ call unite#custom#source('line,outline','matchers','matcher_fuzzy')
 
 nnoremap <C-u> :<C-u>Unite -buffer-name=files -auto-resize file_rec/async:!<cr>
 nnoremap <C-m> :<C-u>Unite -buffer-name=mru -auto-resize neomru/file<cr>
-nnoremap <S-b> :<C-u>Unite -buffer-name=buffers -quick-match -auto-resize buffer<cr>
+nnoremap <C-o> :<C-u>Unite -buffer-name=buffers -quick-match -auto-resize buffer<cr>
 nnoremap <C-\> :<C-u>Unite -buffer-name=grep -auto-resize grep<cr>
 nnoremap <C-y> :<C-u>Unite -buffer-name=yanks -quick-match -auto-resize history/yank<cr>
 nnoremap <C-e> :<C-u>Unite -buffer-name=spell -auto-resize spell_suggest<cr>
