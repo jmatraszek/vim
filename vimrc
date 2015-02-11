@@ -5,7 +5,7 @@ source ~/.vim/bundle/pathogen/autoload/pathogen.vim
 set nocompatible
 filetype off
 " To disable a plugin, add it's bundle name to the following list
-let g:pathogen_disabled = ['easytags', 'tlib-vim']
+let g:pathogen_disabled = ['easytags']
 if !has('gui_running')
     " call add(g:pathogen_disabled, 'example-vim-plugin')
 endif
