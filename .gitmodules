@@ -154,3 +154,6 @@
 [submodule "bundle/geeknote"]
 	path = bundle/geeknote
 	url = https://github.com/neilagabriel/vim-geeknote.git
+[submodule "bundle/clever-f"]
+	path = bundle/clever-f
+	url = https://github.com/rhysd/clever-f.vim.git
