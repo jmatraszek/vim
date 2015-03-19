@@ -270,6 +270,13 @@ let g:easytags_async = 1
 let g:easytags_events = ['BufReadPost', 'BufWritePost']
 " EASYTAGS }}}
 
+" MULTIPLE CURSORS
+let g:multi_cursor_next_key='<A-C-n>'
+let g:multi_cursor_prev_key='<A-C-p>'
+let g:multi_cursor_skip_key='<C-x>'
+let g:multi_cursor_quit_key='<Esc>'
+" MULTIPLE CURSORS
+
 " KEY MAPPING {{{
 " moving in a right way :)
 nnoremap <up> <nop>
