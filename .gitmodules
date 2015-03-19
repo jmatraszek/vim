@@ -157,3 +157,6 @@
 [submodule "bundle/clever-f"]
 	path = bundle/clever-f
 	url = https://github.com/rhysd/clever-f.vim.git
+[submodule "bundle/vim-misc"]
+	path = bundle/vim-misc
+	url = https://github.com/xolox/vim-misc.git

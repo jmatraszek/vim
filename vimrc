@@ -5,7 +5,7 @@ source ~/.vim/bundle/pathogen/autoload/pathogen.vim
 set nocompatible
 filetype off
 " To disable a plugin, add it's bundle name to the following list
-let g:pathogen_disabled = ['easytags']
+" let g:pathogen_disabled = ['easytags']
 if !has('gui_running')
     " call add(g:pathogen_disabled, 'example-vim-plugin')
 endif
@@ -260,6 +260,15 @@ end
 " VIMERL {{{
 let erlang_show_errors = 0 "let syntastic do the job
 " VIMERL }}}
+
+" EASYTAGS {{{
+set tags=./.vimtags;
+let g:easytags_file = './.vimtags'
+" let g:easytags_dynamic_files = 1
+let g:easytags_async = 1
+" let g:easytags_auto_highlight = 0
+let g:easytags_events = ['BufReadPost', 'BufWritePost']
+" EASYTAGS }}}
 
 " KEY MAPPING {{{
 " moving in a right way :)
