@@ -130,6 +130,9 @@ let delimitMate_expand_space = 1
   let g:airline_inactive_collapse=0
   let g:airline_theme='kalisi'
   let g:airline#extensions#branch#displayed_head_limit = 12
+  let g:airline#extensions#tabline#enabled = 1
+  let g:airline#extensions#tabline#buffer_idx_mode = 1
+  let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 " AIRLINE }}}
 
 " C-SUPPORT {{{
@@ -146,6 +149,7 @@ map <leader>w :MBEbf<cr>
 noremap <C-TAB>   :MBEbn<CR>
 noremap <C-S-TAB> :MBEbp<CR>
 command BD MBEbd
+let g:miniBufExplAutoStart = 0
 let g:miniBufExplBuffersNeeded = 1
 let g:miniBufExplSetUT = 200
 let g:miniBufExplCycleArround = 1
