@@ -274,6 +274,11 @@ let g:easytags_async = 1
 " let g:easytags_auto_highlight = 0
 let g:easytags_events = ['BufReadPost', 'BufWritePost']
 " EASYTAGS }}}
+"
+" GUTENTAGS {{{
+set tags=./.vimtags;
+let g:gutentags_tagfile = '.vimtags'
+" GUTENTAGS }}}
 
 " MULTIPLE CURSORS
 " let g:multi_cursor_use_default_mapping=0
