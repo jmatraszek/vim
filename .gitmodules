@@ -76,9 +76,6 @@
 [submodule "bundle/vim-gnupg"]
 	path = bundle/vim-gnupg
 	url = git://github.com/jamessan/vim-gnupg.git
-[submodule "bundle/delimit-mate"]
-	path = bundle/delimit-mate
-	url = git://github.com/Raimondi/delimitMate.git
 [submodule "bundle/undotree"]
 	path = bundle/undotree
 	url = git://github.com/mbbill/undotree.git
@@ -163,3 +160,6 @@
 [submodule "bundle/gutentags"]
 	path = bundle/gutentags
 	url = https://github.com/ludovicchabant/vim-gutentags.git
+[submodule "bundle/lexima"]
+	path = bundle/lexima
+	url = https://github.com/cohama/lexima.vim.git
