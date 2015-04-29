@@ -163,3 +163,6 @@
 [submodule "bundle/lexima"]
 	path = bundle/lexima
 	url = https://github.com/cohama/lexima.vim.git
+[submodule "bundle/csv"]
+	path = bundle/csv
+	url = https://github.com/chrisbra/csv.vim.git
