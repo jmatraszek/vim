@@ -146,6 +146,8 @@ map <leader>a :MBEbp<cr>
 map <leader>s :MBEbn<cr>
 map <leader>q :MBEbb<cr>
 map <leader>w :MBEbf<cr>
+noremap <M-Right>   :MBEbn<CR>
+noremap <M-Left> :MBEbp<CR>
 noremap <C-TAB>   :MBEbn<CR>
 noremap <C-S-TAB> :MBEbp<CR>
 command BD MBEbd
