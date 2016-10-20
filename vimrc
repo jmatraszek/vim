@@ -265,6 +265,11 @@ if has("autocmd")
 end
 " VIM RUBY }}}
 
+" RACER {{{
+let g:racer_cmd = "~/.cargo/bin/racer"
+let $RUST_SRC_PATH="~/.multirust/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src/"
+" RACER }}}
+
 " VIMERL {{{
 let erlang_show_errors = 0 "let syntastic do the job
 " VIMERL }}}
