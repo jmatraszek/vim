@@ -270,6 +270,11 @@ let g:ycm_rust_src_path = expand("~/.multirust/toolchains/stable-x86_64-unknown-
 nnoremap gd :YcmCompleter GoToDefinition<CR>
 " YOUCOMPLETEME }}}
 
+" ULTISNIPS {{{
+let g:UltiSnipsExpandTrigger="<c-tab>"
+let g:UltiSnipsListSnippets="<c-l>"
+" ULTISNIPS }}}
+
 " VIMERL {{{
 let erlang_show_errors = 0 "let syntastic do the job
 " VIMERL }}}
