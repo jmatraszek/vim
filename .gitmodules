@@ -172,3 +172,6 @@
 [submodule "bundle/racer"]
 	path = bundle/racer
 	url = https://github.com/racer-rust/vim-racer.git
+[submodule "bundle/airline-themes"]
+	path = bundle/airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes.git
