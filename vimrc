@@ -5,7 +5,7 @@ source ~/.vim/bundle/pathogen/autoload/pathogen.vim
 set nocompatible
 filetype off
 " To disable a plugin, add it's bundle name to the following list
-let g:pathogen_disabled = ['easytags']
+let g:pathogen_disabled = ['easytags', 'racer']
 if !has('gui_running')
     " call add(g:pathogen_disabled, 'example-vim-plugin')
 endif
@@ -265,10 +265,10 @@ if has("autocmd")
 end
 " VIM RUBY }}}
 
-" RACER {{{
-let g:racer_cmd = "~/.cargo/bin/racer"
-let $RUST_SRC_PATH="~/.multirust/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src/"
-" RACER }}}
+" YOUCOMPLETEME {{{
+let g:ycm_rust_src_path = expand("~/.multirust/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src/")
+nnoremap gd :YcmCompleter GoToDefinition<CR>
+" YOUCOMPLETEME }}}
 
 " VIMERL {{{
 let erlang_show_errors = 0 "let syntastic do the job
