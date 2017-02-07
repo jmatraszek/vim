@@ -206,7 +206,12 @@ nnoremap <Leader>* :<C-u>UniteWithCursorWord -buffer-name=grep -auto-resize grep
 nnoremap <C-y> :<C-u>Unite -buffer-name=yanks -quick-match -auto-resize history/yank<cr>
 nnoremap <C-e> :<C-u>Unite -buffer-name=spell -auto-resize spell_suggest<cr>
 
-if executable('ag')
+if executable('rg')
+  let g:unite_source_grep_command='rg'
+  let g:unite_source_grep_default_opts='--hidden --ho-heading --vimgrep -S'
+  let g:unite_source_grep_recursive_opt=''
+  let g:unite_source_rec_async_command = ['rgg']
+elseif executable('ag')
   let g:unite_source_grep_command='ag'
   let g:unite_source_grep_default_opts='--nocolor --nogroup'
   let g:unite_source_grep_recursive_opt=''
