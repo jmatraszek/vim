@@ -210,7 +210,7 @@ if executable('rg')
   let g:unite_source_grep_command='rg'
   let g:unite_source_grep_default_opts='--hidden --ho-heading --vimgrep -S'
   let g:unite_source_grep_recursive_opt=''
-  let g:unite_source_rec_async_command = ['rgg']
+  let g:unite_source_rec_async_command = ['rg', '--files']
 elseif executable('ag')
   let g:unite_source_grep_command='ag'
   let g:unite_source_grep_default_opts='--nocolor --nogroup'
