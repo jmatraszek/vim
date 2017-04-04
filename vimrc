@@ -208,7 +208,7 @@ nnoremap <C-e> :<C-u>Unite -buffer-name=spell -auto-resize spell_suggest<cr>
 
 if executable('rg')
   let g:unite_source_grep_command='rg'
-  let g:unite_source_grep_default_opts='--hidden --ho-heading --vimgrep -S'
+  let g:unite_source_grep_default_opts='--hidden --vimgrep -S'
   let g:unite_source_grep_recursive_opt=''
   let g:unite_source_rec_async_command = ['rg', '--files']
 elseif executable('ag')
