@@ -172,6 +172,3 @@
 [submodule "bundle/airline-themes"]
 	path = bundle/airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes.git
-[submodule "bundle/sqlutilities"]
-	path = bundle/sqlutilities
-	url = https://github.com/vim-scripts/SQLUtilities
