@@ -20,11 +20,6 @@ And create a directory for backup files:
 
   mkdir ~/.tmp-vim
 
-If you want to use command-t you have to build C extension:
-
-  cd ~/.vim/bundle/command-t/ruby/command-t
-  ruby extconf.rb
-  make
 
 If you do not want to use some of plugins you can remove them:
 1. Remove lines referring to particular submodule from .gitmodules
@@ -36,45 +31,10 @@ If you do not want to use some of plugins you can remove them:
 After deleting plugin you may want to delete that plugin's configuration from .vimrc. That should be pretty easy since
 configuration options in my vimrc are grouped by plugin.
 
-== Plugins
+== Update
 
-I've bundled following plugins:
-* <b>A[https://github.com/vim-scripts/a.vim]</b> - alternate *.c and *.h files quickly.
-* <b>Ack[https://github.com/mileszs/ack.vim]</b> - front-end for Perl module App:Ack.
-* <b>Align[https://github.com/vim-scripts/Align]</b> - easily align text.
-* <b>ApiDock[https://github.com/mileszs/apidock.vim]</b> - search ApiDock for word under the cursor.
-* <b>C[https://github.com/vim-scripts/c.vim]</b> - C/C++ IDE.
-* <b>Color-Sampler-Pack[https://github.com/vim-scripts/Color-Sampler-Pack]</b> - many colorschemes to choose fro.
-* <b>Command-T[https://github.com/wincent/Command-T]</b> - easily open files.
-* <b>Doxygen-Support[https://github.com/vim-scripts/doxygen-support.vim]</b> - support for writing doxygen.
-* <b>Fugitive[https://github.com/tpope/vim-fugitive]</b> - git interface within Vim.
-* <b>Headlights[https://github.com/mbadran/headlights]</b> - TextMate's like 'bundle' menu.
-* <b>MatchIt[https://github.com/vim-scripts/matchit.zip]</b> - extends the % key.
-* <b>NERD-Commenter[https://github.com/scrooloose/nerdcommenter]</b> - easily comment (blocks of) code.
-* <b>NERD-Tree[https://github.com/scrooloose/nerdtree]</b> - directory tree explorer.
-* <b>Pastie[https://github.com/tpope/vim-pastie]</b> - paste code to Pastie from within Vim.
-* <b>Project[https://github.com/vim-scripts/project.tar.gz]</b> - organize and navigate project of files.
-* <b>{Quickfix signs}[https://github.com/tomtom/quickfixsigns_vim]</b> - mark quickfix item with marks.
-* <b>Rails[https://github.com/tpope/vim-rails]</b> - Ruby on Rails IDE.
-* <b>Repeat[https://github.com/tpope/vim-repeat]</b> - repeat the previous surrounding command.
-* <b>ShowMarks[https://github.com/harleypig/ShowMarks]</b> - place and hide marks.
-* <b>Speeddating[https://github.com/tpope/vim-speeddating]</b> - increment/decrement dates, times and more.
-* <b>Supertab[https://github.com/ervandew/supertab]</b> - autocomplete with Tab key.
-* <b>Surround[https://github.com/tpope/vim-surround]</b> - find and edit surrounding parenthesis and so on.
-* <b>Syntastic[https://github.com/scrooloose/syntastic]</b> - check syntax when saving file.
-* <b>Taglist[https://github.com/mexpolk/vim-taglist]</b> - browse code's tags.
-* <b>Tasklist[https://github.com/vim-scripts/TaskList.vim]</b> - Eclipse like task list.
-* <b>TextObj-User[https://github.com/kana/vim-textobj-user]</b> - support for user-defined text objects.
-* <b>TextObj-RubyBlock[https://github.com/nelstrom/vim-textobj-rubyblock]</b> - support for Ruby block text objects.
-* <b>Tlib[https://github.com/tomtom/tlib_vim]</b> - library providing some utility functions.
-* <b>Tgpg[https://github.com/tomtom/tgpg_vim]</b> - edit encrypted files.
-* <b>Unimpaired[https://github.com/tpope/vim-unimpaired]</b> - several pairs of bracket mappings.
-* <b>Vim-Git[https://github.com/tpope/vim-git]</b> - Vim git runtime files.
-* <b>Vim-Preview[https://github.com/greyblake/vim-preview]</b> - easily preview markup files.
-* <b>Vim-RDoc[https://github.com/hallison/vim-rdoc]</b> - adding RDoc syntax.
-* <b>Vim-RSpec[https://github.com/taq/vim-rspec]</b> - run RSpecs from within Vim.
-* <b>Vim-Task[https://github.com/samsonw/vim-task]</b> - getting things done in Vim.
-* <b>{The Vim Outliner}[https://github.com/steeef/TVO--The-Vim-Outliner]</b> - outliner for Vim.
-* <b>XPTemplate[https://github.com/drmingdrmer/xptemplate-dist]</b> - best code snippets.
-* <b>{Yank Ring}[https://github.com/vim-scripts/YankRing.vim]</b> - history of previous yanks.
-
+  git submodule foreach git co master
+  git submodule foreach git pull
+  cd bundle/youcompleteme
+  git submodule update --init --recursive
+  ./install.py
