@@ -298,6 +298,12 @@ let g:easytags_events = ['BufReadPost', 'BufWritePost']
 set tags=./.vimtags;
 let g:gutentags_tagfile = '.vimtags'
 " GUTENTAGS }}}
+"
+" SQLFMT {{{
+let g:sqlfmt_auto = 0
+let g:sqlfmt_command = "sqlformat"
+let g:sqlfmt_options = "-r -k upper"
+" SQLFMT }}}
 
 " MULTIPLE CURSORS
 " let g:multi_cursor_use_default_mapping=0

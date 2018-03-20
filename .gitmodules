@@ -172,3 +172,6 @@
 [submodule "bundle/airline-themes"]
 	path = bundle/airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes.git
+[submodule "bundle/sqlfmt"]
+	path = bundle/sqlfmt
+	url = https://github.com/b4b4r07/vim-sqlfmt.git
