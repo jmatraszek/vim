@@ -296,7 +296,7 @@ let g:easytags_events = ['BufReadPost', 'BufWritePost']
 "
 " GUTENTAGS {{{
 set tags=./.vimtags;
-let g:gutentags_tagfile = '.vimtags'
+let g:gutentags_ctags_file = '.vimtags'
 " GUTENTAGS }}}
 
 " MULTIPLE CURSORS
