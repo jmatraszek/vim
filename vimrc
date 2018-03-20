@@ -5,7 +5,7 @@ source ~/.vim/bundle/pathogen/autoload/pathogen.vim
 set nocompatible
 filetype off
 " To disable a plugin, add it's bundle name to the following list
-let g:pathogen_disabled = ['easytags', 'racer']
+let g:pathogen_disabled = ['easytags']
 if !has('gui_running')
     " call add(g:pathogen_disabled, 'example-vim-plugin')
 endif
@@ -186,52 +186,38 @@ augroup pencil
 augroup END
 "  PENCIL }}}
 
-" UNITE {{{
-let g:unite_source_history_yank_enable = 1
-let g:unite_enable_start_insert = 1
-let g:unite_prompt='» '
-let g:unite_split_rule='botright'
+" DENITE {{{
+nnoremap <C-u> :<C-u>Denite -buffer-name=files -auto-resize file_rec<cr>
+nnoremap <C-o> :<C-u>Denite -buffer-name=buffers -mode=normal -auto-resize buffer<cr>
+nnoremap <C-m> :<C-u>Denite -buffer-name=mru -auto-resize file_mru<cr>
+nnoremap <C-\> :<C-u>Denite -buffer-name=grep -auto-resize grep<cr>
+nnoremap <Leader>* :<C-u>DeniteCursorWord -buffer-name=grep -auto-resize grep<cr>
+nnoremap <C-y> :<C-u>Denite -buffer-name=yanks -mode=normal -auto-resize register<cr>
 
-" call unite#filters#matcher_default#use(['matcher_fuzzy'])
-call unite#filters#sorter_default#use(['sorter_rank'])
-call unite#custom#profile('files', 'context.smartcase', 1)
-call unite#custom#source('line,outline','matchers','matcher_fuzzy')
+" Change file_rec command to use ripgrep
+call denite#custom#var('file_rec', 'command', ['rg', '--files', '--glob', '!.git'])
 
-nnoremap <C-u> :<C-u>Unite -buffer-name=files -auto-resize file_rec/async:!<cr>
-nnoremap <C-m> :<C-u>Unite -buffer-name=mru -auto-resize neomru/file<cr>
-nnoremap <C-o> :<C-u>Unite -buffer-name=buffers -quick-match -auto-resize buffer<cr>
-nnoremap <C-\> :<C-u>Unite -buffer-name=grep -auto-resize grep<cr>
-nnoremap <Leader>* :<C-u>UniteWithCursorWord -buffer-name=grep -auto-resize grep<cr>
-nnoremap <C-y> :<C-u>Unite -buffer-name=yanks -quick-match -auto-resize history/yank<cr>
-nnoremap <C-e> :<C-u>Unite -buffer-name=spell -auto-resize spell_suggest<cr>
+" Get rid of those stupid fuzzy matchers
+call denite#custom#source('file_rec', 'matchers', ['matcher_substring'])
 
-if executable('rg')
-  let g:unite_source_grep_command='rg'
-  let g:unite_source_grep_default_opts='--hidden --vimgrep -S'
-  let g:unite_source_grep_recursive_opt=''
-  let g:unite_source_rec_async_command = ['rg', '--files']
-elseif executable('ag')
-  let g:unite_source_grep_command='ag'
-  let g:unite_source_grep_default_opts='--nocolor --nogroup'
-  let g:unite_source_grep_recursive_opt=''
-  let g:unite_source_rec_async_command = ['ag', '--follow', '--nocolor', '--nogroup', '--hidden', '-g', '']
-elseif executable('ack')
-  let g:unite_source_grep_command='ack'
-  let g:unite_source_grep_default_opts='--no-heading --no-color -C4'
-  let g:unite_source_grep_recursive_opt=''
-endif
+" Change mappings.
+call denite#custom#map('insert', '<C-j>', '<denite:move_to_next_line>', 'noremap')
+call denite#custom#map('insert', '<C-k>', '<denite:move_to_previous_line>', 'noremap')
 
-function! s:unite_settings()
-  nmap <buffer> <esc> <plug>(unite_exit)
-  imap <buffer> <C-j> <Plug>(unite_select_next_line)
-  imap <buffer> <C-k> <Plug>(unite_select_previous_line)
-  inoremap <silent><buffer><expr> <C-s>     unite#do_action('split')
-  inoremap <silent><buffer><expr> <C-v>     unite#do_action('vsplit')
-  nnoremap <silent><buffer><expr> <C-s>     unite#do_action('split')
-  nnoremap <silent><buffer><expr> <C-v>     unite#do_action('vsplit')
-endfunction
-autocmd FileType unite call s:unite_settings()
-" UNITE }}}
+" Ripgrep command on grep source
+call denite#custom#var('grep', 'command', ['rg'])
+call denite#custom#var('grep', 'default_opts', ['--vimgrep', '--no-heading'])
+call denite#custom#var('grep', 'recursive_opts', [])
+call denite#custom#var('grep', 'pattern_opt', ['--regexp'])
+call denite#custom#var('grep', 'separator', ['--'])
+call denite#custom#var('grep', 'final_opts', [])
+
+" Allow to narrow results also by filename
+call denite#custom#source('grep', 'converters', ['converter_abbr_word'])
+
+" Change default prompt
+call denite#custom#option('default', 'prompt', '» ')
+" DENITE }}}
 
 " UNDOTREE {{{
 if has("persistent_undo")
