@@ -5,7 +5,7 @@ source ~/.vim/bundle/pathogen/autoload/pathogen.vim
 set nocompatible
 filetype off
 " To disable a plugin, add it's bundle name to the following list
-let g:pathogen_disabled = ['easytags']
+let g:pathogen_disabled = []
 if !has('gui_running')
     " call add(g:pathogen_disabled, 'example-vim-plugin')
 endif
@@ -270,15 +270,6 @@ let g:UltiSnipsListSnippets="<c-l>"
 let erlang_show_errors = 0 "let syntastic do the job
 " VIMERL }}}
 
-" EASYTAGS {{{
-set tags=./.vimtags;
-let g:easytags_file = './.vimtags'
-" let g:easytags_dynamic_files = 1
-let g:easytags_async = 1
-" let g:easytags_auto_highlight = 0
-let g:easytags_events = ['BufReadPost', 'BufWritePost']
-" EASYTAGS }}}
-"
 " GUTENTAGS {{{
 set tags=./.vimtags;
 let g:gutentags_ctags_file = '.vimtags'
@@ -289,14 +280,6 @@ let g:sqlfmt_auto = 0
 let g:sqlfmt_command = "sqlformat"
 let g:sqlfmt_options = "-r -k upper"
 " SQLFMT }}}
-
-" MULTIPLE CURSORS
-" let g:multi_cursor_use_default_mapping=0
-" let g:multi_cursor_next_key='<A-C-n>'
-" let g:multi_cursor_prev_key='<A-C-p>'
-" let g:multi_cursor_skip_key='<C-x>'
-" let g:multi_cursor_quit_key='<Esc>'
-" MULTIPLE CURSORS
 
 " KEY MAPPING {{{
 " moving in a right way :)

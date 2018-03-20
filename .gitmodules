@@ -28,9 +28,6 @@
 [submodule "bundle/surround"]
     path = bundle/surround
     url = https://github.com/tpope/vim-surround.git
-[submodule "bundle/easytags"]
-	path = bundle/easytags
-	url = https://github.com/vim-scripts/easytags.vim.git
 [submodule "bundle/solarized"]
 	path = bundle/solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
@@ -121,9 +118,6 @@
 [submodule "bundle/gruvbox"]
 	path = bundle/gruvbox
 	url = https://github.com/morhetz/gruvbox.git
-[submodule "bundle/multiple-cursors"]
-	path = bundle/multiple-cursors
-	url = https://github.com/terryma/vim-multiple-cursors.git
 [submodule "bundle/airline"]
 	path = bundle/airline
 	url = https://github.com/bling/vim-airline.git
