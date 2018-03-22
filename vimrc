@@ -119,11 +119,6 @@ let html_dynamic_folds=1
 let g:indent_guides_guide_size = 1
 " INDENT GUIDES }}}
 
-" DELIMITMATE {{{
-let delimitMate_expand_cr = 1
-let delimitMate_expand_space = 1
-" DELIMITMATE }}}
-
 " AIRLINE {{{
   let g:airline_powerline_fonts=1
   let g:airline_inactive_collapse=0
@@ -162,28 +157,12 @@ hi MBEVisibleActiveNormal  guifg=#A6DB29 guibg=fg cterm=underline gui=underline
 hi MBEVisibleActiveChanged guifg=#F1266F guibg=fg cterm=underline gui=underline
 " MINIBUFEXPL }}}
 
-" CALENDAR {{{
-let g:calendar_google_calendar = 1
-let g:calendar_google_task = 1
-" CALENDAR }}}
-
 " SYNTASTIC {{{
 let g:syntastic_enable_signs = 1
 let g:syntastic_quiet_messages = { "level": "warnings" }
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_cpp_compiler_options = ' -Wall -Wno-write-strings -g `pkg-config --cflags opencv` `pkg-config --cflags sigc++-2.0`'
 " SYNTASTIC }}}
-
-" PENCIL {{{
-let g:pencil#wrapModeDefault = 'hard' " or 'soft'
-
-augroup pencil
-  autocmd!
-  autocmd FileType markdown call pencil#init()
-  autocmd FileType textile call pencil#init()
-  autocmd FileType text call pencil#init({'wrap': 'hard'})
-augroup END
-"  PENCIL }}}
 
 " DENITE {{{
 nnoremap <C-u> :<C-u>Denite -buffer-name=files -auto-resize file_rec<cr>
