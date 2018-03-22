@@ -84,7 +84,7 @@ if &t_Co > 2 || has("gui_running")
     syntax on
     set background=dark
     set hlsearch
-    set guifont=Iosevka\ Regular\ 9 " install this using: https://github.com/Lokaltog/vim-powerline/wiki/Patched-fonts
+    set guifont=Iosevka\ Regular\ 10
     hi SpecialKey ctermfg=12 ctermbg=234
     hi NonText ctermfg=12 ctermbg=234
 endif
