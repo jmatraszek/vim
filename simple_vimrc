@@ -9,6 +9,7 @@ set number
 set hlsearch
 set pastetoggle=<F4>
 set completeopt=menu,longest,preview
+set tags=./.vimtags
 " }}}
 
 " COLORSCHEME {{{

@@ -2,6 +2,8 @@
 
 " PATHOGEN {{{
 source ~/.vim/bundle/pathogen/autoload/pathogen.vim
+" source sensible on its own so it is possible to overwrite tags
+source ~/.vim/bundle/sensible/plugin/sensible.vim
 set nocompatible
 filetype off
 " To disable a plugin, add it's bundle name to the following list
@@ -44,6 +46,7 @@ set nofoldenable
 set updatetime=4100
 set lazyredraw
 set pastetoggle=<F4>
+set tags=./.vimtags
 
 "CHANGE CURSOR SHAPE IN DIFFRENT MODES
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
@@ -249,8 +252,7 @@ let erlang_show_errors = 0 "let syntastic do the job
 " VIMERL }}}
 
 " GUTENTAGS {{{
-set tags=./.vimtags;
-let g:gutentags_ctags_file = '.vimtags'
+let g:gutentags_ctags_tagfile = '.vimtags'
 " GUTENTAGS }}}
 "
 " SQLFMT {{{
