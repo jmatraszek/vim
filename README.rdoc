@@ -37,5 +37,4 @@ configuration options in my vimrc are grouped by plugin.
   git submodule foreach git pull
   cd bundle/youcompleteme
   git submodule update --init --recursive
-  ./install.py
-
+  ./install.py --go-completer --rust-completer
