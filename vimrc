@@ -88,15 +88,9 @@ if &t_Co > 2 || has("gui_running")
     syntax on
     set background=dark
     set hlsearch
-    set guifont=Iosevka\ Regular\ 10
-    hi SpecialKey ctermfg=12 ctermbg=234
-    hi NonText ctermfg=12 ctermbg=234
 endif
 if has("gui_running")
-    hi SpecialKey guibg=grey20
-    hi NonText guifg=yellowgreen guibg=grey20
-    set lines=999
-    set columns=999
+    set guifont=Iosevka\ Regular\ 10
     set cursorline
     set guioptions=aegit "wylaczony toolbar i menu
     set guiheadroom=0
