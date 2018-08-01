@@ -80,6 +80,10 @@ set foldtext=CustomFoldText()
 " BASIC SETTINGS }}}
 
 " GUI {{{
+if (has("termguicolors"))
+ set termguicolors
+endif
+
 if &t_Co > 2 || has("gui_running")
     syntax on
     set background=dark
@@ -105,9 +109,9 @@ endif
 " COLORSCHEME {{{
 if !has('gui_running')
     let g:gruvbox_italic=0
-    colorscheme gruvbox
+    colorscheme tender
 else
-    colorscheme gruvbox
+    colorscheme tender
 end
 " COLORSCHEME }}}
 
@@ -125,7 +129,7 @@ let g:indent_guides_guide_size = 1
 " AIRLINE {{{
   let g:airline_powerline_fonts=1
   let g:airline_inactive_collapse=0
-  let g:airline_theme='kalisi'
+  let g:airline_theme='tenderplus'
   let g:airline#extensions#branch#displayed_head_limit = 15
   let g:airline#extensions#tabline#enabled = 1
   let g:airline#extensions#tabline#buffer_idx_mode = 1

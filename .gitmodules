@@ -131,3 +131,6 @@
 [submodule "bundle/denite"]
 	path = bundle/denite
 	url = https://github.com/Shougo/denite.nvim.git
+[submodule "bundle/tender"]
+	path = bundle/tender
+	url = https://github.com/jacoborus/tender.vim.git
