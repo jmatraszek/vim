@@ -80,10 +80,6 @@ set foldtext=CustomFoldText()
 " BASIC SETTINGS }}}
 
 " GUI {{{
-if (has("termguicolors"))
- set termguicolors
-endif
-
 if &t_Co > 2 || has("gui_running")
     syntax on
     set background=dark
