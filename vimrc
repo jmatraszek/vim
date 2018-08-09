@@ -99,9 +99,9 @@ endif
 " COLORSCHEME {{{
 if !has('gui_running')
     let g:gruvbox_italic=0
-    colorscheme tender
+    colorscheme apprentice
 else
-    colorscheme tender
+    colorscheme apprentice
 end
 " COLORSCHEME }}}
 
@@ -119,7 +119,7 @@ let g:indent_guides_guide_size = 1
 " AIRLINE {{{
   let g:airline_powerline_fonts=1
   let g:airline_inactive_collapse=0
-  let g:airline_theme='tenderplus'
+  let g:airline_theme='quantum'
   let g:airline#extensions#branch#displayed_head_limit = 15
   let g:airline#extensions#tabline#enabled = 1
   let g:airline#extensions#tabline#buffer_idx_mode = 1
