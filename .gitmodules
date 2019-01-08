@@ -143,3 +143,6 @@
 [submodule "bundle/quantum"]
 	path = bundle/quantum
 	url = https://github.com/tyrannicaltoucan/vim-quantum.git
+[submodule "bundle/vim-yaml-helper"]
+	path = bundle/vim-yaml-helper
+	url = https://github.com/lmeijvogel/vim-yaml-helper.git
