@@ -85,9 +85,6 @@
 [submodule "bundle/vim-indent-guides"]
 	path = bundle/vim-indent-guides
 	url = https://github.com/nathanaelkane/vim-indent-guides.git
-[submodule "bundle/vinegar"]
-	path = bundle/vinegar
-	url = https://github.com/tpope/vim-vinegar.git
 [submodule "bundle/gruvbox"]
 	path = bundle/gruvbox
 	url = https://github.com/morhetz/gruvbox.git
@@ -146,3 +143,9 @@
 [submodule "bundle/vim-tmux"]
 	path = bundle/vim-tmux
 	url = git://github.com/tmux-plugins/vim-tmux.git
+[submodule "bundle/vim-dirvish"]
+	path = bundle/vim-dirvish
+	url = git@github.com:justinmk/vim-dirvish.git
+[submodule "bundle/vim-dirvish-git"]
+	path = bundle/vim-dirvish-git
+	url = git@github.com:kristijanhusak/vim-dirvish-git.git
