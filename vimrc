@@ -261,6 +261,7 @@ let g:gutentags_ctags_tagfile = '.vimtags'
 " GUTENTAGS }}}
 "
 " SQLFMT {{{
+vnoremap <leader>sf ! sqlformat -r -k upper -<cr>
 let g:sqlfmt_auto = 0
 let g:sqlfmt_command = "sqlformat"
 let g:sqlfmt_options = "-r -k upper"
