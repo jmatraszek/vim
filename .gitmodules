@@ -143,3 +143,6 @@
 [submodule "bundle/vim-yaml-helper"]
 	path = bundle/vim-yaml-helper
 	url = https://github.com/lmeijvogel/vim-yaml-helper.git
+[submodule "bundle/vim-tmux"]
+	path = bundle/vim-tmux
+	url = git://github.com/tmux-plugins/vim-tmux.git
