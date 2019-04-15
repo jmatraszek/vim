@@ -184,7 +184,7 @@ nnoremap <C-y> :<C-u>Denite -buffer-name=yanks -mode=normal -auto-resize registe
 call denite#custom#var('file_rec', 'command', ['rg', '--files', '--glob', '!.git'])
 
 " Get rid of those stupid fuzzy matchers
-call denite#custom#source('file_rec', 'matchers', ['matcher_substring'])
+call denite#custom#source('file/rec', 'matchers', ['matcher_substring'])
 
 " Change mappings.
 call denite#custom#map('insert', '<C-j>', '<denite:move_to_next_line>', 'noremap')
