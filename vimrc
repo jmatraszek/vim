@@ -173,7 +173,7 @@ let g:syntastic_cpp_compiler_options = ' -Wall -Wno-write-strings -g `pkg-config
 " SYNTASTIC }}}
 
 " DENITE {{{
-nnoremap <C-u> :<C-u>Denite -buffer-name=files -auto-resize file_rec<cr>
+nnoremap <C-u> :<C-u>Denite -buffer-name=files -auto-resize file/rec<cr>
 nnoremap <C-o> :<C-u>Denite -buffer-name=buffers -mode=normal -auto-resize buffer<cr>
 nnoremap <C-m> :<C-u>Denite -buffer-name=mru -auto-resize file_mru<cr>
 nnoremap <C-\> :<C-u>Denite -buffer-name=grep -auto-resize grep<cr>
