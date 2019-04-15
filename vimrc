@@ -263,6 +263,18 @@ let g:sqlfmt_command = "sqlformat"
 let g:sqlfmt_options = "-r -k upper"
 " SQLFMT }}}
 
+" VIMUX {{{
+ map <Leader>rf :call VimuxRunCommand("clear; dcr rspec " . bufname("%"))<CR>
+ map <Leader>rs :call VimuxRunCommand("clear; dcr rspec " . bufname("%") . ":" . line('.'))<CR>
+ map <Leader>rw :call VimuxRunCommand("clear; dcr rspec spec")<CR>
+ map <Leader>vp :VimuxPromptCommand<CR>
+ map <Leader>vl :VimuxRunLastCommand<CR>
+ map <Leader>vi :VimuxInspectRunner<CR>
+ map <Leader>vq :VimuxCloseRunner<CR>
+ map <Leader>vx :VimuxInterruptRunner<CR>
+ map <Leader>vz :call VimuxZoomRunner()<CR>
+" VIMUX }}}
+
 " KEY MAPPING {{{
 " moving in a right way :)
 nnoremap <up> <nop>
