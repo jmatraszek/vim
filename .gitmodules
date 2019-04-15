@@ -100,9 +100,6 @@
 [submodule "bundle/pathogen"]
 	path = bundle/pathogen
 	url = https://github.com/tpope/vim-pathogen.git
-[submodule "bundle/clever-f"]
-	path = bundle/clever-f
-	url = https://github.com/rhysd/clever-f.vim.git
 [submodule "bundle/gutentags"]
 	path = bundle/gutentags
 	url = https://github.com/ludovicchabant/vim-gutentags.git
@@ -125,18 +122,12 @@
 [submodule "bundle/denite"]
 	path = bundle/denite
 	url = https://github.com/Shougo/denite.nvim.git
-[submodule "bundle/tender"]
-	path = bundle/tender
-	url = https://github.com/jacoborus/tender.vim.git
 [submodule "bundle/vim-polyglot"]
 	path = bundle/vim-polyglot
 	url = https://github.com/sheerun/vim-polyglot.git
 [submodule "bundle/apprentice"]
 	path = bundle/apprentice
 	url = https://github.com/romainl/Apprentice.git
-[submodule "bundle/quantum"]
-	path = bundle/quantum
-	url = https://github.com/tyrannicaltoucan/vim-quantum.git
 [submodule "bundle/vim-yaml-helper"]
 	path = bundle/vim-yaml-helper
 	url = https://github.com/lmeijvogel/vim-yaml-helper.git
