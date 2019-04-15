@@ -122,14 +122,10 @@ let html_use_css=1
 let html_dynamic_folds=1
 " TOHTML }}}
 
-" INDENT GUIDES {{{
-let g:indent_guides_guide_size = 1
-" INDENT GUIDES }}}
-
 " AIRLINE {{{
   let g:airline_powerline_fonts=1
   let g:airline_inactive_collapse=0
-  let g:airline_theme='quantum'
+  let g:airline_theme='bubblegum'
   let g:airline#extensions#branch#displayed_head_limit = 15
   let g:airline#extensions#tabline#enabled = 1
   let g:airline#extensions#tabline#buffer_idx_mode = 1
@@ -255,10 +251,6 @@ nnoremap gd :YcmCompleter GoToDefinition<CR>
 let g:UltiSnipsExpandTrigger="<c-tab>"
 let g:UltiSnipsListSnippets="<c-l>"
 " ULTISNIPS }}}
-
-" VIMERL {{{
-let erlang_show_errors = 0 "let syntastic do the job
-" VIMERL }}}
 
 " GUTENTAGS {{{
 let g:gutentags_ctags_tagfile = '.vimtags'
