@@ -4,7 +4,6 @@
 source ~/.vim/bundle/pathogen/autoload/pathogen.vim
 " source sensible on its own so it is possible to overwrite tags
 source ~/.vim/bundle/sensible/plugin/sensible.vim
-set nocompatible
 filetype off
 " To disable a plugin, add it's bundle name to the following list
 let g:pathogen_disabled = []
@@ -25,19 +24,16 @@ set backupdir=~/.tmp-vim
 set history=500 " keep 50 lines of command line history
 set showmatch "show matching brackets/parenthesis
 set incsearch " do incremental searching
-set completeopt=menu,longest,preview
-set wildchar=<TAB>
 set wildignore+=*.o,*.obj,.git,public/system,build/**
-set number "numerowanie linii
+set number
 set fencs=utf8
 set enc=utf8
 set tenc=utf8
 set mouse=a " select using mouse with shift pressed on
 set formatoptions=tcqomM
-set helplang=pl,en
-set smartindent
+set autoindent
 set ignorecase
-set smartcase "case sensitive tylko jesli wyszukiwana fraza zawiera wielka litere
+set smartcase
 set smarttab
 set nolist
 set listchars=tab:▸\ ,eol:¬
@@ -64,7 +60,7 @@ imap <F18> 
 
 " CustomFoldText {{{
 " http://www.gregsexton.org/2011/03/improving-the-text-displayed-in-a-fold/
-fu! CustomFoldText()
+function! CustomFoldText() abort
     "get first non-blank line
     let fs = v:foldstart
     while getline(fs) =~ '^\s*$' | let fs = nextnonblank(fs + 1)
@@ -94,33 +90,18 @@ if &t_Co > 2 || has("gui_running")
     syntax on
     set background=dark
     set hlsearch
+    set cursorline
+    colorscheme apprentice
 endif
 if has("gui_running")
     set guifont=Iosevka\ Regular\ 10
-    set cursorline
-    set guioptions=aegit "wylaczony toolbar i menu
+    set guioptions=aegit " no toolbar or menu
     set guiheadroom=0
 else
     set nopaste
     set ttyfast
 endif
 " GUI }}}
-
-" COLORSCHEME {{{
-if !has('gui_running')
-    let g:gruvbox_italic=0
-    colorscheme apprentice
-else
-    colorscheme apprentice
-end
-" COLORSCHEME }}}
-
-" TOHTML {{{
-let html_number_lines=0
-let use_xhtml=1
-let html_use_css=1
-let html_dynamic_folds=1
-" TOHTML }}}
 
 " AIRLINE {{{
   let g:airline_powerline_fonts=1
@@ -154,27 +135,18 @@ noremap <C-TAB>   :MBEbn<CR>
 noremap <C-S-TAB> :MBEbp<CR>
 command BD MBEbd
 let g:miniBufExplAutoStart = 0
-let g:miniBufExplBuffersNeeded = 1
-let g:miniBufExplSetUT = 200
 let g:miniBufExplCycleArround = 1
-hi MBENormal               guifg=#808080 guibg=fg
-hi MBEChanged              guifg=#CD5907 guibg=fg
-hi MBEVisibleNormal        guifg=#5DC2D6 guibg=fg
-hi MBEVisibleChanged       guifg=#F1266F guibg=fg
-hi MBEVisibleActiveNormal  guifg=#A6DB29 guibg=fg cterm=underline gui=underline
-hi MBEVisibleActiveChanged guifg=#F1266F guibg=fg cterm=underline gui=underline
 " MINIBUFEXPL }}}
 
 " SYNTASTIC {{{
 let g:syntastic_enable_signs = 1
 let g:syntastic_quiet_messages = { "level": "warnings" }
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_cpp_compiler_options = ' -Wall -Wno-write-strings -g `pkg-config --cflags opencv` `pkg-config --cflags sigc++-2.0`'
 " SYNTASTIC }}}
 
 " DENITE {{{
 nnoremap <C-u> :<C-u>Denite -buffer-name=files -auto-resize file/rec<cr>
-nnoremap <C-o> :<C-u>Denite -buffer-name=buffers -mode=normal -auto-resize buffer<cr>
+nnoremap <C-o> :<C-u>Denite -buffer-name=buffers -mode=normal -quick-move=select -auto-resize buffer<cr>
 nnoremap <C-m> :<C-u>Denite -buffer-name=mru -auto-resize file_mru<cr>
 nnoremap <C-\> :<C-u>Denite -buffer-name=grep -auto-resize grep<cr>
 nnoremap <Leader>* :<C-u>DeniteCursorWord -buffer-name=grep -auto-resize grep<cr>
@@ -222,23 +194,22 @@ call yankstack#setup() " this should be called before any custom mappings relate
 
 " TAGBAR {{{
 nmap <silent> <Leader>tg :TagbarToggle<CR>
-nmap <silent> <Leader>th :TagbarOpenAutoClose<CR>
 " TAGBAR }}}
 
 " FUGITIVE {{{
 nmap <leader>gw :Gwrite<cr>
 nmap <leader>gc :Gcommit<cr>
-nmap <leader>gs :Gvsplit :<cr>
-nmap <leader>gd :Gdiff<cr>
-nmap <leader>gds :Gdiff --staged<cr>
 " FUGITIVE }}}
 
 " VIM RUBY {{{
 if has("autocmd")
+  augroup vimRuby
+    autocmd!
     autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
     autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
     autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
     autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+  augroup END
 end
 " VIM RUBY }}}
 
@@ -258,9 +229,6 @@ let g:gutentags_ctags_tagfile = '.vimtags'
 "
 " SQLFMT {{{
 vnoremap <leader>sf ! sqlformat -r -k upper -<cr>
-let g:sqlfmt_auto = 0
-let g:sqlfmt_command = "sqlformat"
-let g:sqlfmt_options = "-r -k upper"
 " SQLFMT }}}
 
 " VIMUX {{{
@@ -296,24 +264,17 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 
 map Q gqap
-" szybkie wylaczenie podswietlania wynikow wyszukiwania
 map gn :nohlsearch<CR>
-" latwe powrot z taga do ktorego skoczylismy
 map <silent> <A-]> :pop<CR>
-" zapis gdy edytujemy plik bez uprawnien do zapisu
 cmap w!! w !sudo tee % >/dev/null
 
-noremap <F2> <Esc>mZggVG=`Z:delmarks Z<CR>lzz<Insert>
-noremap! <F2> <Esc>mZggVG=`Z:delmarks Z<CR>lzz<Insert>
-
-" nowe linie powyzej/ponizej w trybie normal
 nnoremap + O<esc>
 nnoremap _ o<esc>
 " Remove the Windows ^M - when the encodings gets messed up
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
 " PasteWindow {{{
-fu! Pastewindow(direction)
+function! Pastewindow(direction) abort
     if exists("g:yanked_buffer")
         if a:direction == 'edit'
             let temp_buffer = bufnr('%')
@@ -336,17 +297,6 @@ nmap <silent> <leader>wv :call Pastewindow('vsplit')<cr>
 nmap <silent> <leader>wt :call Pastewindow('tabnew')<cr>
 " PasteWindow }}}
 
-" wlaczenie/wylaczenie menu
-function ToggleFlag(option,flag)
-    exec ('let lopt = &' . a:option)
-    if lopt =~ (".*" . a:flag . ".*")
-        exec ('set ' . a:option . '-=' . a:flag)
-    else
-        exec ('set ' . a:option . '+=' . a:flag)
-    endif
-endfunction
-noremap <silent> <A-1> :call ToggleFlag("guioptions","m")<BAR>set guioptions?<CR>
-imap <A-1> <C-O><A-1>
 " KEY MAPPINGS }}}
 
 " PROSE {{{
@@ -368,11 +318,13 @@ let g:spellfile_URL = 'http://ftp.vim.org/vim/runtime/spell'
 
 " AUTOCMD {{{
 if has("autocmd")
-    autocmd QuickfixCmdPost make,grep,grepadd,vimgrep :botright cwindow "wlacz okienko quickfix po kazdym make
-    autocmd BufWritePre * :%s/\s\+$//e "usuwa trailing spaces
+    augroup removeTrailingSpaces
+      autocmd!
+      autocmd BufWritePre * :%s/\s\+$//e
+    augroup END
 
-    augroup vimrcEx
-        au!
+    augroup vimInMutt
+        autocmd!
         autocmd BufRead /tmp/mutt* :source ~/.vim/mail.vim
     augroup END
 endif
