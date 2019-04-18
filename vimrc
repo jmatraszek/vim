@@ -234,6 +234,11 @@ let g:gutentags_ctags_tagfile = '.vimtags'
 vnoremap <leader>sf ! sqlformat -r -k upper -<cr>
 " SQLFMT }}}
 
+" VIMADE {{{
+let g:vimade = {}
+let g:vimade.fadelevel = 0.7
+" VIMADE }}}
+
 " VIMUX {{{
  map <Leader>rf :call VimuxRunCommand("clear; dcr rspec " . bufname("%"))<CR>
  map <Leader>rs :call VimuxRunCommand("clear; dcr rspec " . bufname("%") . ":" . line('.'))<CR>
