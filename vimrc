@@ -251,6 +251,10 @@ let g:vimade.fadelevel = 0.7
  map <Leader>vz :call VimuxZoomRunner()<CR>
 " VIMUX }}}
 
+" YANKCODE {{{
+map <leader>y <plug>YankCode
+" YANKCODE }}}
+
 " KEY MAPPING {{{
 " moving in a right way :)
 nnoremap <up> <nop>

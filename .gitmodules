@@ -131,3 +131,6 @@
 [submodule "bundle/vimade"]
 	path = bundle/vimade
 	url = git@github.com:TaDaa/vimade.git
+[submodule "bundle/yank-code"]
+	path = bundle/yank-code
+	url = git@github.com:AaronLasseigne/yank-code.git
