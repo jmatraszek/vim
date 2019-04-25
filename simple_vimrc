@@ -115,8 +115,8 @@ inoremap <C-U> <C-G>u<C-U>
 "" Extras
 
 " Switch buffers
-:nnoremap <leader>w :bnext<CR>
-:nnoremap <leader>q :bprevious<CR>
+nnoremap <leader>w :bnext<CR>
+nnoremap <leader>q :bprevious<CR>
 
 " Keep flags when repeating last substitute command.
 nnoremap & :&&<CR>
@@ -126,7 +126,7 @@ xnoremap & :&&<CR>
 nnoremap Y y$
 
 " Make S work like X
-nmap S hs
+nnoremap S hs
 
 " Automatically create directories for backup and undo files.
 if !isdirectory(expand(s:dir))
@@ -158,17 +158,17 @@ set hidden
 set wrap linebreak
 set showbreak=" "
 
-" Allow easy navigation between wrapped lines.
-vmap j gj
-vmap k gk
-nmap j gj
-nmap k gk
+" " Allow easy navigation between wrapped lines.
+vnoremap j gj
+vnoremap k gk
+nnoremap j gj
+nnoremap k gk
 
 " Easy window switching
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
+noremap <C-h> <C-w>h
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
+noremap <C-l> <C-w>l
 
 " Use + and _ to add empty lines
 nnoremap + O<esc>
@@ -271,7 +271,7 @@ endfunction
 vmap <silent> <expr> p <sid>Repl()
 
 " Prevent common mistake of pressing q: instead :q
-map q: :q
+noremap q: :q
 
 " Allow to save buffer when editing not as root
-cmap w!! w !sudo tee % >/dev/null
+cnoremap w!! w !sudo tee % >/dev/null
