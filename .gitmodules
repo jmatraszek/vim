@@ -134,3 +134,6 @@
 [submodule "bundle/yank-code"]
 	path = bundle/yank-code
 	url = git@github.com:AaronLasseigne/yank-code.git
+[submodule "bundle/vim-bracketed-paste"]
+	path = bundle/vim-bracketed-paste
+	url = git@github.com:ConradIrwin/vim-bracketed-paste.git
