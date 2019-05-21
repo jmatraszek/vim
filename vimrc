@@ -51,12 +51,14 @@ let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 set <F15>=[1;5I
 set <F16>=[1;6I
 set <F18>=
-nmap <F15> <C-Tab>
-nmap <F16> <C-S-Tab>
+map <F15> <C-Tab>
+map <F16> <C-S-Tab>
 imap <F15> <C-Tab>
 imap <F16> <C-S-Tab>
-imap <M-BS> 
-imap <F18> 
+cnoremap <M-BS> 
+cnoremap <F18> 
+inoremap <M-BS> 
+inoremap <F18> 
 
 " CustomFoldText {{{
 " http://www.gregsexton.org/2011/03/improving-the-text-displayed-in-a-fold/
