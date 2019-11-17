@@ -137,3 +137,6 @@
 [submodule "bundle/vim-bracketed-paste"]
 	path = bundle/vim-bracketed-paste
 	url = git@github.com:ConradIrwin/vim-bracketed-paste.git
+[submodule "bundle/splitjoin"]
+	path = bundle/splitjoin
+	url = git@github.com:AndrewRadev/splitjoin.vim.git
