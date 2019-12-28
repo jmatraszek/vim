@@ -38,4 +38,5 @@ configuration options in my vimrc are grouped by plugin.
   cd bundle/youcompleteme
   git submodule update --init --recursive
   ./install.py --rust-completer
-  pip install --user --no-binary :all: pynvim # denite requires this
+  cd bundle/leaderf
+  ./install.sh

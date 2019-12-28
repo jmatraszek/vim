@@ -98,9 +98,6 @@
 [submodule "bundle/airline-themes"]
 	path = bundle/airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes.git
-[submodule "bundle/denite"]
-	path = bundle/denite
-	url = https://github.com/Shougo/denite.nvim.git
 [submodule "bundle/vim-polyglot"]
 	path = bundle/vim-polyglot
 	url = https://github.com/sheerun/vim-polyglot.git
@@ -119,12 +116,6 @@
 [submodule "bundle/vim-dirvish-git"]
 	path = bundle/vim-dirvish-git
 	url = git@github.com:kristijanhusak/vim-dirvish-git.git
-[submodule "bundle/nvim-yarp"]
-	path = bundle/nvim-yarp
-	url = git@github.com:roxma/nvim-yarp.git
-[submodule "bundle/vim-hug-neovim-rpc"]
-	path = bundle/vim-hug-neovim-rpc
-	url = git@github.com:roxma/vim-hug-neovim-rpc.git
 [submodule "bundle/vimux"]
 	path = bundle/vimux
 	url = git@github.com:benmills/vimux.git
@@ -140,3 +131,6 @@
 [submodule "bundle/splitjoin"]
 	path = bundle/splitjoin
 	url = git@github.com:AndrewRadev/splitjoin.vim.git
+[submodule "bundle/leaderf"]
+	path = bundle/leaderf
+	url = git@github.com:Yggdroot/LeaderF.git

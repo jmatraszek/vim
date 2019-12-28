@@ -149,38 +149,40 @@ let g:syntastic_quiet_messages = { "level": "warnings" }
 let g:syntastic_auto_loc_list = 1
 " SYNTASTIC }}}
 
-" DENITE {{{
-nnoremap <C-u> :<C-u>Denite -buffer-name=files -auto-resize file/rec<cr>
-nnoremap <C-o> :<C-u>Denite -buffer-name=buffers -mode=normal -quick-move=select -auto-resize buffer<cr>
-nnoremap <C-m> :<C-u>Denite -buffer-name=mru -auto-resize file_mru<cr>
-nnoremap <C-\> :<C-u>Denite -buffer-name=grep -auto-resize grep<cr>
-nnoremap <Leader>* :<C-u>DeniteCursorWord -buffer-name=grep -auto-resize grep<cr>
-nnoremap <C-y> :<C-u>Denite -buffer-name=yanks -mode=normal -auto-resize register<cr>
+" LEADERF {{{
+" don't show the help in normal mode
+let g:Lf_HideHelp = 1
+let g:Lf_UseCache = 0
+let g:Lf_UseVersionControlTool = 1
+let g:Lf_IgnoreCurrentBufferName = 1
+" popup mode
+let g:Lf_WindowPosition = 'popup'
+let g:Lf_PreviewInPopup = 1
+let g:Lf_StlSeparator = { 'left': "\ue0b0", 'right': "\ue0b2", 'font': "DejaVu Sans Mono for Powerline" }
+let g:Lf_PreviewResult = {'Function': 0, 'BufTag': 0 }
 
-" Change file_rec command to use ripgrep
-call denite#custom#var('file_rec', 'command', ['rg', '--files', '--glob', '!.git'])
+let g:Lf_ShortcutF = "<leader>ff"
+noremap <leader>fb :<C-U><C-R>=printf("Leaderf buffer %s", "")<CR><CR>
+noremap <leader>fm :<C-U><C-R>=printf("Leaderf mru %s", "")<CR><CR>
+noremap <leader>ft :<C-U><C-R>=printf("Leaderf bufTag %s", "")<CR><CR>
+noremap <leader>fl :<C-U><C-R>=printf("Leaderf line %s", "")<CR><CR>
 
-" Get rid of those stupid fuzzy matchers
-call denite#custom#source('file/rec', 'matchers', ['matcher_substring'])
+noremap <C-B> :<C-U><C-R>=printf("Leaderf! rg --current-buffer -e %s ", expand("<cword>"))<CR><CR>
+noremap <leader>* :<C-U><C-R>=printf("Leaderf! rg -e %s ", expand("<cword>"))<CR><CR>
+noremap <C-\> :<C-U><C-R>=printf("Leaderf! rg -e ")<CR>
+" search visually selected text literally
+xnoremap gf :<C-U><C-R>=printf("Leaderf! rg -F -e %s ", leaderf#Rg#visual())<CR>
+noremap go :<C-U>Leaderf! rg --recall<CR>
 
-" Change mappings.
-call denite#custom#map('insert', '<C-j>', '<denite:move_to_next_line>', 'noremap')
-call denite#custom#map('insert', '<C-k>', '<denite:move_to_previous_line>', 'noremap')
-
-" Ripgrep command on grep source
-call denite#custom#var('grep', 'command', ['rg'])
-call denite#custom#var('grep', 'default_opts', ['--vimgrep', '--no-heading'])
-call denite#custom#var('grep', 'recursive_opts', [])
-call denite#custom#var('grep', 'pattern_opt', ['--regexp'])
-call denite#custom#var('grep', 'separator', ['--'])
-call denite#custom#var('grep', 'final_opts', [])
-
-" Allow to narrow results also by filename
-call denite#custom#source('grep', 'converters', ['converter_abbr_word'])
-
-" Change default prompt
-call denite#custom#option('default', 'prompt', '» ')
-" DENITE }}}
+" should use `Leaderf gtags --update` first
+let g:Lf_GtagsAutoGenerate = 0
+let g:Lf_Gtagslabel = 'native-pygments'
+noremap <leader>fr :<C-U><C-R>=printf("Leaderf! gtags -r %s --auto-jump", expand("<cword>"))<CR><CR>
+noremap <leader>fd :<C-U><C-R>=printf("Leaderf! gtags -d %s --auto-jump", expand("<cword>"))<CR><CR>
+noremap <leader>fo :<C-U><C-R>=printf("Leaderf! gtags --recall %s", "")<CR><CR>
+noremap <leader>fn :<C-U><C-R>=printf("Leaderf gtags --next %s", "")<CR><CR>
+noremap <leader>fp :<C-U><C-R>=printf("Leaderf gtags --previous %s", "")<CR><CR>
+" }}}
 
 " UNDOTREE {{{
 if has("persistent_undo")
