@@ -112,7 +112,7 @@ endif
   let g:airline_powerline_fonts=1
   let g:airline_inactive_collapse=0
   let g:airline_theme='bubblegum'
-  let g:airline#extensions#branch#displayed_head_limit = 15
+  let g:airline#extensions#branch#displayed_head_limit = 17
   let g:airline#extensions#tabline#enabled = 1
   let g:airline#extensions#tabline#buffer_idx_mode = 1
   nmap <leader>1 <Plug>AirlineSelectTab1
@@ -260,6 +260,7 @@ map <leader>y <plug>YankCode
 " YANKCODE }}}
 
 " KEY MAPPING {{{
+let mapleader=","
 " moving in a right way :)
 nnoremap <up> <nop>
 nnoremap <down> <nop>
