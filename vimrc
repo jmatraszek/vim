@@ -169,12 +169,16 @@ noremap <leader>fm :<C-U><C-R>=printf("Leaderf mru %s", "")<CR><CR>
 noremap <leader>ft :<C-U><C-R>=printf("Leaderf bufTag %s", "")<CR><CR>
 noremap <leader>fl :<C-U><C-R>=printf("Leaderf line %s", "")<CR><CR>
 
-noremap <C-B> :<C-U><C-R>=printf("Leaderf! rg --current-buffer -e %s ", expand("<cword>"))<CR><CR>
-noremap <leader>* :<C-U><C-R>=printf("Leaderf! rg -e %s ", expand("<cword>"))<CR><CR>
-noremap <C-\> :<C-U><C-R>=printf("Leaderf! rg -e ")<CR>
-" search visually selected text literally
-xnoremap gf :<C-U><C-R>=printf("Leaderf! rg -F -e %s ", leaderf#Rg#visual())<CR>
-noremap go :<C-U>Leaderf! rg --recall<CR>
+" Search current word in current buffer
+noremap <leader>fW :<C-U><C-R>=printf("Leaderf! rg --current-buffer -e %s ", expand("<cword>"))<CR><CR>
+" Search current word
+noremap <leader>fw :<C-U><C-R>=printf("Leaderf! rg -e %s ", expand("<cword>"))<CR><CR>
+" Search
+noremap <leader>fs :<C-U><C-R>=printf("Leaderf! rg -e ")<CR>
+" Search visually selected text literally
+xnoremap <leader>fv :<C-U><C-R>=printf("Leaderf! rg -F -e %s ", leaderf#Rg#visual())<CR>
+" Recall last search
+noremap <leader>fS :<C-U>Leaderf! rg --recall<CR>
 
 " should use `Leaderf gtags --update` first
 let g:Lf_GtagsAutoGenerate = 0
