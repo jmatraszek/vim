@@ -44,6 +44,8 @@ set lazyredraw
 set pastetoggle=<F4>
 set tags=./.vimtags
 
+let mapleader=","
+
 "CHANGE CURSOR SHAPE IN DIFFRENT MODES
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
@@ -260,7 +262,6 @@ map <leader>y <plug>YankCode
 " YANKCODE }}}
 
 " KEY MAPPING {{{
-let mapleader=","
 " moving in a right way :)
 nnoremap <up> <nop>
 nnoremap <down> <nop>
