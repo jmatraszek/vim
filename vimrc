@@ -349,7 +349,7 @@ if has("autocmd")
 
     augroup vimInMutt
         autocmd!
-        autocmd BufRead /tmp/mutt* :source ~/.vim/mail.vim
+        autocmd BufRead /tmp/neomutt* :source ~/.vim/mail.vim
     augroup END
 endif
 " AUTOCMD }}}

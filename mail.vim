@@ -13,10 +13,7 @@
 ""   Misc
 "" ----------------------------------------------------------------------------
 
-set pastetoggle=<f12>   " toggle mouse paste mode with F12
 set ft=mail             " needless to say, vim had already guessed that alone :)
-
-
 
 "" ----------------------------------------------------------------------------
 ""   Automatic line wrap
@@ -44,8 +41,6 @@ nmap	<F3>	kgqj
 map!	<F1>	<ESC>gqapi
 map!	<F2>	<ESC>gqqji
 map!	<F3>	<ESC>kgqji
-
-
 
 "" ----------------------------------------------------------------------------
 ""   Suppressing quoted signature(s) if any when replying
