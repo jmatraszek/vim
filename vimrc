@@ -228,7 +228,9 @@ end
 
 " YOUCOMPLETEME {{{
 let g:ycm_rust_src_path = expand("~/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src/")
+let g:ycm_add_preview_to_completeopt = '0'
 nnoremap gd :YcmCompleter GoToDefinition<CR>
+set completeopt-=preview
 " YOUCOMPLETEME }}}
 
 " ULTISNIPS {{{
