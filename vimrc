@@ -157,11 +157,13 @@ let g:Lf_HideHelp = 1
 let g:Lf_UseCache = 0
 let g:Lf_UseVersionControlTool = 1
 let g:Lf_IgnoreCurrentBufferName = 1
+let g:Lf_ShowDevIcons = 0
 " popup mode
 let g:Lf_WindowPosition = 'popup'
 let g:Lf_PreviewInPopup = 1
 let g:Lf_StlSeparator = { 'left': "\ue0b0", 'right': "\ue0b2", 'font': "Iosevka" }
 let g:Lf_PreviewResult = {'Function': 0, 'BufTag': 0 }
+let g:Lf_RgConfig = ["--max-columns=150", "--glob=!node_modules/*", "--glob=!dist/*",]
 
 let g:Lf_ShortcutF = "<leader>ff"
 noremap <leader>fb :<C-U><C-R>=printf("Leaderf buffer %s", "")<CR><CR>
