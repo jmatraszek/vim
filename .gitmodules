@@ -1,15 +1,15 @@
 [submodule "bundle/vim-ruby"]
     path = bundle/vim-ruby
-    url = git://github.com/vim-ruby/vim-ruby.git
+    url = https://github.com/vim-ruby/vim-ruby.git
 [submodule "bundle/rails"]
     path = bundle/rails
-    url = git://github.com/tpope/vim-rails.git
+    url = https://github.com/tpope/vim-rails.git
 [submodule "bundle/vim-git"]
     path = bundle/vim-git
     url = https://github.com/tpope/vim-git.git
 [submodule "bundle/fugitive"]
     path = bundle/fugitive
-    url = git://github.com/tpope/vim-fugitive.git
+    url = https://github.com/tpope/vim-fugitive.git
 [submodule "bundle/c"]
     path = bundle/c
     url = https://github.com/vim-scripts/c.vim.git
@@ -42,25 +42,25 @@
 	url = https://github.com/vim-scripts/a.vim.git
 [submodule "bundle/vim-gnupg"]
 	path = bundle/vim-gnupg
-	url = git://github.com/jamessan/vim-gnupg.git
+	url = https://github.com/jamessan/vim-gnupg.git
 [submodule "bundle/undotree"]
 	path = bundle/undotree
-	url = git://github.com/mbbill/undotree.git
+	url = https://github.com/mbbill/undotree.git
 [submodule "bundle/yankstack"]
 	path = bundle/yankstack
-	url = git://github.com/maxbrunsfeld/vim-yankstack.git
+	url = https://github.com/maxbrunsfeld/vim-yankstack.git
 [submodule "bundle/vim-commentary"]
 	path = bundle/vim-commentary
-	url = git://github.com/tpope/vim-commentary.git
+	url = https://github.com/tpope/vim-commentary.git
 [submodule "bundle/sleuth"]
 	path = bundle/sleuth
-	url = git://github.com/tpope/vim-sleuth.git
+	url = https://github.com/tpope/vim-sleuth.git
 [submodule "bundle/vim-snippets"]
 	path = bundle/vim-snippets
-	url = git://github.com/honza/vim-snippets.git
+	url = https://github.com/honza/vim-snippets.git
 [submodule "bundle/abolish"]
 	path = bundle/abolish
-	url = git://github.com/tpope/vim-abolish.git
+	url = https://github.com/tpope/vim-abolish.git
 [submodule "bundle/minibufexpl"]
 	path = bundle/minibufexpl
 	url = https://github.com/techlivezheng/vim-plugin-minibufexpl.git
@@ -109,7 +109,7 @@
 	url = https://github.com/lmeijvogel/vim-yaml-helper.git
 [submodule "bundle/vim-tmux"]
 	path = bundle/vim-tmux
-	url = git://github.com/tmux-plugins/vim-tmux.git
+	url = https://github.com/tmux-plugins/vim-tmux.git
 [submodule "bundle/vim-dirvish"]
 	path = bundle/vim-dirvish
 	url = git@github.com:justinmk/vim-dirvish.git
