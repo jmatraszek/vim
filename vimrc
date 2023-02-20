@@ -223,6 +223,9 @@ let g:ycm_add_preview_to_completeopt = '0'
 let g:ycm_collect_identifiers_from_tags_files = 1
 nnoremap gd :YcmCompleter GoToDefinition<CR>
 set completeopt-=preview
+set completeopt+=popup
+" load language server configuration
+source /home/jakub/dev/prv/lsp-examples/vimrc.generated
 " YOUCOMPLETEME }}}
 
 " ULTISNIPS {{{
