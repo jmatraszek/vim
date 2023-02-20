@@ -39,7 +39,7 @@ set nolist
 set listchars=tab:▸\ ,eol:¬
 set foldmethod=syntax
 set nofoldenable
-set updatetime=4100
+set updatetime=100
 set lazyredraw
 set pastetoggle=<F4>
 set tags=.vimtags;/

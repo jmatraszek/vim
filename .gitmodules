@@ -134,3 +134,6 @@
 [submodule "bundle/leaderf"]
 	path = bundle/leaderf
 	url = git@github.com:Yggdroot/LeaderF.git
+[submodule "bundle/vim-signify"]
+	path = bundle/vim-signify
+	url = https://github.com/mhinz/vim-signify.git
