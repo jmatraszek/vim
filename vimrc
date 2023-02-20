@@ -6,7 +6,7 @@ source ~/.vim/bundle/pathogen/autoload/pathogen.vim
 source ~/.vim/bundle/sensible/plugin/sensible.vim
 filetype off
 " To disable a plugin, add it's bundle name to the following list
-let g:pathogen_disabled = []
+let g:pathogen_disabled = ['vim-yaml-helper']
 if !has('gui_running')
     " call add(g:pathogen_disabled, 'example-vim-plugin')
 endif
