@@ -127,8 +127,8 @@ endif
   nmap <leader>7 <Plug>AirlineSelectTab7
   nmap <leader>8 <Plug>AirlineSelectTab8
   nmap <leader>9 <Plug>AirlineSelectTab9
-  nmap <leader>- <Plug>AirlineSelectPrevTab
-  nmap <leader>= <Plug>AirlineSelectNextTab
+  nmap <C-Tab> <Plug>AirlineSelectNextTab
+  nmap <C-S-Tab> <Plug>AirlineSelectPrevTab
   let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 " AIRLINE }}}
 
@@ -139,11 +139,8 @@ let g:C_MapLeader = ','
 " C-SUPPORT }}}
 
 " MINIBUFEXPL {{{
-noremap <C-TAB>   :MBEbn<CR>
-noremap <C-S-TAB> :MBEbp<CR>
 command BD MBEbd
 let g:miniBufExplAutoStart = 0
-let g:miniBufExplCycleArround = 1
 " MINIBUFEXPL }}}
 
 " SYNTASTIC {{{
