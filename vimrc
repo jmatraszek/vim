@@ -43,6 +43,7 @@ set updatetime=100
 set lazyredraw
 set pastetoggle=<F4>
 set tags=.vimtags;/
+set shiftround " https://vimtricks.com/p/ensuring-aligned-indentation/
 
 let mapleader=","
 
