@@ -37,13 +37,16 @@ set smartcase
 set smarttab
 set nolist
 set listchars=tab:▸\ ,eol:¬
-set foldmethod=syntax
+set foldmethod=indent
+set regexpengine=1 " https://stackoverflow.com/a/16920294
 set nofoldenable
 set updatetime=100
 set lazyredraw
 set pastetoggle=<F4>
 set tags=.vimtags;/
 set shiftround " https://vimtricks.com/p/ensuring-aligned-indentation/
+
+let g:ruby_path = system('rvm current')
 
 let mapleader=","
 
@@ -120,6 +123,7 @@ command BW Bwipeout
 let g:airline#extensions#tagbar#enabled = 0
 let g:airline_powerline_fonts=1
 let g:airline_inactive_collapse=0
+let g:airline_highlighting_cache = 1
 let g:airline_theme='bubblegum'
 let g:airline#extensions#branch#displayed_head_limit = 17
 let g:airline#extensions#tabline#enabled = 1
