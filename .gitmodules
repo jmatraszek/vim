@@ -61,9 +61,6 @@
 [submodule "bundle/abolish"]
 	path = bundle/abolish
 	url = https://github.com/tpope/vim-abolish.git
-[submodule "bundle/minibufexpl"]
-	path = bundle/minibufexpl
-	url = https://github.com/techlivezheng/vim-plugin-minibufexpl.git
 [submodule "bundle/ultisnips"]
 	path = bundle/ultisnips
 	url = https://github.com/SirVer/ultisnips
@@ -137,3 +134,6 @@
 [submodule "bundle/vim-signify"]
 	path = bundle/vim-signify
 	url = https://github.com/mhinz/vim-signify.git
+[submodule "bundle/vim-bbye"]
+	path = bundle/vim-bbye
+	url = https://github.com/moll/vim-bbye.git
