@@ -186,6 +186,15 @@ xnoremap <leader>fv :<C-U><C-R>=printf("Leaderf! rg -F -e %s ", leaderf#Rg#visua
 noremap <leader>fS :<C-U>Leaderf! rg --recall<CR>
 " }}}
 
+" NNN {{{
+" Disable default mappings
+let g:nnn#set_default_mappings = 0
+" Set custom mappings
+nnoremap <silent> <leader>nn :NnnPicker<CR>
+" Start n³ in the current file's directory
+nnoremap <silent> <leader>nh :NnnPicker %:p:h<CR>
+" }}}
+
 " UNDOTREE {{{
 if has("persistent_undo")
     set undodir=~/.undo-vim/

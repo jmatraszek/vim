@@ -107,12 +107,6 @@
 [submodule "bundle/vim-tmux"]
 	path = bundle/vim-tmux
 	url = https://github.com/tmux-plugins/vim-tmux.git
-[submodule "bundle/vim-dirvish"]
-	path = bundle/vim-dirvish
-	url = git@github.com:justinmk/vim-dirvish.git
-[submodule "bundle/vim-dirvish-git"]
-	path = bundle/vim-dirvish-git
-	url = git@github.com:kristijanhusak/vim-dirvish-git.git
 [submodule "bundle/vimux"]
 	path = bundle/vimux
 	url = git@github.com:benmills/vimux.git
@@ -137,3 +131,6 @@
 [submodule "bundle/vim-bbye"]
 	path = bundle/vim-bbye
 	url = https://github.com/moll/vim-bbye.git
+[submodule "bundle/nnn"]
+	path = bundle/nnn
+	url = https://github.com/mcchrish/nnn.vim.git
