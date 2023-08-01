@@ -134,3 +134,6 @@
 [submodule "bundle/nnn"]
 	path = bundle/nnn
 	url = https://github.com/mcchrish/nnn.vim.git
+[submodule "bundle/csv.vim"]
+	path = bundle/csv.vim
+	url = git@github.com:chrisbra/csv.vim.git
