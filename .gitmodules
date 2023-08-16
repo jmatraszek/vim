@@ -137,3 +137,6 @@
 [submodule "bundle/csv.vim"]
 	path = bundle/csv.vim
 	url = git@github.com:chrisbra/csv.vim.git
+[submodule "bundle/fern"]
+	path = bundle/fern
+	url = git@github.com:lambdalisue/fern.vim.git

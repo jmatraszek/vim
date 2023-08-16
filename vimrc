@@ -195,6 +195,10 @@ nnoremap <silent> <leader>nn :NnnPicker<CR>
 nnoremap <silent> <leader>nh :NnnPicker %:p:h<CR>
 " }}}
 
+" FERN {{{
+nnoremap <silent> <leader>fr :Fern . -drawer<CR>
+" }}}
+
 " UNDOTREE {{{
 if has("persistent_undo")
     set undodir=~/.undo-vim/
