@@ -140,3 +140,6 @@
 [submodule "bundle/fern"]
 	path = bundle/fern
 	url = git@github.com:lambdalisue/fern.vim.git
+[submodule "bundle/fern-git-status"]
+	path = bundle/fern-git-status
+	url = git@github.com:lambdalisue/fern-git-status.vim.git
