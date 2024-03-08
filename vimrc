@@ -160,7 +160,7 @@ let g:Lf_HideHelp = 1
 let g:Lf_UseCache = 0
 let g:Lf_UseVersionControlTool = 1
 let g:Lf_IgnoreCurrentBufferName = 1
-let g:Lf_ShowDevIcons = 0
+let g:Lf_ShowDevIcons = 1
 " popup mode
 let g:Lf_WindowPosition = 'popup'
 let g:Lf_PreviewInPopup = 1
@@ -197,6 +197,7 @@ nnoremap <silent> <leader>nh :NnnPicker %:p:h<CR>
 
 " FERN {{{
 nnoremap <silent> <leader>fr :Fern . -drawer<CR>
+let g:fern#renderer = "nerdfont"
 " }}}
 
 " UNDOTREE {{{

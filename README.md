@@ -1,6 +1,7 @@
 ## Prerequisites
 *   Vim 7.2 (not tested with other versions)
 *   sqlftm depends on sqlparse: `pacman -S python-sqlparse`
+*   LeaderF and fern depend on `nerd-fonts` Arch package group.
 *   Some other plugins depends on other external programs/libraries. Please
     refer to plugins' documentation for more information.
 

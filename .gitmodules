@@ -143,3 +143,12 @@
 [submodule "bundle/fern-git-status"]
 	path = bundle/fern-git-status
 	url = git@github.com:lambdalisue/fern-git-status.vim.git
+[submodule "bundle/nerdfont"]
+	path = bundle/nerdfont
+	url = git@github.com:lambdalisue/nerdfont.vim.git
+[submodule "bundle/glyph-palette"]
+	path = bundle/glyph-palette
+	url = git@github.com:lambdalisue/glyph-palette.vim.git
+[submodule "bundle/fern-renderer-nerdfont"]
+	path = bundle/fern-renderer-nerdfont
+	url = git@github.com:lambdalisue/fern-renderer-nerdfont.vim.git
