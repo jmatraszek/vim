@@ -281,6 +281,11 @@ let g:vimade.fadelevel = 0.7
 map <leader>y <plug>YankCode
 " YANKCODE }}}
 
+" COPILOT {{{
+imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
+let g:copilot_no_tab_map = v:true
+" }}}
+
 " KEY MAPPING {{{
 " moving in a right way :)
 nnoremap <up> <nop>

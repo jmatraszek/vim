@@ -152,3 +152,6 @@
 [submodule "bundle/fern-renderer-nerdfont"]
 	path = bundle/fern-renderer-nerdfont
 	url = git@github.com:lambdalisue/fern-renderer-nerdfont.vim.git
+[submodule "bundle/copilot"]
+	path = bundle/copilot
+	url = git@github.com:github/copilot.vim.git
